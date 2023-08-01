@@ -46,8 +46,7 @@ def fcj_to_states() -> dict:
     box = Box.from_fcjson_parmameters(data['fcj']["parameters"])
     state = St.from_flight(flight, box).splitter_labels(data['fcj']["mans"])
 
-    
-    sdef = ScheduleInfo.build(*data['sinfo']) #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])
+    sdef = ScheduleInfo.build(**data['sinfo']).definition() #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])
 
     mans = {}
     for mdef in sdef:

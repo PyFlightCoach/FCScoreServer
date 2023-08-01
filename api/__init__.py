@@ -1,6 +1,11 @@
 
 from flightdata import Flight
-from flightanalysis import State as St, Box, get_schedule_definition, ManoeuvreAnalysis as MA, ManDef
+from flightanalysis import (
+    State as St, Box, 
+    ManoeuvreAnalysis as MA, 
+    ManDef, 
+    ScheduleInfo
+)
 
 from flask import Blueprint, request, jsonify, current_app
 from json import dumps, loads
@@ -27,17 +32,22 @@ class NumpyEncoder(json.JSONEncoder):
 def fcj_to_states() -> dict:
     """Format the flight coach json in a more useful way so less data can be sent
     forwards and backwards in subsequent requests
-    
-    
+    request data contains: dict(str: any)
+    {
+        "fcj": fcjson, 
+        "sinfo": {
+            "category": f3a, 
+            "name": p23
+    }}
     """
     data = loads(request.data)
-    fcj:dict = data['fcj']
-    sdef: dict = data['sinfo']
-    flight = Flight.from_fc_json(fcj)
+    flight = Flight.from_fc_json(data['fcj'])
 
-    box = Box.from_fcjson_parmameters(fcj["parameters"])
-    state = St.from_flight(flight, box).splitter_labels(fcj["mans"])
-    sdef = get_schedule_definition(fcj["parameters"]["schedule"][1])
+    box = Box.from_fcjson_parmameters(data['fcj']["parameters"])
+    state = St.from_flight(flight, box).splitter_labels(data['fcj']["mans"])
+
+    
+    sdef = ScheduleInfo.build(*data['sinfo']) #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])
 
     mans = {}
     for mdef in sdef:

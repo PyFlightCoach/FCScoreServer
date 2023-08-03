@@ -56,9 +56,10 @@ def fcj_to_states() -> dict:
         )
     return current_app.response_class(dumps(mans, cls=NumpyEncoder), mimetype="application/json")
 
-@api.route("/align_manoevre")
-def align(man: dict) -> dict:
+@api.route("/align", methods=['POST'])
+def align() -> dict:
     """Perform the Sequence Alignment"""
+    man = loads(request.data)
 
     st = St.from_dict(man['fl'])
     mdef = ManDef.from_dict(man['mdef'])
@@ -66,7 +67,7 @@ def align(man: dict) -> dict:
     manoeuvre, tp = MA.template(mdef, MA.initial_transform(mdef, st))
     al = MA.alignment(tp, manoeuvre, st)
     
-    return al.to_dict()
+    return current_app.response_class(dumps(al.to_dict(), cls=NumpyEncoder), mimetype="application/json")
 
 
 @api.route("/edit_alignment")

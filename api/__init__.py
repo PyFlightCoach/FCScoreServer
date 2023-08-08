@@ -70,29 +70,28 @@ def align() -> dict:
     return current_app.response_class(dumps(al.to_dict(), cls=NumpyEncoder), mimetype="application/json")
 
 
-@api.route("/edit_alignment")
-def edit_alignment(almod: dict) -> dict:
-    """shifts the end time of an element for an element"""
-    return St.from_dict(almod['fl']).shift_labels("element", almod['elname'], almod['stp']).to_dict()
+@api.route("/score", methods=['POST'])
+def score() -> dict:
+    man = loads(request.data)
 
-
-@api.route("/analyse_manoevre")
-def analyse(man: dict) -> dict:
-
-    aligned = St.from_dict(man['aligned'])
+    aligned = St.from_dict(man['al'])
     mdef: ManDef = ManDef.from_dict(man['mdef'])
+
     itrans = MA.initial_transform(mdef, aligned)
     intended, int_tp = mdef.create(itrans).add_lines().match_intention(St.from_transform(itrans),aligned)
     corr = MA.correction(mdef, intended, int_tp, aligned)
     ma = MA(mdef, aligned, intended, int_tp, corr, corr.create_template(itrans, aligned))
 
-    scores = ma.scores()
+    res = dict(
+        mdef=mdef.to_dict(),
+        analysis=dict(
+            intended=ma.intended.to_dict(),
+            intended_tp = ma.intended_template.to_dict(),
+            corrected=ma.corrected.to_dict(),
+            corrected_tp = ma.corrected_template.to_dict(),
+        ),
+        score=ma.scores().to_dict()
+    )
 
-    res = ma.to_dict()
-
-    res['scores'] = scores.to_dict()
-    res['score_summary'] = scores.summary()
-    res['score'] = scores.score()
-    res['stage'] = 'results'
-    return res
+    return current_app.response_class(dumps(res, cls=NumpyEncoder), mimetype="application/json")
 

@@ -89,12 +89,10 @@ def score() -> dict:
 
     res = dict(
         mdef=mdef.to_dict(),
-        analysis=dict(
-            intended=ma.intended.to_dict(),
-            intended_tp = ma.intended_template.to_dict(),
-            corrected=ma.corrected.to_dict(),
-            corrected_tp = ma.corrected_template.to_dict(),
-        ),
+        intended=ma.intended.to_dict(),
+        intended_tp = ma.intended_template.to_dict(),
+        corrected=ma.corrected.to_dict(),
+        corrected_tp = ma.corrected_template.to_dict(),
         score=ma.scores().to_dict()
     )
 

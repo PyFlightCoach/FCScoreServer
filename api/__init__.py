@@ -11,15 +11,12 @@ from flask import Blueprint, request, jsonify, current_app
 from json import dumps, loads
 import json 
 import numpy as np
+from functools import wraps
+import api.funcs as funcs
+from pathlib import Path
 
 api = Blueprint('api', __name__)
 
-
-
-@api.route("/test")
-def test_server():
-    print("testing")
-    return dict(test="success")
 
 class NumpyEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -33,68 +30,51 @@ class NumpyEncoder(json.JSONEncoder):
             return json.JSONEncoder.default(self, obj)
     
 
-@api.route("/convert_fcj", methods=['POST'])
-def fcj_to_states() -> dict:
-    """Format the flight coach json in a more useful way so less data can be sent
-    forwards and backwards in subsequent requests
-    request data contains: dict(str: any)
-    {
-        "fcj": fcjson, 
-        "sinfo": {
-            "category": f3a, 
-            "name": p23
-    }}
-    """
-    data = loads(request.data)
-    flight = Flight.from_fc_json(data['fcj'])
+def fcscore_route(name, methods=None):
+    """decorator for routes to process response and return json string"""
+    if methods is None:
+        methods = ['GET']
+    def outer(f):
+        @api.route(name, methods=methods)
+        @wraps(f)
+        def innfun():
+            return current_app.response_class(
+                dumps(
+                    f(**loads(request.data)), 
+                    cls=NumpyEncoder
+                ), 
+                mimetype="application/json"
+            )
+        return innfun
 
-    box = Box.from_fcjson_parmameters(data['fcj']["parameters"])
-    state = St.from_flight(flight, box).splitter_labels(data['fcj']["mans"])
+    return outer
 
-    sdef = ScheduleInfo.build(**data['sinfo']).definition() #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])
-
-    mans = {}
-    for mdef in sdef:
-        mans[mdef.info.short_name] = dict(
-            mdef=mdef.to_dict(),
-            fl=state.get_manoeuvre(mdef.info.short_name).to_dict()
-        )
-    return current_app.response_class(dumps(mans, cls=NumpyEncoder), mimetype="application/json")
-
-@api.route("/align", methods=['POST'])
-def align() -> dict:
-    """Perform the Sequence Alignment"""
-    man = loads(request.data)
-
-    st = St.from_dict(man['fl'])
-    mdef = ManDef.from_dict(man['mdef'])
-
-    manoeuvre, tp = MA.template(mdef, MA.initial_transform(mdef, st))
-    al = MA.alignment(tp, manoeuvre, st)
-    
-    return current_app.response_class(dumps(al.to_dict(), cls=NumpyEncoder), mimetype="application/json")
+@fcscore_route("/convert_fcj", ['POST'])
+def _fcj_to_states(fcj: dict, sinfo: dict):
+    return funcs.fcj_to_states(fcj, sinfo)
 
 
-@api.route("/score", methods=['POST'])
-def score() -> dict:
-    man = loads(request.data)
+@fcscore_route("/convert_fcj_example", ['POST'])
+def _fcj_to_states_example():
+    return loads('api/examples/fcj_to_states.json')
 
-    aligned = St.from_dict(man['al'])
-    mdef: ManDef = ManDef.from_dict(man['mdef'])
+@fcscore_route("/align", ['POST'])
+def _align(fl, mdef) -> dict:
+    return funcs.align(fl, mdef)
 
-    itrans = MA.initial_transform(mdef, aligned)
-    intended, int_tp = mdef.create(itrans).add_lines().match_intention(St.from_transform(itrans),aligned)
-    corr = MA.correction(mdef, intended, int_tp, aligned)
-    ma = MA(mdef, aligned, intended, int_tp, corr, corr.create_template(itrans, aligned))
+@fcscore_route("/align_example", ['POST'])
+def _align_example(man) -> dict:
+    return loads(f'api/examples/align_{man["man"]}.json')
 
-    res = dict(
-        mdef=mdef.to_dict(),
-        intended=ma.intended.to_dict(),
-        intended_tp = ma.intended_template.to_dict(),
-        corrected=ma.corrected.to_dict(),
-        corrected_tp = ma.corrected_template.to_dict(),
-        score=ma.scores().to_dict()
-    )
+@fcscore_route("/score", ['POST'])
+def _score(al, mdef) -> dict:
+    return funcs.score(al, mdef)
 
-    return current_app.response_class(dumps(res, cls=NumpyEncoder), mimetype="application/json")
+@fcscore_route("/score_example", ['POST'])
+def _score_example(man) -> dict:
+    return loads(f'api/examples/score_{man["man"]}.json')
 
+
+@fcscore_route("/example_manlist", ['POST'])
+def example_mans() -> dict:
+    return [p.stem.split('_')[1] for p in sorted(Path(("api/examples/")).glob("align_*.json"))]

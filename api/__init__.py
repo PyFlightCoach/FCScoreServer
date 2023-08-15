@@ -54,27 +54,19 @@ def _fcj_to_states(fcj: dict, sinfo: dict):
     return funcs.fcj_to_states(fcj, sinfo)
 
 
-@fcscore_route("/convert_fcj_example", ['POST'])
-def _fcj_to_states_example():
-    return loads('api/examples/fcj_to_states.json')
+@fcscore_route("/example", ['POST'])
+def _example(man):
+    with open(f'api/examples/{man}.json', 'r') as f:
+        return json.load(f)
 
 @fcscore_route("/align", ['POST'])
 def _align(fl, mdef) -> dict:
     return funcs.align(fl, mdef)
 
-@fcscore_route("/align_example", ['POST'])
-def _align_example(man) -> dict:
-    return loads(f'api/examples/align_{man["man"]}.json')
-
 @fcscore_route("/score", ['POST'])
 def _score(al, mdef) -> dict:
     return funcs.score(al, mdef)
 
-@fcscore_route("/score_example", ['POST'])
-def _score_example(man) -> dict:
-    return loads(f'api/examples/score_{man["man"]}.json')
-
-
 @fcscore_route("/example_manlist", ['POST'])
 def example_mans() -> dict:
-    return [p.stem.split('_')[1] for p in sorted(Path(("api/examples/")).glob("align_*.json"))]
+    return [p.stem for p in sorted(Path(("api/examples/")).glob("*.json"))]

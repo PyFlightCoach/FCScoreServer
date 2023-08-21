@@ -14,3 +14,4 @@ for k, m in mans.items():
 
     with open(f'api/examples/{k}.json', 'w') as f:
         dump(dict(al=al,busy=False,**_score,), f, cls=NumpyEncoder)
+    break

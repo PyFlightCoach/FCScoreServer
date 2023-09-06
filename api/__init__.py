@@ -9,7 +9,7 @@ from flightanalysis import (
 
 from flask import Blueprint, request, jsonify, current_app
 from json import dumps, loads
-import json 
+import simplejson
 import numpy as np
 from functools import wraps
 import api.funcs as funcs
@@ -17,8 +17,7 @@ from pathlib import Path
 
 api = Blueprint('api', __name__)
 
-
-class NumpyEncoder(json.JSONEncoder):
+class NumpyEncoder(simplejson.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, np.ndarray):
             return obj.tolist()
@@ -27,8 +26,9 @@ class NumpyEncoder(json.JSONEncoder):
         elif isinstance(obj, np.floating):
             return float(obj)
         else:
-            return json.JSONEncoder.default(self, obj)
+            return simplejson.JSONEncoder.default(self, obj)
     
+
 
 def fcscore_route(name, methods=None):
     """decorator for routes to process response and return json string"""
@@ -39,8 +39,9 @@ def fcscore_route(name, methods=None):
         @wraps(f)
         def innfun():
             return current_app.response_class(
-                dumps(
-                    f(**loads(request.data)), 
+                simplejson.dumps(
+                    f(**simplejson.loads(request.data)), 
+                    ignore_nan=True,
                     cls=NumpyEncoder
                 ), 
                 mimetype="application/json"
@@ -57,7 +58,7 @@ def _fcj_to_states(fcj: dict, sinfo: dict):
 @fcscore_route("/example", ['POST'])
 def _example(man):
     with open(f'api/examples/{man}.json', 'r') as f:
-        return json.load(f)
+        return simplejson.load(f)
 
 @fcscore_route("/align", ['POST'])
 def _align(fl, mdef) -> dict:

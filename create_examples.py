@@ -1,4 +1,4 @@
-from json import load, dump
+from simplejson import load, dump
 from api.funcs import fcj_to_states, align, score
 from api import NumpyEncoder
 
@@ -13,5 +13,5 @@ for k, m in mans.items():
     _score = score(al=al, mdef = m['mdef'])
 
     with open(f'api/examples/{k}.json', 'w') as f:
-        dump(dict(al=al,busy=False,**_score,), f, cls=NumpyEncoder)
+        dump(dict(al=al,busy=False,**_score,), f, cls=NumpyEncoder, ignore_nan=True)
     

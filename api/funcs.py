@@ -41,7 +41,11 @@ def align(fl, mdef) -> dict:
     mdef = ManDef.from_dict(mdef)
 
     manoeuvre, tp = MA.template(mdef, MA.initial_transform(mdef, st))
-    return MA.alignment(tp, manoeuvre, st).to_dict()
+    res = MA.alignment(tp, manoeuvre, st)
+    return dict(
+        dist=res[0],
+        al=res[1].to_dict()
+    )
     
 
 def score(al, mdef) -> dict:

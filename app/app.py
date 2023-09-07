@@ -1,21 +1,16 @@
-
-from flightdata import Flight
-from flightanalysis import (
-    State as St, Box, 
-    ManoeuvreAnalysis as MA, 
-    ManDef, 
-    ScheduleInfo
-)
-
-from flask import Blueprint, request, jsonify, current_app
-from json import dumps, loads
+from flask import Flask
+from flask_cors import CORS
+from flask import request, current_app
 import simplejson
 import numpy as np
 from functools import wraps
-import api.funcs as funcs
+import app.funcs as funcs
 from pathlib import Path
 
-api = Blueprint('api', __name__)
+
+app = Flask(__name__)
+CORS(app)
+
 
 class NumpyEncoder(simplejson.JSONEncoder):
     def default(self, obj):
@@ -35,7 +30,7 @@ def fcscore_route(name, methods=None):
     if methods is None:
         methods = ['GET']
     def outer(f):
-        @api.route(name, methods=methods)
+        @app.route(name, methods=methods)
         @wraps(f)
         def innfun():
             return current_app.response_class(
@@ -57,7 +52,7 @@ def _fcj_to_states(fcj: dict, sinfo: dict):
 
 @fcscore_route("/example", ['POST'])
 def _example(man):
-    with open(f'api/examples/{man}.json', 'r') as f:
+    with open(f'app/examples/{man}.json', 'r') as f:
         return simplejson.load(f)
 
 @fcscore_route("/align", ['POST'])
@@ -70,4 +65,8 @@ def _score(al, mdef) -> dict:
 
 @fcscore_route("/example_manlist", ['POST'])
 def example_mans() -> dict:
-    return [p.stem for p in sorted(Path(("api/examples/")).glob("*.json"))]
+    return [p.stem for p in sorted(Path(("app/examples/")).glob("*.json"))]
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

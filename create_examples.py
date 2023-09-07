@@ -1,6 +1,6 @@
 from simplejson import load, dump
-from api.funcs import fcj_to_states, align, score
-from api import NumpyEncoder
+from app.funcs import fcj_to_states, align, score
+from app.app import NumpyEncoder
 
 with open('api/examples/manual_F3A_P23_22_05_31_00000350.json', 'r') as f:
     fcj = load(f)

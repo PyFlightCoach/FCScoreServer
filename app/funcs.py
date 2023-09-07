@@ -3,8 +3,7 @@ from flightanalysis import (
     State as St, Box, 
     ManoeuvreAnalysis as MA, 
     ManDef, 
-    ScheduleInfo,
-    SchedDef
+    ScheduleInfo
 )
 
 

@@ -67,6 +67,11 @@ def _score(al, mdef) -> dict:
 def example_mans() -> dict:
     return [p.stem for p in sorted(Path(("app/examples/")).glob("*.json"))]
 
+@fcscore_route("/create_fc_json", ['POST'])
+def _create_fcj(sts, mdefs, name, category) -> dict:
+    return funcs.create_fc_json(sts, mdefs, name, category)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

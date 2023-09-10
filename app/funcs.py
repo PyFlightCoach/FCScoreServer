@@ -3,8 +3,11 @@ from flightanalysis import (
     State as St, Box, 
     ManoeuvreAnalysis as MA, 
     ManDef, 
-    ScheduleInfo
+    ScheduleInfo,
+    SchedDef
 )
+import numpy as np
+import pandas as pd
 
 
 def fcj_to_states(fcj: dict, sinfo: dict):
@@ -65,3 +68,11 @@ def score(al, mdef) -> dict:
         score=ma.scores().to_dict()
     )
 
+
+def create_fc_json(sts, mdefs, name, category) -> dict:
+    st = St(pd.DataFrame.from_dict(sts))
+    return st.create_fc_json(
+        SchedDef([ManDef.from_dict(mdef) for mdef in mdefs]), 
+        name, 
+        category
+    )

@@ -7,6 +7,6 @@ fastdtw
 gunicorn
 werkzeug
 pfc-geometry==0.1.6
-flightdata==0.1.2
-flightanalysis==0.1.16
+flightdata==0.1.3
+flightanalysis==0.1.17
 simplejson

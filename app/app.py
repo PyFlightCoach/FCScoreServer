@@ -60,8 +60,8 @@ def _align(fl, mdef) -> dict:
     return funcs.align(fl, mdef)
 
 @fcscore_route("/score", ['POST'])
-def _score(al, mdef) -> dict:
-    return funcs.score(al, mdef)
+def _score(al, mdef, direction) -> dict:
+    return funcs.score(al, mdef, direction)
 
 @fcscore_route("/example_manlist", ['POST'])
 def example_mans() -> dict:

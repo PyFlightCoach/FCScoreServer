@@ -60,6 +60,10 @@ def score(al, mdef) -> dict:
     itrans = MA.initial_transform(mdef, aligned)
     intended, int_tp = mdef.create(itrans).add_lines().match_intention(St.from_transform(itrans),aligned)
     corr = MA.correction(mdef, intended, int_tp, aligned)
+
+    intended= intended.copy_directions(corr)
+    int_tp = intended.el_matched_tp(int_tp[0], aligned)
+
     ma = MA(mdef, aligned, intended, int_tp, corr, corr.create_template(itrans, aligned))
 
     return dict(

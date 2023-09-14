@@ -11,7 +11,7 @@ for k, m in mans.items():
     print(m['mdef']['info']['short_name'])
     al = align(fl=m['fl'], mdef=m['mdef'])
 
-    _score = score(al=al['al'], mdef = m['mdef'])
+    _score = score(al=al['al'], mdef = m['mdef'], direction=-1)
 
     with open(f'app/examples/{k}.json', 'w') as f:
         dump(dict(**al,busy=False,**_score,), f, cls=NumpyEncoder, ignore_nan=True)

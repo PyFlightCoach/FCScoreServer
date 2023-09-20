@@ -6,7 +6,7 @@ import numpy as np
 from functools import wraps
 import app.funcs as funcs
 from pathlib import Path
-
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -71,6 +71,12 @@ def example_mans() -> dict:
 def _create_fcj(sts, mdefs, name, category) -> dict:
     return funcs.create_fc_json(sts, mdefs, name, category)
 
+@fcscore_route("/version", ['POST'])
+def _version() -> dict:
+    ver = os.getenv("PUBLIC_VERSION")
+    if ver is None:
+        ver = "next"
+    return dict(version=ver)
 
 
 if __name__ == "__main__":

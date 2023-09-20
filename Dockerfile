@@ -11,5 +11,9 @@ RUN pip install -r /requirements.txt
 
 COPY . . 
 
+ARG SOURCE_COMMIT
+ENV PUBLIC_VERSION $SOURCE_COMMIT
+RUN echo "SOURCE_COMMIT = $PUBLIC_VERSION"
+
 EXPOSE 5000
 ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "wsgi:app"]

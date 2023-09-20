@@ -48,8 +48,10 @@ def align(fl, mdef) -> dict:
 
     manoeuvre, tp = MA.template(mdef, MA.initial_transform(mdef, st))
     res = MA.alignment(tp, manoeuvre, st)
+    intended, int_tp = MA.intention(manoeuvre, res[1], tp)
+    dist = np.sum(abs(int_tp.pos - res[1].pos))
     return dict(
-        dist=res[0],
+        dist=dist,#res[0],
         al=res[1].to_dict()
     )
     

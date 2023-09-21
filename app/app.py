@@ -78,6 +78,10 @@ def _version() -> dict:
         ver = "next"
     return dict(version=ver)
 
+@fcscore_route("/standard_f3a_mps", ["POST"])
+def _standard_f3a_mps():
+    return funcs.standard_f3a_mps()
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -89,3 +89,8 @@ def create_fc_json(sts, mdefs, name, category) -> dict:
         name, 
         category
     )
+
+
+def standard_f3a_mps() -> dict:
+    from flightanalysis.schedule.definition.manoeuvre_builder import f3amb
+    return f3amb.mps.to_dict()

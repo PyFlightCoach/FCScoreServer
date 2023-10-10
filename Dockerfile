@@ -1,4 +1,4 @@
-FROM python:3.11.4-slim-buster
+FROM thomasdavid/pyflightcoach:latest
 
 LABEL maintainer "Thomas David, thomasdavid0@gmail.com"
 

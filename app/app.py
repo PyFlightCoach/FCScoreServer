@@ -6,23 +6,11 @@ import numpy as np
 from functools import wraps
 import app.funcs as funcs
 from pathlib import Path
+from flightdata import NumpyEncoder
 import os
 
 app = Flask(__name__)
 CORS(app)
-
-
-class NumpyEncoder(simplejson.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, np.ndarray):
-            return obj.tolist()
-        elif isinstance(obj, np.integer):
-            return int(obj)
-        elif isinstance(obj, np.floating):
-            return float(obj)
-        else:
-            return simplejson.JSONEncoder.default(self, obj)
-    
 
 
 def fcscore_route(name, methods=None):

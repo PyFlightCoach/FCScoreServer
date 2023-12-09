@@ -1,6 +1,6 @@
 from flightdata import Flight
+from flightdata import State as St, Origin
 from flightanalysis import (
-    State as St, Box, 
     ManoeuvreAnalysis as MA, 
     ManDef, 
     ScheduleInfo,
@@ -24,7 +24,7 @@ def fcj_to_states(fcj: dict, sinfo: dict):
     """
     flight = Flight.from_fc_json(fcj)
 
-    box = Box.from_fcjson_parmameters(fcj["parameters"])
+    box = Origin.from_fcjson_parmameters(fcj["parameters"])
     sdef = ScheduleInfo.build(**sinfo).definition() #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])
 
     state = St.from_flight(flight, box).splitter_labels(
@@ -60,7 +60,6 @@ def score(al, mdef, direction) -> dict:
     aligned = St.from_dict(al)
     mdef: ManDef = ManDef.from_dict(mdef)
 
-    #itrans = MA.initial_transform(mdef, aligned)
     itrans = Transformation(aligned[0].pos, mdef.info.start.initial_rotation(-direction))
     
     intended, int_tp = mdef.create(itrans).add_lines().match_intention(St.from_transform(itrans),aligned)
@@ -92,5 +91,5 @@ def create_fc_json(sts, mdefs, name, category) -> dict:
 
 
 def standard_f3a_mps() -> dict:
-    from flightanalysis.schedule.definition.manoeuvre_builder import f3amb
+    from flightanalysis.definition.builders.manbuilder import f3amb
     return f3amb.mps.to_dict()

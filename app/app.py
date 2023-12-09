@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 from flask import request, current_app
-import simplejson
+import simplejson as json
 import numpy as np
 from functools import wraps
 import app.funcs as funcs
@@ -22,8 +22,8 @@ def fcscore_route(name, methods=None):
         @wraps(f)
         def innfun():
             return current_app.response_class(
-                simplejson.dumps(
-                    f(**simplejson.loads(request.data)), 
+                json.dumps(
+                    f(**json.loads(request.data)), 
                     ignore_nan=True,
                     cls=NumpyEncoder
                 ), 
@@ -41,7 +41,7 @@ def _fcj_to_states(fcj: dict, sinfo: dict):
 @fcscore_route("/example", ['POST'])
 def _example(man):
     with open(f'app/examples/{man}.json', 'r') as f:
-        return simplejson.load(f)
+        return json.load(f)
 
 @fcscore_route("/align", ['POST'])
 def _align(fl, mdef) -> dict:

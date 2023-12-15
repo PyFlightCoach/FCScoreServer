@@ -22,7 +22,7 @@ def fcj_to_states(fcj: dict, sinfo: dict):
             "name": p23
     }}
     """
-    flight = Flight.from_fc_json(fcj).butter_filter(4,5)
+    flight = Flight.from_fc_json(fcj).remove_time_flutter().butter_filter(4,5)
 
     box = Origin.from_fcjson_parmameters(fcj["parameters"])
     sdef = ScheduleInfo.build(**sinfo).definition() #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])

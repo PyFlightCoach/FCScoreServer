@@ -14,6 +14,7 @@ mans = fcj_to_states(
 )
 
 for mn, man in mans.items():
+
     alres = align(man['fl'], man['mdef'])
     man['al'] = alres['al']
     man['dist'] = alres['dist']

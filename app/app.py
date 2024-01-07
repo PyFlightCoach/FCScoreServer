@@ -8,6 +8,8 @@ import app.funcs as funcs
 from pathlib import Path
 from flightdata import NumpyEncoder
 import os
+from flightdata import State as St
+from flightanalysis import ManDef
 
 app = Flask(__name__)
 CORS(app)
@@ -37,23 +39,14 @@ def fcscore_route(name, methods=None):
 def _fcj_to_states(fcj: dict, sinfo: dict):
     return funcs.fcj_to_states(fcj, sinfo)
 
+@fcscore_route("/analyse_manoeuvre", ['POST'])
+def _analyse_manoeuvre(fl, mdef, direction) -> dict:
+    return funcs.f_analyse_manoeuvre(fl, mdef, direction)
 
-@fcscore_route("/example", ['POST'])
-def _example(man):
-    with open(f'app/examples/{man}.json', 'r') as f:
-        return json.load(f)
+@fcscore_route("/score_manoeuvre", ['POST'])
+def _score_manoeuvre(mdef, manoeuvre, aligned, template) -> dict:
+    return funcs.f_score_manoeuvre(mdef, manoeuvre, aligned, template)
 
-@fcscore_route("/align", ['POST'])
-def _align(fl, mdef) -> dict:
-    return funcs.align(fl, mdef)
-
-@fcscore_route("/score", ['POST'])
-def _score(al, mdef, direction) -> dict:
-    return funcs.score(al, mdef, direction)
-
-@fcscore_route("/example_manlist", ['POST'])
-def example_mans() -> dict:
-    return [p.stem for p in sorted(Path(("app/examples/")).glob("*.json"))]
 
 @fcscore_route("/create_fc_json", ['POST'])
 def _create_fcj(sts, mdefs, name, category) -> dict:

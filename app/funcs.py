@@ -1,10 +1,11 @@
 from flightdata import Flight
-from flightdata import State as St, Origin
+from flightdata import State, Origin
 from flightanalysis import (
     ManoeuvreAnalysis as MA, 
     ManDef, 
     ScheduleInfo,
-    SchedDef
+    SchedDef,
+    Manoeuvre
 )
 import numpy as np
 import pandas as pd
@@ -27,7 +28,7 @@ def fcj_to_states(fcj: dict, sinfo: dict):
     box = Origin.from_fcjson_parmameters(fcj["parameters"])
     sdef = ScheduleInfo.build(**sinfo).definition() #get_schedule_definition(data['fcj']["parameters"]["schedule"][1])
 
-    state = St.from_flight(flight, box).splitter_labels(
+    state = State.from_flight(flight, box).splitter_labels(
         fcj["mans"],
         [m.info.short_name for m in sdef]
     )
@@ -41,48 +42,63 @@ def fcj_to_states(fcj: dict, sinfo: dict):
     return mans
 
 
-def align(fl, mdef) -> dict:
-    """Perform the Sequence Alignment"""
-    st = St.from_dict(fl)
+def analyse_manoeuvre(fl: State, mdef: ManDef, direction: int):
+    res = align(fl, mdef, direction)
+    return score_manoeuvre(**res) if res.pop('success') else res
+
+def f_analyse_manoeuvre(fl, mdef, direction):
+    fl = State.from_dict(fl)
     mdef = ManDef.from_dict(mdef)
+    return {k: v.to_dict() for k, v in analyse_manoeuvre(fl, mdef, direction).items()}
+    
 
-    manoeuvre, tp = MA.template(mdef, MA.initial_transform(mdef, st))
-    res = MA.alignment(tp, manoeuvre, st)
-    intended, int_tp = MA.intention(manoeuvre, res[1], tp)
-    dist = np.sum(abs(int_tp.pos - res[1].pos))
+def align(fl: State, mdef: ManDef, direction: int) -> dict:
+    """Perform the Sequence Alignment"""
+    itrans = Transformation(fl[0].pos, mdef.info.start.initial_rotation(-direction))
+    manoeuvre, tp = MA.template(mdef, itrans)
+    dist, aligned = State.align(fl, tp, 10)
+    try:
+        manoeuvre, tp = manoeuvre.match_intention(tp[0], aligned)
+        dist, aligned = State.align(aligned, tp, 10, mirror=False)
+        manoeuvre, tp = manoeuvre.match_intention(tp[0], aligned)
+        success = True
+    except Exception as e:
+        success = False
+    return dict(success=success, mdef=mdef, manoeuvre=manoeuvre, aligned=aligned, template=tp)
+
+
+def score_manoeuvre(mdef: ManDef, manoeuvre: Manoeuvre, aligned: State, template: State):
+    aligned = manoeuvre.optimise_alignment(template[0], aligned)
+    manoeuvre, template = manoeuvre.match_intention(template[0], aligned) 
+    
+    mdef = ManDef(mdef.info, mdef.mps.update_defaults(manoeuvre), mdef.eds)
+    corrected_manoeuvre = mdef.create(template[0].transform).add_lines()
+    
+    manoeuvre = manoeuvre.copy_directions(corrected_manoeuvre)
+    template = manoeuvre.el_matched_tp(template[0], aligned)
+    
+    corrected_template = corrected_manoeuvre.create_template(template[0], aligned)
+
     return dict(
-        dist=dist,#res[0],
-        al=res[1].to_dict()
+        mdef=mdef,
+        manoeuvre=manoeuvre,
+        aligned=aligned,
+        template=template,
+        corrected=corrected_manoeuvre,
+        corrected_template = corrected_template,
+        score=MA(mdef, aligned, manoeuvre, template, corrected_manoeuvre, corrected_template).scores()
     )
     
-
-def score(al, mdef, direction) -> dict:
-    aligned = St.from_dict(al)
-    mdef: ManDef = ManDef.from_dict(mdef)
-
-    itrans = Transformation(aligned[0].pos, mdef.info.start.initial_rotation(-direction))
-    
-    intended, int_tp = mdef.create(itrans).add_lines().match_intention(St.from_transform(itrans),aligned)
-    corr = MA.correction(mdef, intended, int_tp, aligned)
-
-    intended= intended.copy_directions(corr)
-    
-    int_tp = intended.el_matched_tp(int_tp[0], aligned)
-    
-    ma = MA(mdef, aligned, intended, int_tp, corr, corr.create_template(itrans, aligned))
-
-    return dict(
-        mdef=mdef.to_dict(),
-        intended=ma.intended.to_dict(),
-        intended_template = ma.intended_template.to_dict(),
-        corrected=ma.corrected.to_dict(),
-        corrected_template = ma.corrected_template.to_dict(),
-        score=ma.scores().to_dict()
-    )
+def f_score_manoeuvre(mdef, manoeuvre, aligned, template):
+    mdef = ManDef.from_dict(mdef)
+    manoeuvre = manoeuvre.from_dict(manoeuvre)
+    al = State.from_dict(aligned)
+    tp = State.from_dict(template)
+    return {k: v.to_dict() for k, v in score_manoeuvre(mdef, manoeuvre, al, tp).items()}
 
 
 def create_fc_json(sts, mdefs, name, category) -> dict:
-    st = St(pd.DataFrame.from_dict(sts))
+    st = State(pd.DataFrame.from_dict(sts))
     return st.create_fc_json(
         SchedDef([ManDef.from_dict(mdef) for mdef in mdefs]), 
         name, 

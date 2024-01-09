@@ -14,7 +14,6 @@ from flightanalysis import ManDef
 app = Flask(__name__)
 CORS(app)
 
-
 def fcscore_route(name, methods=None):
     """decorator for routes to process response and return json string"""
     if methods is None:
@@ -44,8 +43,8 @@ def _analyse_manoeuvre(fl, mdef, direction) -> dict:
     return funcs.f_analyse_manoeuvre(fl, mdef, direction)
 
 @fcscore_route("/score_manoeuvre", ['POST'])
-def _score_manoeuvre(mdef, manoeuvre, aligned, template) -> dict:
-    return funcs.f_score_manoeuvre(mdef, manoeuvre, aligned, template)
+def _score_manoeuvre(mdef, manoeuvre, aligned, direction) -> dict:
+    return funcs.f_score_manoeuvre(mdef, manoeuvre, aligned, direction)
 
 
 @fcscore_route("/create_fc_json", ['POST'])

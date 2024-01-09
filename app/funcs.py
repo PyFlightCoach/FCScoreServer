@@ -49,12 +49,12 @@ def analyse_manoeuvre(fl: State, mdef: ManDef, direction: int):
 def f_analyse_manoeuvre(fl, mdef, direction):
     fl = State.from_dict(fl)
     mdef = ManDef.from_dict(mdef)
-    return {k: v.to_dict() for k, v in analyse_manoeuvre(fl, mdef, direction).items()}
+    return {k: v.to_dict() if hasattr(v, 'to_dict') else v for k, v in analyse_manoeuvre(fl, mdef, direction).items()}
     
 
 def align(fl: State, mdef: ManDef, direction: int) -> dict:
     """Perform the Sequence Alignment"""
-    itrans = Transformation(fl[0].pos, mdef.info.start.initial_rotation(-direction))
+    itrans = Transformation(fl[0].pos, mdef.info.start.initial_rotation(direction))
     manoeuvre, tp = MA.template(mdef, itrans)
     dist, aligned = State.align(fl, tp, 10)
     try:
@@ -64,20 +64,22 @@ def align(fl: State, mdef: ManDef, direction: int) -> dict:
         success = True
     except Exception as e:
         success = False
-    return dict(success=success, mdef=mdef, manoeuvre=manoeuvre, aligned=aligned, template=tp)
+    return dict(success=success, mdef=mdef, manoeuvre=manoeuvre, aligned=aligned, direction=direction)
 
 
-def score_manoeuvre(mdef: ManDef, manoeuvre: Manoeuvre, aligned: State, template: State):
-    aligned = manoeuvre.optimise_alignment(template[0], aligned)
-    manoeuvre, template = manoeuvre.match_intention(template[0], aligned) 
+def score_manoeuvre(mdef: ManDef, manoeuvre: Manoeuvre, aligned: State, direction: int):
+    istate = State.from_transform(Transformation(aligned[0].pos, mdef.info.start.initial_rotation(direction)))
+    
+    aligned = manoeuvre.optimise_alignment(istate, aligned)
+    manoeuvre, template = manoeuvre.match_intention(istate, aligned) 
     
     mdef = ManDef(mdef.info, mdef.mps.update_defaults(manoeuvre), mdef.eds)
-    corrected_manoeuvre = mdef.create(template[0].transform).add_lines()
+    corrected_manoeuvre = mdef.create(istate.transform).add_lines()
     
     manoeuvre = manoeuvre.copy_directions(corrected_manoeuvre)
-    template = manoeuvre.el_matched_tp(template[0], aligned)
+    template = manoeuvre.el_matched_tp(istate, aligned)
     
-    corrected_template = corrected_manoeuvre.create_template(template[0], aligned)
+    corrected_template = corrected_manoeuvre.create_template(istate, aligned)
 
     return dict(
         mdef=mdef,
@@ -89,12 +91,11 @@ def score_manoeuvre(mdef: ManDef, manoeuvre: Manoeuvre, aligned: State, template
         score=MA(mdef, aligned, manoeuvre, template, corrected_manoeuvre, corrected_template).scores()
     )
     
-def f_score_manoeuvre(mdef, manoeuvre, aligned, template):
+def f_score_manoeuvre(mdef, manoeuvre, aligned, direction):
     mdef = ManDef.from_dict(mdef)
-    manoeuvre = manoeuvre.from_dict(manoeuvre)
+    manoeuvre = Manoeuvre.from_dict(manoeuvre)
     al = State.from_dict(aligned)
-    tp = State.from_dict(template)
-    return {k: v.to_dict() for k, v in score_manoeuvre(mdef, manoeuvre, al, tp).items()}
+    return {k: v.to_dict() if hasattr(v, 'to_dict') else v for k, v in score_manoeuvre(mdef, manoeuvre, al, direction).items()}
 
 
 def create_fc_json(sts, mdefs, name, category) -> dict:

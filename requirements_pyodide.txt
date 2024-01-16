@@ -1,13 +1,11 @@
-flask
-flask-cors
 numpy
 pandas
 scipy
-fastdtw
+flask
+flask-cors
 gunicorn
-werkzeug
+fastdtw
 simplejson
-pymavlink
 ardupilot_log_reader
 pfc-geometry
 flightdata

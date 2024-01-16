@@ -39,8 +39,8 @@ def _fcj_to_states(fcj: dict, sinfo: dict):
     return funcs.fcj_to_states(fcj, sinfo)
 
 @fcscore_route("/analyse_manoeuvre", ['POST'])
-def _analyse_manoeuvre(fl, mdef, direction) -> dict:
-    return funcs.f_analyse_manoeuvre(fl, mdef, direction)
+def _analyse_manoeuvre(flown, mdef, direction) -> dict:
+    return funcs.f_analyse_manoeuvre(flown, mdef, direction)
 
 @fcscore_route("/score_manoeuvre", ['POST'])
 def _score_manoeuvre(mdef, manoeuvre, aligned, direction) -> dict:

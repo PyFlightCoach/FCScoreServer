@@ -37,26 +37,26 @@ def fcj_to_states(fcj: dict, sinfo: dict):
     for mdef in sdef:
         mans[mdef.info.short_name] = dict(
             mdef=mdef.to_dict(),
-            fl=state.get_manoeuvre(mdef.info.short_name).to_dict()
+            flown=state.get_manoeuvre(mdef.info.short_name).to_dict()
         )
     return mans
 
 
-def analyse_manoeuvre(fl: State, mdef: ManDef, direction: int):
-    res = align(fl, mdef, direction)
+def analyse_manoeuvre(flown: State, mdef: ManDef, direction: int):
+    res = align(flown, mdef, direction)
     return score_manoeuvre(**res) if res.pop('success') else res
 
-def f_analyse_manoeuvre(fl, mdef, direction):
-    fl = State.from_dict(fl)
+def f_analyse_manoeuvre(flown, mdef, direction):
+    flown = State.from_dict(flown)
     mdef = ManDef.from_dict(mdef)
-    return {k: v.to_dict() if hasattr(v, 'to_dict') else v for k, v in analyse_manoeuvre(fl, mdef, direction).items()}
+    return {k: v.to_dict() if hasattr(v, 'to_dict') else v for k, v in analyse_manoeuvre(flown, mdef, direction).items()}
     
 
-def align(fl: State, mdef: ManDef, direction: int) -> dict:
+def align(flown: State, mdef: ManDef, direction: int) -> dict:
     """Perform the Sequence Alignment"""
-    itrans = Transformation(fl[0].pos, mdef.info.start.initial_rotation(direction))
-    manoeuvre, tp = MA.template(mdef, itrans)
-    dist, aligned = State.align(fl, tp, 10)
+    itrans = Transformation(flown[0].pos, mdef.info.start.initial_rotation(direction))
+    manoeuvre, tp = MA.basic_manoeuvre(mdef, itrans)
+    dist, aligned = State.align(flown, tp, 10)
     try:
         manoeuvre, tp = manoeuvre.match_intention(tp[0], aligned)
         dist, aligned = State.align(aligned, tp, 10, mirror=False)

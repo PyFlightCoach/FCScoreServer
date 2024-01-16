@@ -1,4 +1,5 @@
 from app.app import app
+import os
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=False, processes=10)
+    app.run(debug=True, threaded=False, processes=os.cpu_count())

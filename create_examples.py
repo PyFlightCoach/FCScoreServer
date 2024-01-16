@@ -14,7 +14,7 @@ mans = fcj_to_states(
 
 for mn, man in mans.items():
     print(mn)
-    alres = f_analyse_manoeuvre(man['fl'], man['mdef'], -1)
+    alres = f_analyse_manoeuvre(man['flown'], man['mdef'], 1)
     
     with open(f"../FCScoreClient/static/examples/{mn}.json", 'w') as f:
         dump(alres, f, cls=NumpyEncoder)

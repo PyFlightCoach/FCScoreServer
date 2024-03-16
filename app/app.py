@@ -2,14 +2,11 @@ from flask import Flask
 from flask_cors import CORS
 from flask import request, current_app
 import simplejson as json
-import numpy as np
 from functools import wraps
 import app.funcs as funcs
-from pathlib import Path
 from flightdata import NumpyEncoder
 import os
-from flightdata import State as St
-from flightanalysis import ManDef
+from loguru import logger
 
 app = Flask(__name__)
 CORS(app)

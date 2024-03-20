@@ -12,3 +12,4 @@ ardupilot_log_reader
 pfc-geometry
 flightdata
 flightanalysis
+loguru

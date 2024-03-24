@@ -3,10 +3,12 @@ from flask_cors import CORS
 from flask import request, current_app
 import simplejson as json
 from functools import wraps
-import app.funcs as funcs
-from flightdata import NumpyEncoder
 import os
 from loguru import logger
+from flightdata import State, NumpyEncoder
+from flightanalysis import ManDef, ScheduleInfo, SchedDef, ma, ScheduleAnalysis
+import pandas as pd
+
 
 app = Flask(__name__)
 CORS(app)
@@ -32,22 +34,22 @@ def fcscore_route(name, methods=None):
     return outer
 
 @fcscore_route("/convert_fcj", ['POST'])
-def _fcj_to_states(fcj: dict, sinfo: dict):
-    return funcs.fcj_to_states(fcj, sinfo)
+def _convert_fcj(fcj: dict, sinfo: dict):
+    return ScheduleAnalysis.from_fcj(fcj, ScheduleInfo.build(**sinfo)).to_dict()
 
 @fcscore_route("/analyse_manoeuvre", ['POST'])
-def _analyse_manoeuvre(flown, mdef, direction) -> dict:
-    return funcs.f_analyse_manoeuvre(flown, mdef, direction)
-
-@fcscore_route("/score_manoeuvre", ['POST'])
-def _score_manoeuvre(mdef, manoeuvre, aligned, direction) -> dict:
-    return funcs.f_score_manoeuvre(mdef, manoeuvre, aligned, direction)
+def _analyse_manoeuvre(man: dict) -> dict:
+    return ma.Scored.from_dict(man).run_all().to_dict()
 
 
 @fcscore_route("/create_fc_json", ['POST'])
 def _create_fcj(sts, mdefs, name, category) -> dict:
-    return funcs.create_fc_json(sts, mdefs, name, category)
-
+    return State(pd.DataFrame.from_dict(sts)).create_fc_json(
+        SchedDef([ManDef.from_dict(mdef) for mdef in mdefs]), 
+        name, 
+        category
+    )
+    
 @fcscore_route("/version", ['POST'])
 def _version() -> dict:
     ver = os.getenv("PUBLIC_VERSION")
@@ -57,7 +59,8 @@ def _version() -> dict:
 
 @fcscore_route("/standard_f3a_mps", ["POST"])
 def _standard_f3a_mps():
-    return funcs.standard_f3a_mps()
+    from flightanalysis.definition.builders.manbuilder import f3amb
+    return f3amb.mps.to_dict()
 
 
 if __name__ == "__main__":

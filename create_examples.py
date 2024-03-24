@@ -1,20 +1,21 @@
 from flightanalysis import ScheduleInfo
 from json import load, dump
-from app.funcs import fcj_to_states, f_analyse_manoeuvre
+from flightdata import State, NumpyEncoder
+from flightanalysis import ManDef, ScheduleInfo, SchedDef, ma, ScheduleAnalysis
 from flightdata import NumpyEncoder
 
-with open('../../data/manual_F3A_P23_22_05_31_00000350.json', 'r') as f:
-    data = load(f)
 
+sa = ScheduleAnalysis.from_fcj(load(open(
+    '../../data/manual_F3A_P23_22_05_31_00000350.json', 
+    'r'
+))).run_all()
 
-mans = fcj_to_states(
-    data, 
-    ScheduleInfo.from_fcj_sch(data['parameters']['schedule']).__dict__
-)
+for man in sa:
+    print(man.name)
+    dump(
+        man.to_dict(), 
+        open(f"../FCScoreClient/static/examples/{man.name}.json", 'w'), 
+        cls=NumpyEncoder
+    )
 
-for mn, man in mans.items():
-    print(mn)
-    alres = f_analyse_manoeuvre(man['flown'], man['mdef'], 1)
-    
-    with open(f"../FCScoreClient/static/examples/{mn}.json", 'w') as f:
-        dump(alres, f, cls=NumpyEncoder)
+        

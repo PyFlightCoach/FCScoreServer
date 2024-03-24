@@ -13,3 +13,4 @@ pfc-geometry
 flightdata
 flightanalysis
 loguru
+joblib

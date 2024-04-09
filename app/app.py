@@ -4,11 +4,15 @@ from flask import request, current_app
 import simplejson as json
 from functools import wraps
 import os
-from loguru import logger
 from flightdata import State, NumpyEncoder
-from flightanalysis import ManDef, ScheduleInfo, SchedDef, ma, ScheduleAnalysis
+from flightanalysis import ManDef, SchedDef, ma, ScheduleAnalysis, ScheduleInfo
 import pandas as pd
+from loguru import logger
+import sys
 
+logger.enable("flightanalysis")
+logger.remove()
+logger.add(sys.stderr, level="INFO" )
 
 app = Flask(__name__)
 CORS(app)
@@ -35,12 +39,11 @@ def fcscore_route(name, methods=None):
 
 @fcscore_route("/convert_fcj", ['POST'])
 def _convert_fcj(fcj: dict, sinfo: dict):
-    return ScheduleAnalysis.from_fcj(fcj, ScheduleInfo.build(**sinfo)).to_dict()
+    return ScheduleAnalysis.from_fcj(fcj, ScheduleInfo(**sinfo)).to_dict()
 
 @fcscore_route("/analyse_manoeuvre", ['POST'])
 def _analyse_manoeuvre(man: dict) -> dict:
     return ma.Scored.from_dict(man).run_all().to_dict()
-
 
 @fcscore_route("/create_fc_json", ['POST'])
 def _create_fcj(sts, mdefs, name, category) -> dict:
@@ -49,7 +52,7 @@ def _create_fcj(sts, mdefs, name, category) -> dict:
         name, 
         category
     )
-    
+
 @fcscore_route("/version", ['POST'])
 def _version() -> dict:
     ver = os.getenv("PUBLIC_VERSION")

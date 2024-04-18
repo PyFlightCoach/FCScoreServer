@@ -1,4 +1,4 @@
-FROM thomasdavid/pyflightcoach:latest
+FROM thomasdavid/pyflightcoach:533734ca9
 
 LABEL maintainer "Thomas David, thomasdavid0@gmail.com"
 

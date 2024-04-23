@@ -43,7 +43,14 @@ def _convert_fcj(fcj: dict, sinfo: dict):
 
 @fcscore_route("/analyse_manoeuvre", ['POST'])
 def _analyse_manoeuvre(man: dict) -> dict:
-    return ma.Scored.from_dict(man).run_all().to_dict()
+    man = ma.Complete.from_dict(man)
+    man.stage = min(man.stage, ma.AlinmentStage.SECONDARY)
+    return man.run_all().to_dict()
+
+@fcscore_route("/score_manoeuvre", ["POST"])
+def _score_manoevure(man: dict) -> dict:
+    return ma.parse_dict(man).run_all(False).to_dict()
+
 
 @fcscore_route("/create_fc_json", ['POST'])
 def _create_fcj(sts, mdefs, name, category) -> dict:

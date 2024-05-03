@@ -12,7 +12,7 @@ import sys
 
 logger.enable("flightanalysis")
 logger.remove()
-logger.add(sys.stderr, level="INFO" )
+logger.add(sys.stderr, level="DEBUG" )
 
 app = Flask(__name__)
 CORS(app)
@@ -43,7 +43,7 @@ def _convert_fcj(fcj: dict, sinfo: dict):
 
 @fcscore_route("/analyse_manoeuvre", ['POST'])
 def _analyse_manoeuvre(man: dict) -> dict:
-    man = ma.Complete.from_dict(man)
+    man = ma.parse_dict(man)
     man.stage = min(man.stage, ma.AlinmentStage.SECONDARY)
     return man.run_all().to_dict()
 

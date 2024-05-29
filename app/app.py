@@ -1,6 +1,5 @@
-from flask import Flask
+from flask import Flask, request, current_app
 from flask_cors import CORS
-from flask import request, current_app
 import simplejson as json
 from functools import wraps
 import os
@@ -12,6 +11,8 @@ from time import time
 from uuid import uuid4
 from loguru import logger
 from datetime import datetime
+from .log_parser import TLog, last_log
+
 
 app = Flask(__name__)
 CORS(app)
@@ -37,13 +38,7 @@ def fcscore_route(name, methods=None):
         def innfun():
             interaction_id = uuid4()
             start_time = time()
-            log( 
-                'request', 
-                interaction_id,
-                methods[0],
-                name,
-                request.content_length
-            )
+            log('request', interaction_id,methods[0],name,request.content_length)
 
             response = current_app.response_class(
                 json.dumps(
@@ -54,12 +49,7 @@ def fcscore_route(name, methods=None):
                 mimetype="application/json"
             )
         
-            log( 
-                'response', 
-                interaction_id,
-                time() - start_time,
-                response.content_length
-            )
+            log('response', interaction_id,time() - start_time,response.content_length)
 
             return response
         return innfun
@@ -94,7 +84,6 @@ def _score_manoevure(id: str, man: dict) -> dict:
     log_manoeuvre(id, result)
     return result.to_dict()
 
-
 @fcscore_route("/create_fc_json", ['POST'])
 def _create_fcj(id: str, sts, mdefs, name, category) -> dict:
     return State(pd.DataFrame.from_dict(sts)).create_fc_json(
@@ -110,11 +99,14 @@ def _version(id: str) -> dict:
         ver = "next"
     return dict(version=ver)
 
-@fcscore_route("/standard_f3a_mps", ["POST"])
-def _standard_f3a_mps(id: str):
-    from flightanalysis.definition.builders.manbuilder import f3amb
-    return f3amb.mps.to_dict()
-
+@fcscore_route("/telemetry", ['GET'])
+def _telemetry(id: str) -> dict:
+    tlog = TLog.from_file(last_log())
+    return {
+        'processes': tlog.count_concurrent().to_dict(),
+        'data_in': tlog.data_in().to_dict(),
+        'data_out': tlog.data_out().to_dict()
+    }
 
 if __name__ == "__main__":
     app.run(debug=True)

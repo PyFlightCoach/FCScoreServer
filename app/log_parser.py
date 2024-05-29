@@ -45,17 +45,17 @@ class TLog:
         raise AttributeError(f'{name} not available')
     
     def count_concurrent(self):
-        dfon = pd.DataFrame(index=tlog.response.index - pd.to_timedelta(tlog.response.elapsed.astype(float), unit="s" ), data=np.ones(len(tlog.response)))
-        dfoff = pd.DataFrame(index=tlog.response.index, data=-np.ones(len(tlog.response)))
-        return pd.concat([dfon,dfoff]).sort_index().cumsum().iloc[:,0]
+        dfon = pd.DataFrame(index=self.response.index - pd.to_timedelta(self.response.elapsed.astype(float), unit="s" ), data=np.ones(len(self.response)))
+        dfoff = pd.DataFrame(index=self.response.index, data=-np.ones(len(self.response)))
+        return pd.concat([dfon,dfoff]).sort_index().cumsum().iloc[:,0].reset_index().set_axis(['time', 'processes'], axis=1).set_index('time')
 
     def data_in_out(self, name: str):
-        df = pd.DataFrame(tlog.data[name].length.astype(int) / 1000)
+        df = pd.DataFrame(self.data[name].length.astype(int) / 1000)
         df = df.assign(total=df.length.cumsum())
         if name == 'response':
-            df = df.assign(function=pd.merge(tlog.response, tlog.request, on='id').function.to_numpy())
+            df = df.assign(function=pd.merge(self.response, self.request, on='id').function.to_numpy())
         elif name == 'request':
-            df = df.assign(function=tlog.data[name].function)
+            df = df.assign(function=self.data[name].function)
         else:
             raise ValueError(f'Invalid name: {name}')
         return df
@@ -68,7 +68,8 @@ class TLog:
 
 
 if __name__ == "__main__":
-    tlog = TLog.from_file(last_log())
+    tlog = TLog.from_file("logs/telem.log")
+    print(tlog.count_concurrent())
     print(tlog.data_in())
     print(tlog.data_out())
     pass

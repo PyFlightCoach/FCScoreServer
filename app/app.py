@@ -18,12 +18,14 @@ app = Flask(__name__)
 CORS(app)
 
 
-logfile = Path(f'logs/{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}.log')
-logfile.touch()
+#logfile = Path(f'logs/{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}.log')
+logfile = Path('logs/telem.log')
+if not logfile.exists():
+    logfile.touch()
 
 
 logger.remove()
-logger.add(open(logfile, 'w'), level='INFO')
+logger.add(open(logfile, 'a'), level='INFO')
 
 def log(*args):
     logger.info(",".join([str(v) for v in args]))
@@ -99,13 +101,13 @@ def _version(id: str) -> dict:
         ver = "next"
     return dict(version=ver)
 
-@fcscore_route("/telemetry", ['GET'])
+@fcscore_route("/telemetry", ['POST'])
 def _telemetry(id: str) -> dict:
-    tlog = TLog.from_file(last_log())
+    tlog = TLog.from_file("logs/telem.log")
     return {
-        'processes': tlog.count_concurrent().to_dict(),
-        'data_in': tlog.data_in().to_dict(),
-        'data_out': tlog.data_out().to_dict()
+        'processes': tlog.count_concurrent().reset_index().astype(dict(time=int)).to_dict(orient='list'),
+        'data_in': tlog.data_in().reset_index().astype(dict(time=int)).to_dict(orient='list'),
+        'data_out': tlog.data_out().reset_index().astype(dict(time=int)).to_dict(orient='list')
     }
 
 if __name__ == "__main__":

@@ -10,13 +10,12 @@ from pathlib import Path
 from time import time
 from uuid import uuid4
 from loguru import logger
-from datetime import datetime
-from .log_parser import TLog, last_log
-
+from .log_parser import TLog
 
 app = Flask(__name__)
 CORS(app)
 
+logger.enable('flightanalysis')
 
 #logfile = Path(f'logs/{datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}.log')
 logfile = Path('logs/telem.log')
@@ -25,7 +24,7 @@ if not logfile.exists():
 
 
 logger.remove()
-logger.add(open(logfile, 'a'), level='INFO')
+logger.add(open(logfile, 'a'), level='DEBUG')
 
 def log(*args):
     logger.info(",".join([str(v) for v in args]))
@@ -74,17 +73,28 @@ def log_manoeuvre(id, result: ma.Scored):
 
 @fcscore_route("/analyse_manoeuvre", ['POST'])
 def _analyse_manoeuvre(id: str, man: dict) -> dict:
-    man: ma.Basic = ma.parse_dict(man)
-    man.stage = min(man.stage, ma.AlinmentStage.SECONDARY)
-    result = man.run_all()
+    result = ma.parse(man).run_all(True, True)
     log_manoeuvre(id, result)
     return result.to_dict()
 
 @fcscore_route("/score_manoeuvre", ["POST"])
 def _score_manoevure(id: str, man: dict) -> dict:
-    result = ma.parse_dict(man).run_all(False)
+    result = ma.parse(man).run_all(False, True)
     log_manoeuvre(id, result)
     return result.to_dict()
+
+@fcscore_route("/run_manoeuvre", ['POST'])
+def _run_manouevure(id: str, data: dict, optimise: bool, long_output: bool, force: bool) -> dict:
+    man = ma.parse(data).run_all(optimise, force)
+        
+    log_manoeuvre(id, man)
+    if long_output:
+        return dict(
+            **man.to_dict(), 
+            els=man.flown.label_ranges('element').to_dict('records')
+        )
+    else:
+        return man.to_mindict()
 
 @fcscore_route("/create_fc_json", ['POST'])
 def _create_fcj(id: str, sts, mdefs, name, category) -> dict:

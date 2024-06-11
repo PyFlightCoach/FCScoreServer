@@ -1,4 +1,4 @@
-flightanalysis==0.2.13
+flightanalysis==0.2.14
 flask
 flask-cors
 gunicorn

@@ -5,17 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Current File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "FCScore Server Debugger",
             "type": "debugpy",
             "request": "launch",
-            "program": "main.py",
+            "program": "server/main.py",
             "console": "integratedTerminal",
         }
     ]

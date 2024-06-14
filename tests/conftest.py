@@ -1,7 +1,7 @@
 from json import load
 from fastapi.testclient import TestClient
 from pytest import fixture
-from server.main import app
+from main import app
 from flightanalysis import ma
 
 
@@ -19,7 +19,7 @@ def fcj() -> dict:
 def short_manoeuvre(fcj: dict):
     return dict(
         id=0,
-        direction=1,
+        direction=0,
         sinfo=dict(category='f3a', name='f25'),
         origin=dict(
             lat=fcj['parameters']['pilotLat'],
@@ -41,7 +41,7 @@ def man():
 def long_manoeuvre(man: ma.Scored):
     return dict(
         mdef=man.mdef.to_dict(),
-        direction=1,
+        direction=0,
         id=0,
         flown=man.flown.to_dict(),
         manoeuvre=man.manoeuvre.to_dict(),

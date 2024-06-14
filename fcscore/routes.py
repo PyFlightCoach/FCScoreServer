@@ -1,41 +1,31 @@
-import uvicorn
 from flightanalysis import ma, ScheduleInfo, SchedDef, ManDef, Manoeuvre
 from flightdata import State, Flight
-from fastapi import FastAPI, Body, HTTPException
+from fastapi import Body, HTTPException, APIRouter
 import pandas as pd
-import server.schemas as s
+import fcscore.schemas as s
 import os
 from typing import Any, Annotated
-from fastapi.middleware.cors import CORSMiddleware
 import traceback
 from loguru import logger
+from time import time
+from fcscore.logs import log_run
 
 
-app = FastAPI()
 
-origins = [
-    "http://localhost:5173",
-]
+router = APIRouter()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-@app.post("/run_short_manoeuvre")
-def run_short_manouevre(
+@router.post("/run_short_manoeuvre")
+async def run_short_manouevre(
     id: Annotated[int, Body(description="The id of the manoeuvre, zero index")],
-    direction: Annotated[int, Body()],
-    sinfo: ScheduleInfo, 
-    origin: s.FCJOrigin,
-    data: list[s.FCJData], 
-    optimise_alignment: Annotated[bool, Body()], 
-    long_output: Annotated[bool, Body()],
-    els: Annotated[list[s.El], Body()]=None,
+    direction: Annotated[int, Body(description="The direction the schedule is flown in, 1 for left to right, -1 for right to left")],
+    sinfo: Annotated[ScheduleInfo, Body(description="The category and schedule, as per names in flight coach plotter ")], 
+    origin: Annotated[s.FCJOrigin, Body(description="Pilot position and heading to locate the box")],
+    data: Annotated[list[s.FCJData], Body(description="A slice of the flight coach json data corresponding to this manoeuvre")], 
+    optimise_alignment: Annotated[bool, Body(description="Should an alignment optimisation be performed? Aligmnent optimisation takes longer but gives kinder scores")], 
+    long_output: Annotated[bool, Body(description="Control the data contained in the response. False for scores and splits only, True for all plotting infrmation.")],
+    els: Annotated[list[s.El], Body(description="Optional, list of element split information from a previous run")]=None,
 ) -> s.ShortOutput | s.LongOutout:
+    start = time()
     try:
         
         st = State.from_flight(Flight.parse_fcj_data(
@@ -53,7 +43,9 @@ def run_short_manouevre(
             SchedDef.load(sinfo.fcj_to_pfc())[id], 
             st, 
             direction
-        ).proceed(optimise_alignment).run_all(optimise_alignment, False)
+        ).proceed().run_all(optimise_alignment, False)
+
+        log_run(start, optimise_alignment, man)
 
         return s.LongOutout.build(man) if long_output else s.ShortOutput.build(man)
     except Exception as ex:
@@ -61,37 +53,34 @@ def run_short_manouevre(
         raise HTTPException(status_code=500, detail=str(ex))
 
 
-@app.post("/run_long_manoeuvre")
-def run_long_manouevre(
+@router.post("/run_long_manoeuvre")
+async def run_long_manouevre(
     mdef: Annotated[dict[str, Any], Body()],
     direction: Annotated[int, Body()],
     id: Annotated[int, Body()],
     flown: list[s.State],
-    manoeuvre: Annotated[dict[str, Any], Body()],
-    template: list[s.State],
     optimise_alignment: Annotated[int, Body()]
 ) -> s.LongOutout:
-    try:    
-    
-        man = ma.Alignment(
+    start=time()
+    try:
+        
+        man = ma.Basic(
             id, 
             ManDef.from_dict(mdef), 
             State(pd.DataFrame([fl.__dict__ for fl in flown])), 
             direction, 
-            Manoeuvre.from_dict(manoeuvre), 
-            State(pd.DataFrame([tp.__dict__ for tp in template]))
-        ).run_all(optimise_alignment)
+        ).proceed().run_all(optimise_alignment)
+
+        log_run(start, optimise_alignment, man)
+
         return s.LongOutout.build(man)
-        
     except Exception as ex:
+        logger.error(traceback.format_exc(ex))
         raise HTTPException(status_code=500, detail=str(ex))
 
-@app.get("/version")
-def read_version() -> str:
+@router.get("/version")
+async def read_version() -> str:
     ver = os.getenv("PUBLIC_VERSION")
     if ver is None:
         ver = "next"
     return ver
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)

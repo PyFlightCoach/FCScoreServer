@@ -36,8 +36,6 @@ class FCJOrigin(BaseModel):
     def create(self):
         return Origin('fcj', g.GPS(self.lat, self.lng, self.alt), self.heading)
 
-
-
 class Score(BaseModel):
     intra: float
     inter: float
@@ -121,3 +119,10 @@ class LongOutout(ShortOutput):
             full_scores=man.scores.to_dict()
         )
 
+
+class TLog(BaseModel):
+    time:float
+    name:str
+    score:float
+    duration:float
+    optimised:bool

@@ -1,3 +1,5 @@
 flightanalysis==0.2.14
 fastapi
 joblib
+uvicorn[standard]
+gunicorn

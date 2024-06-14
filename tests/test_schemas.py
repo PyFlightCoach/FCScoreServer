@@ -1,5 +1,5 @@
 from .conftest import fcj, man
-import server.schemas as s
+import fcscore.schemas as s
 from flightanalysis import ScheduleInfo, ma, SchedDef
 
 

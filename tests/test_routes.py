@@ -4,7 +4,7 @@ from geometry import GPS
 from pytest import fixture
 from .conftest import client, fcj, short_manoeuvre, long_manoeuvre
 from fastapi.testclient import TestClient
-import server.schemas as s
+import fcscore.schemas as s
 import pandas as pd
 from json import load
 
@@ -20,6 +20,7 @@ def test_run_short_manoeuvre(client: TestClient, short_manoeuvre: dict):
     assert response.status_code == 200, response.json()['detail']
     data = response.json()
     assert 'els' in data
+    assert data['score']['positioning'] > 0
 
 
 def test_run_long_manoeuvre(client: TestClient, long_manoeuvre: dict):

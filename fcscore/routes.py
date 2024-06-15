@@ -1,4 +1,4 @@
-from flightanalysis import ma, ScheduleInfo, SchedDef, ManDef, Manoeuvre
+from flightanalysis import ma, ScheduleInfo, SchedDef, ManDef
 from flightdata import State, Flight
 from fastapi import Body, HTTPException, APIRouter
 import pandas as pd
@@ -84,3 +84,11 @@ async def read_version() -> str:
     if ver is None:
         ver = "next"
     return ver
+
+
+@router.get("/raw_telemetry")
+async def read_raw_telemetry() -> list[s.TLog]:
+    df = pd.read_csv('logs/run_history.log')
+    return [s.TLog(**r) for r in df.to_dict('records')]
+
+

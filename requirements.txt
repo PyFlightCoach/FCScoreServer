@@ -3,3 +3,4 @@ fastapi
 joblib
 uvicorn[standard]
 gunicorn
+PyYAML

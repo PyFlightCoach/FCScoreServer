@@ -6,11 +6,12 @@ import fcscore.schemas as s
 import os
 from typing import Any, Annotated
 import traceback
-from loguru import logger
 from time import time
-from fcscore.logs import log_run
+import logging
+from fastapi.responses import FileResponse
 
 
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -27,7 +28,6 @@ async def run_short_manouevre(
 ) -> s.ShortOutput | s.LongOutout:
     start = time()
     try:
-        
         st = State.from_flight(Flight.parse_fcj_data(
             origin.create(), 
             pd.DataFrame([d.__dict__ for d in data])
@@ -44,9 +44,8 @@ async def run_short_manouevre(
             st, 
             direction
         ).proceed().run_all(optimise_alignment, False)
-
-        log_run(start, optimise_alignment, man)
-
+        
+        logger.info(f'run_short,{time()-start},{man.mdef.info.short_name},{man.scores.score()}')
         return s.LongOutout.build(man) if long_output else s.ShortOutput.build(man)
     except Exception as ex:
         logger.error(traceback.format_exc())
@@ -71,8 +70,7 @@ async def run_long_manouevre(
             direction, 
         ).proceed().run_all(optimise_alignment)
 
-        log_run(start, optimise_alignment, man)
-
+        logger.info(f'run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}')
         return s.LongOutout.build(man)
     except Exception as ex:
         logger.error(traceback.format_exc(ex))
@@ -86,9 +84,8 @@ async def read_version() -> str:
     return ver
 
 
-@router.get("/raw_telemetry")
-async def read_raw_telemetry() -> list[s.TLog]:
-    df = pd.read_csv('logs/run_history.log')
-    return [s.TLog(**r) for r in df.to_dict('records')]
+@router.get("/telemetry", response_class=FileResponse)
+async def read_telemetry():
+    return 'logs/gunicorn.root.log'
 
 

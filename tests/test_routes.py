@@ -1,13 +1,10 @@
 from flightanalysis import ScheduleAnalysis, ma
 from flightdata import State, Flight, Origin
 from geometry import GPS
-from pytest import fixture
 from .conftest import client, fcj, short_manoeuvre, long_manoeuvre
 from fastapi.testclient import TestClient
 import fcscore.schemas as s
-import pandas as pd
-from json import load
-
+import io
 
 def test_version(client: TestClient):
     response = client.get('/version')
@@ -28,3 +25,9 @@ def test_run_long_manoeuvre(client: TestClient, long_manoeuvre: dict):
     assert response.status_code == 200, response.json()['detail']
     data = response.json()
     assert 'full_scores' in data
+
+
+def test_telemetry(client: TestClient):
+    file = client.get('/telemetry')
+    
+    assert 'INFO' in io.StringIO(file.text).readline()

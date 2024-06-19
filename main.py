@@ -12,6 +12,7 @@ def create_app() -> FastAPI:
     origins = [
         "http://localhost:5173",
         "http://localhost:4173",
+        "https://pyflightcoach.github.io"
     ]
 
     app.add_middleware(
@@ -26,4 +27,4 @@ def create_app() -> FastAPI:
 app = create_app()
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=5000)

@@ -10,14 +10,17 @@ RUN pip install -r requirements.txt
 
 ADD fcscore ./fcscore
 COPY logging.conf .
-COPY config.py .
+COPY gunicorn.conf.py .
 COPY main.py .
 RUN mkdir logs
+RUN touch logs/gunicorn.access.log
+RUN touch logs/gunicorn.error.log
+RUN touch logs/gunicorn.root.log
 
 ARG TAG
 ENV PUBLIC_VERSION $TAG
 RUN echo "VERSION = $TAG"
 
 EXPOSE 8000
-CMD [ "gunicorn", "-c", "config.py", "main:app", "--log-config", "logging.conf"]
+CMD [ "gunicorn", "main:app"]
 

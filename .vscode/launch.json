@@ -8,7 +8,7 @@
             "name": "FCScore Server Debugger",
             "type": "debugpy",
             "request": "launch",
-            "program": "server/main.py",
+            "program": "main.py",
             "console": "integratedTerminal",
         }
     ]

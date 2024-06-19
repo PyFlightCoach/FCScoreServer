@@ -4,9 +4,9 @@ A simple Flask API built around the pyflightcoach project to analyse aerobatic f
 
 ```bash
 docker build -t fcs_server --build-arg TAG=$(git describe --abbrev=0 --tags ) .
-docker run --rm -p 8000:8000 --name=fcs_server fcs_server
+docker run --rm -p 5000:5000 --name=fcs_server fcs_server
 ```
 
 ```bash
-    gunicorn main:app --workers 10 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000 --timeout 600
+    gunicorn main:app
 ```

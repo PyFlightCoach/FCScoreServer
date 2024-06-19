@@ -1,47 +1,7 @@
 from pydantic import BaseModel
 from flightanalysis import ma
 import geometry as g
-from flightdata import Origin
 from typing import Any
-
-class FCJData(BaseModel):
-    VN: float
-    VE: float
-    VD: float
-    dPD: float
-    r: float
-    p: float
-    yw: float
-    N: float
-    E: float
-    D: float
-    time: int
-    roll: float
-    pitch: float
-    yaw: float
-
-
-class El(BaseModel):
-    element: str
-    start: int
-    end: int
-
-
-class FCJOrigin(BaseModel):
-    lat: float
-    lng: float
-    alt: float
-    heading: float
-
-    def create(self):
-        return Origin('fcj', g.GPS(self.lat, self.lng, self.alt), self.heading)
-
-class Score(BaseModel):
-    intra: float
-    inter: float
-    positioning: float
-    total: float
-    k: float
 
 
 class Point(BaseModel):
@@ -80,14 +40,31 @@ class State(BaseModel):
     manoeuvre: str=None
     element: str=None
 
+
+class El(BaseModel):
+    name: str
+    start: int
+    stop: int
+
+
+class Score(BaseModel):
+    intra: float
+    inter: float
+    positioning: float
+    total: float
+    k: float
+
+
 class ShortOutput(BaseModel):
     els: list[El]
     score: Score
 
     @staticmethod
     def build(man: ma.Scored):
+        df = man.flown.label_ranges('element').iloc[:,:3]
+        df.columns = ['name', 'start', 'stop']
         return ShortOutput(
-            els=[El(**v) for v in man.flown.label_ranges('element').to_dict('records')],
+            els=[El(**v) for v in df.to_dict('records')],
             score = Score(
                 intra=man.scores.intra.total,
                 inter=man.scores.inter.total,

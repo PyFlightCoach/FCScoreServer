@@ -4015,3 +4015,2512 @@ For further information visit https://errors.pydantic.dev/2.7/u/schema-for-unkno
 2024-06-19 16:04:19 [637578] [ERROR] Worker (pid:637601) was sent SIGINT!
 2024-06-19 16:04:19 [637578] [ERROR] Worker (pid:637599) was sent SIGINT!
 2024-06-19 16:04:19 [637578] [INFO] Shutting down: Master
+2024-06-20 12:32:24 [11568] [INFO] Starting gunicorn 22.0.0
+2024-06-20 12:32:24 [11568] [INFO] Listening at: http://0.0.0.0:5000 (11568)
+2024-06-20 12:32:24 [11568] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-20 12:32:24 [11569] [INFO] Booting worker with pid: 11569
+2024-06-20 12:32:24 [11570] [INFO] Booting worker with pid: 11570
+2024-06-20 12:32:24 [11571] [INFO] Booting worker with pid: 11571
+2024-06-20 12:32:24 [11572] [INFO] Booting worker with pid: 11572
+2024-06-20 12:32:24 [11575] [INFO] Booting worker with pid: 11575
+2024-06-20 12:32:24 [11576] [INFO] Booting worker with pid: 11576
+2024-06-20 12:32:24 [11580] [INFO] Booting worker with pid: 11580
+2024-06-20 12:32:24 [11581] [INFO] Booting worker with pid: 11581
+2024-06-20 12:32:24 [11582] [INFO] Booting worker with pid: 11582
+2024-06-20 12:32:24 [11583] [INFO] Booting worker with pid: 11583
+2024-06-20 12:32:25 [11584] [INFO] Booting worker with pid: 11584
+2024-06-20 12:32:25 [11585] [INFO] Booting worker with pid: 11585
+2024-06-20 12:32:25 [11586] [INFO] Booting worker with pid: 11586
+2024-06-20 12:32:25 [11587] [INFO] Booting worker with pid: 11587
+2024-06-20 12:32:25 [11588] [INFO] Booting worker with pid: 11588
+2024-06-20 12:32:25 [11589] [INFO] Booting worker with pid: 11589
+2024-06-20 12:32:27 [11581] [INFO] Started server process [11581]
+2024-06-20 12:32:27 [11575] [INFO] Started server process [11575]
+2024-06-20 12:32:27 [11572] [INFO] Started server process [11572]
+2024-06-20 12:32:27 [11581] [INFO] Waiting for application startup.
+2024-06-20 12:32:27 [11575] [INFO] Waiting for application startup.
+2024-06-20 12:32:27 [11572] [INFO] Waiting for application startup.
+2024-06-20 12:32:27 [11581] [INFO] Application startup complete.
+2024-06-20 12:32:27 [11575] [INFO] Application startup complete.
+2024-06-20 12:32:27 [11572] [INFO] Application startup complete.
+2024-06-20 12:32:27 [11569] [INFO] Started server process [11569]
+2024-06-20 12:32:27 [11569] [INFO] Waiting for application startup.
+2024-06-20 12:32:27 [11569] [INFO] Application startup complete.
+2024-06-20 12:32:27 [11580] [INFO] Started server process [11580]
+2024-06-20 12:32:27 [11580] [INFO] Waiting for application startup.
+2024-06-20 12:32:27 [11580] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11576] [INFO] Started server process [11576]
+2024-06-20 12:32:28 [11576] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11576] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11570] [INFO] Started server process [11570]
+2024-06-20 12:32:28 [11570] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11570] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11571] [INFO] Started server process [11571]
+2024-06-20 12:32:28 [11571] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11571] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11582] [INFO] Started server process [11582]
+2024-06-20 12:32:28 [11582] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11582] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11583] [INFO] Started server process [11583]
+2024-06-20 12:32:28 [11583] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11583] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11585] [INFO] Started server process [11585]
+2024-06-20 12:32:28 [11585] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11585] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11584] [INFO] Started server process [11584]
+2024-06-20 12:32:28 [11584] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11584] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11586] [INFO] Started server process [11586]
+2024-06-20 12:32:28 [11586] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11586] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11588] [INFO] Started server process [11588]
+2024-06-20 12:32:28 [11588] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11588] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11589] [INFO] Started server process [11589]
+2024-06-20 12:32:28 [11589] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11589] [INFO] Application startup complete.
+2024-06-20 12:32:28 [11587] [INFO] Started server process [11587]
+2024-06-20 12:32:28 [11587] [INFO] Waiting for application startup.
+2024-06-20 12:32:28 [11587] [INFO] Application startup complete.
+2024-06-20 12:49:34 [11568] [INFO] Handling signal: winch
+2024-06-20 12:51:40 [11568] [INFO] Handling signal: winch
+2024-06-20 14:14:11 [11568] [INFO] Handling signal: winch
+2024-06-20 14:14:13 [11568] [INFO] Handling signal: winch
+2024-06-20 14:14:15 [11568] [INFO] Handling signal: winch
+2024-06-20 14:37:11 [11568] [INFO] Handling signal: int
+2024-06-20 14:37:11 [11571] [INFO] Shutting down
+2024-06-20 14:37:11 [11589] [INFO] Shutting down
+2024-06-20 14:37:11 [11588] [INFO] Shutting down
+2024-06-20 14:37:11 [11585] [INFO] Shutting down
+2024-06-20 14:37:11 [11571] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11588] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11589] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11585] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11569] [INFO] Shutting down
+2024-06-20 14:37:11 [11569] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11583] [INFO] Shutting down
+2024-06-20 14:37:11 [11572] [INFO] Shutting down
+2024-06-20 14:37:11 [11586] [INFO] Shutting down
+2024-06-20 14:37:11 [11581] [INFO] Shutting down
+2024-06-20 14:37:11 [11583] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11572] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11586] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:11 [11581] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11575] [INFO] Shutting down
+2024-06-20 14:37:12 [11575] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11587] [INFO] Shutting down
+2024-06-20 14:37:12 [11587] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11570] [INFO] Shutting down
+2024-06-20 14:37:12 [11570] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11584] [INFO] Shutting down
+2024-06-20 14:37:12 [11584] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11582] [INFO] Shutting down
+2024-06-20 14:37:12 [11582] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11580] [INFO] Shutting down
+2024-06-20 14:37:12 [11580] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11576] [INFO] Shutting down
+2024-06-20 14:37:12 [11576] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-20 14:37:12 [11571] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11588] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11585] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11589] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11571] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11588] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11585] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11589] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11571] [INFO] Finished server process [11571]
+2024-06-20 14:37:12 [11588] [INFO] Finished server process [11588]
+2024-06-20 14:37:12 [11585] [INFO] Finished server process [11585]
+2024-06-20 14:37:12 [11589] [INFO] Finished server process [11589]
+2024-06-20 14:37:12 [11569] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11569] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11569] [INFO] Finished server process [11569]
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11585) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11589) was sent SIGINT!
+2024-06-20 14:37:12 [11583] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11572] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11581] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11586] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11583] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11572] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11572] [INFO] Finished server process [11572]
+2024-06-20 14:37:12 [11581] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11586] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11583] [INFO] Finished server process [11583]
+2024-06-20 14:37:12 [11581] [INFO] Finished server process [11581]
+2024-06-20 14:37:12 [11586] [INFO] Finished server process [11586]
+2024-06-20 14:37:12 [11575] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11575] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11575] [INFO] Finished server process [11575]
+2024-06-20 14:37:12 [11587] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11587] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11587] [INFO] Finished server process [11587]
+2024-06-20 14:37:12 [11570] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11570] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11570] [INFO] Finished server process [11570]
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11581) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11572) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11575) was sent SIGINT!
+2024-06-20 14:37:12 [11584] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11584] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11584] [INFO] Finished server process [11584]
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11586) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11583) was sent SIGINT!
+2024-06-20 14:37:12 [11582] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11582] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11582] [INFO] Finished server process [11582]
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11587) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11570) was sent SIGINT!
+2024-06-20 14:37:12 [11580] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11580] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11580] [INFO] Finished server process [11580]
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11584) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11582) was sent SIGINT!
+2024-06-20 14:37:12 [11576] [INFO] Waiting for application shutdown.
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11580) was sent SIGINT!
+2024-06-20 14:37:12 [11576] [INFO] Application shutdown complete.
+2024-06-20 14:37:12 [11576] [INFO] Finished server process [11576]
+2024-06-20 14:37:12 [11568] [ERROR] Worker (pid:11576) was sent SIGINT!
+2024-06-20 14:37:12 [11568] [INFO] Shutting down: Master
+2024-06-20 14:57:44 [82230] [INFO] Starting gunicorn 22.0.0
+2024-06-20 14:57:44 [82230] [INFO] Listening at: http://0.0.0.0:5000 (82230)
+2024-06-20 14:57:44 [82230] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-20 14:57:44 [82239] [INFO] Booting worker with pid: 82239
+2024-06-20 14:57:44 [82240] [INFO] Booting worker with pid: 82240
+2024-06-20 14:57:44 [82241] [INFO] Booting worker with pid: 82241
+2024-06-20 14:57:44 [82242] [INFO] Booting worker with pid: 82242
+2024-06-20 14:57:44 [82243] [INFO] Booting worker with pid: 82243
+2024-06-20 14:57:45 [82244] [INFO] Booting worker with pid: 82244
+2024-06-20 14:57:45 [82245] [INFO] Booting worker with pid: 82245
+2024-06-20 14:57:45 [82246] [INFO] Booting worker with pid: 82246
+2024-06-20 14:57:45 [82249] [INFO] Booting worker with pid: 82249
+2024-06-20 14:57:45 [82251] [INFO] Booting worker with pid: 82251
+2024-06-20 14:57:45 [82252] [INFO] Booting worker with pid: 82252
+2024-06-20 14:57:45 [82253] [INFO] Booting worker with pid: 82253
+2024-06-20 14:57:45 [82254] [INFO] Booting worker with pid: 82254
+2024-06-20 14:57:45 [82255] [INFO] Booting worker with pid: 82255
+2024-06-20 14:57:45 [82256] [INFO] Booting worker with pid: 82256
+2024-06-20 14:57:45 [82258] [INFO] Booting worker with pid: 82258
+2024-06-20 14:57:47 [82240] [INFO] Started server process [82240]
+2024-06-20 14:57:47 [82240] [INFO] Waiting for application startup.
+2024-06-20 14:57:47 [82240] [INFO] Application startup complete.
+2024-06-20 14:57:47 [82239] [INFO] Started server process [82239]
+2024-06-20 14:57:47 [82239] [INFO] Waiting for application startup.
+2024-06-20 14:57:47 [82239] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82242] [INFO] Started server process [82242]
+2024-06-20 14:57:48 [82242] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82242] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82246] [INFO] Started server process [82246]
+2024-06-20 14:57:48 [82246] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82246] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82243] [INFO] Started server process [82243]
+2024-06-20 14:57:48 [82243] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82243] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82244] [INFO] Started server process [82244]
+2024-06-20 14:57:48 [82244] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82244] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82241] [INFO] Started server process [82241]
+2024-06-20 14:57:48 [82241] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82241] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82245] [INFO] Started server process [82245]
+2024-06-20 14:57:48 [82245] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82245] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82251] [INFO] Started server process [82251]
+2024-06-20 14:57:48 [82251] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82251] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82258] [INFO] Started server process [82258]
+2024-06-20 14:57:48 [82258] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82258] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82252] [INFO] Started server process [82252]
+2024-06-20 14:57:48 [82252] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82252] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82253] [INFO] Started server process [82253]
+2024-06-20 14:57:48 [82253] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82253] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82254] [INFO] Started server process [82254]
+2024-06-20 14:57:48 [82254] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82254] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82249] [INFO] Started server process [82249]
+2024-06-20 14:57:48 [82249] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82249] [INFO] Application startup complete.
+2024-06-20 14:57:48 [82255] [INFO] Started server process [82255]
+2024-06-20 14:57:48 [82255] [INFO] Waiting for application startup.
+2024-06-20 14:57:48 [82255] [INFO] Application startup complete.
+2024-06-20 14:57:49 [82256] [INFO] Started server process [82256]
+2024-06-20 14:57:49 [82256] [INFO] Waiting for application startup.
+2024-06-20 14:57:49 [82256] [INFO] Application startup complete.
+2024-06-20 21:02:13 [82230] [INFO] Handling signal: winch
+2024-06-20 21:02:13 [82230] [INFO] Handling signal: hup
+2024-06-20 21:02:13 [82230] [INFO] Hang up: Master
+2024-06-20 21:02:13 [146876] [INFO] Booting worker with pid: 146876
+2024-06-20 21:02:13 [146877] [INFO] Booting worker with pid: 146877
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82239) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82240) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82242) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82246) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82249) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82254) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82252) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82256) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82253) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82244) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82255) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82245) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82241) was sent SIGHUP!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82243) was sent SIGHUP!
+2024-06-20 21:02:13 [146899] [INFO] Booting worker with pid: 146899
+2024-06-20 21:02:13 [146901] [INFO] Booting worker with pid: 146901
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:82258) was sent SIGHUP!
+2024-06-20 21:02:13 [146904] [INFO] Booting worker with pid: 146904
+2024-06-20 21:02:13 [146905] [INFO] Booting worker with pid: 146905
+2024-06-20 21:02:13 [146906] [INFO] Booting worker with pid: 146906
+2024-06-20 21:02:13 [146907] [INFO] Booting worker with pid: 146907
+2024-06-20 21:02:13 [146908] [INFO] Booting worker with pid: 146908
+2024-06-20 21:02:13 [146909] [INFO] Booting worker with pid: 146909
+2024-06-20 21:02:13 [146910] [INFO] Booting worker with pid: 146910
+2024-06-20 21:02:13 [146911] [INFO] Booting worker with pid: 146911
+2024-06-20 21:02:13 [146912] [INFO] Booting worker with pid: 146912
+2024-06-20 21:02:13 [146913] [INFO] Booting worker with pid: 146913
+2024-06-20 21:02:13 [146914] [INFO] Booting worker with pid: 146914
+2024-06-20 21:02:13 [82230] [INFO] Handling signal: hup
+2024-06-20 21:02:13 [82230] [INFO] Hang up: Master
+2024-06-20 21:02:13 [146915] [INFO] Booting worker with pid: 146915
+2024-06-20 21:02:13 [146917] [INFO] Booting worker with pid: 146917
+2024-06-20 21:02:13 [146918] [INFO] Booting worker with pid: 146918
+2024-06-20 21:02:13 [146916] [INFO] Booting worker with pid: 146916
+2024-06-20 21:02:13 [146921] [INFO] Booting worker with pid: 146921
+2024-06-20 21:02:13 [146920] [INFO] Booting worker with pid: 146920
+2024-06-20 21:02:13 [146919] [INFO] Booting worker with pid: 146919
+2024-06-20 21:02:13 [146922] [INFO] Booting worker with pid: 146922
+2024-06-20 21:02:13 [146923] [INFO] Booting worker with pid: 146923
+2024-06-20 21:02:13 [146925] [INFO] Booting worker with pid: 146925
+2024-06-20 21:02:13 [146924] [INFO] Booting worker with pid: 146924
+2024-06-20 21:02:13 [146926] [INFO] Booting worker with pid: 146926
+2024-06-20 21:02:13 [146927] [INFO] Booting worker with pid: 146927
+2024-06-20 21:02:13 [146928] [INFO] Booting worker with pid: 146928
+2024-06-20 21:02:13 [146929] [INFO] Booting worker with pid: 146929
+2024-06-20 21:02:13 [146930] [INFO] Booting worker with pid: 146930
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146899) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146905) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146906) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146909) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146904) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146910) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146911) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146913) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146914) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146908) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146901) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146912) was sent SIGTERM!
+2024-06-20 21:02:13 [146931] [INFO] Booting worker with pid: 146931
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146907) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146876) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146915) was sent SIGTERM!
+2024-06-20 21:02:13 [82230] [ERROR] Worker (pid:146877) was sent SIGTERM!
+2024-06-20 21:02:14 [146918] [INFO] Started server process [146918]
+2024-06-20 21:02:14 [146918] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146918] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146921] [INFO] Started server process [146921]
+2024-06-20 21:02:14 [146921] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146921] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146916] [INFO] Started server process [146916]
+2024-06-20 21:02:14 [146916] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146916] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146923] [INFO] Started server process [146923]
+2024-06-20 21:02:14 [146923] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146923] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146928] [INFO] Started server process [146928]
+2024-06-20 21:02:14 [146928] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146928] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146920] [INFO] Started server process [146920]
+2024-06-20 21:02:14 [146920] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146920] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146917] [INFO] Started server process [146917]
+2024-06-20 21:02:14 [146917] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146917] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146930] [INFO] Started server process [146930]
+2024-06-20 21:02:14 [146930] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146930] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146931] [INFO] Started server process [146931]
+2024-06-20 21:02:14 [146931] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146931] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146924] [INFO] Started server process [146924]
+2024-06-20 21:02:14 [146924] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146924] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146926] [INFO] Started server process [146926]
+2024-06-20 21:02:14 [146926] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146926] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146922] [INFO] Started server process [146922]
+2024-06-20 21:02:14 [146922] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146922] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146927] [INFO] Started server process [146927]
+2024-06-20 21:02:14 [146927] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146927] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146925] [INFO] Started server process [146925]
+2024-06-20 21:02:14 [146925] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146925] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146929] [INFO] Started server process [146929]
+2024-06-20 21:02:14 [146929] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146929] [INFO] Application startup complete.
+2024-06-20 21:02:14 [146919] [INFO] Started server process [146919]
+2024-06-20 21:02:14 [146919] [INFO] Waiting for application startup.
+2024-06-20 21:02:14 [146919] [INFO] Application startup complete.
+2024-06-20 21:02:15 [82230] [INFO] Handling signal: term
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146916) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146921) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146928) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146920) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146925) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146924) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146922) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146923) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146918) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146926) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146917) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146927) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146929) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146919) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146931) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [ERROR] Worker (pid:146930) was sent SIGHUP!
+2024-06-20 21:02:15 [82230] [INFO] Shutting down: Master
+2024-06-21 07:16:29 [9412] [INFO] Starting gunicorn 22.0.0
+2024-06-21 07:16:29 [9412] [INFO] Listening at: http://0.0.0.0:5000 (9412)
+2024-06-21 07:16:29 [9412] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-21 07:16:29 [9413] [INFO] Booting worker with pid: 9413
+2024-06-21 07:16:29 [9414] [INFO] Booting worker with pid: 9414
+2024-06-21 07:16:29 [9415] [INFO] Booting worker with pid: 9415
+2024-06-21 07:16:29 [9416] [INFO] Booting worker with pid: 9416
+2024-06-21 07:16:29 [9417] [INFO] Booting worker with pid: 9417
+2024-06-21 07:16:29 [9418] [INFO] Booting worker with pid: 9418
+2024-06-21 07:16:29 [9419] [INFO] Booting worker with pid: 9419
+2024-06-21 07:16:29 [9420] [INFO] Booting worker with pid: 9420
+2024-06-21 07:16:29 [9421] [INFO] Booting worker with pid: 9421
+2024-06-21 07:16:30 [9424] [INFO] Booting worker with pid: 9424
+2024-06-21 07:16:30 [9425] [INFO] Booting worker with pid: 9425
+2024-06-21 07:16:30 [9426] [INFO] Booting worker with pid: 9426
+2024-06-21 07:16:30 [9427] [INFO] Booting worker with pid: 9427
+2024-06-21 07:16:30 [9429] [INFO] Booting worker with pid: 9429
+2024-06-21 07:16:30 [9431] [INFO] Booting worker with pid: 9431
+2024-06-21 07:16:30 [9433] [INFO] Booting worker with pid: 9433
+2024-06-21 07:16:31 [9412] [INFO] Handling signal: winch
+2024-06-21 07:16:32 [9415] [INFO] Started server process [9415]
+2024-06-21 07:16:32 [9415] [INFO] Waiting for application startup.
+2024-06-21 07:16:32 [9415] [INFO] Application startup complete.
+2024-06-21 07:16:32 [9413] [INFO] Started server process [9413]
+2024-06-21 07:16:32 [9413] [INFO] Waiting for application startup.
+2024-06-21 07:16:32 [9413] [INFO] Application startup complete.
+2024-06-21 07:16:32 [9414] [INFO] Started server process [9414]
+2024-06-21 07:16:32 [9414] [INFO] Waiting for application startup.
+2024-06-21 07:16:32 [9414] [INFO] Application startup complete.
+2024-06-21 07:16:32 [9416] [INFO] Started server process [9416]
+2024-06-21 07:16:32 [9416] [INFO] Waiting for application startup.
+2024-06-21 07:16:32 [9416] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9417] [INFO] Started server process [9417]
+2024-06-21 07:16:33 [9417] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9417] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9426] [INFO] Started server process [9426]
+2024-06-21 07:16:33 [9426] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9426] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9427] [INFO] Started server process [9427]
+2024-06-21 07:16:33 [9427] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9427] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9419] [INFO] Started server process [9419]
+2024-06-21 07:16:33 [9419] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9419] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9418] [INFO] Started server process [9418]
+2024-06-21 07:16:33 [9418] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9418] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9420] [INFO] Started server process [9420]
+2024-06-21 07:16:33 [9420] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9420] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9425] [INFO] Started server process [9425]
+2024-06-21 07:16:33 [9425] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9425] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9424] [INFO] Started server process [9424]
+2024-06-21 07:16:33 [9424] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9424] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9433] [INFO] Started server process [9433]
+2024-06-21 07:16:33 [9433] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9433] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9421] [INFO] Started server process [9421]
+2024-06-21 07:16:33 [9421] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9421] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9431] [INFO] Started server process [9431]
+2024-06-21 07:16:33 [9431] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9431] [INFO] Application startup complete.
+2024-06-21 07:16:33 [9429] [INFO] Started server process [9429]
+2024-06-21 07:16:33 [9429] [INFO] Waiting for application startup.
+2024-06-21 07:16:33 [9429] [INFO] Application startup complete.
+2024-06-21 09:00:37 [9412] [INFO] Handling signal: winch
+2024-06-21 09:00:38 [9412] [INFO] Handling signal: int
+2024-06-21 09:00:38 [9418] [INFO] Shutting down
+2024-06-21 09:00:38 [9418] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9431] [INFO] Shutting down
+2024-06-21 09:00:38 [9431] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9429] [INFO] Shutting down
+2024-06-21 09:00:38 [9429] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9433] [INFO] Shutting down
+2024-06-21 09:00:38 [9433] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9425] [INFO] Shutting down
+2024-06-21 09:00:38 [9425] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9417] [INFO] Shutting down
+2024-06-21 09:00:38 [9414] [INFO] Shutting down
+2024-06-21 09:00:38 [9426] [INFO] Shutting down
+2024-06-21 09:00:38 [9427] [INFO] Shutting down
+2024-06-21 09:00:38 [9414] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9426] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9417] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9427] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9415] [INFO] Shutting down
+2024-06-21 09:00:38 [9415] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9420] [INFO] Shutting down
+2024-06-21 09:00:38 [9420] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9416] [INFO] Shutting down
+2024-06-21 09:00:38 [9416] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9413] [INFO] Shutting down
+2024-06-21 09:00:38 [9413] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9424] [INFO] Shutting down
+2024-06-21 09:00:38 [9421] [INFO] Shutting down
+2024-06-21 09:00:38 [9421] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9424] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9419] [INFO] Shutting down
+2024-06-21 09:00:38 [9419] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-21 09:00:38 [9418] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9418] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9418] [INFO] Finished server process [9418]
+2024-06-21 09:00:38 [9431] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9431] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9431] [INFO] Finished server process [9431]
+2024-06-21 09:00:38 [9429] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9429] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9429] [INFO] Finished server process [9429]
+2024-06-21 09:00:38 [9433] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9433] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9433] [INFO] Finished server process [9433]
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9418) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9429) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9431) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9433) was sent SIGINT!
+2024-06-21 09:00:38 [9425] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9425] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9425] [INFO] Finished server process [9425]
+2024-06-21 09:00:38 [9414] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9417] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9427] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9426] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9414] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9417] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9426] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9427] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9414] [INFO] Finished server process [9414]
+2024-06-21 09:00:38 [9417] [INFO] Finished server process [9417]
+2024-06-21 09:00:38 [9426] [INFO] Finished server process [9426]
+2024-06-21 09:00:38 [9427] [INFO] Finished server process [9427]
+2024-06-21 09:00:38 [9415] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9415] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9415] [INFO] Finished server process [9415]
+2024-06-21 09:00:38 [9420] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9420] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9420] [INFO] Finished server process [9420]
+2024-06-21 09:00:38 [9416] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9416] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9416] [INFO] Finished server process [9416]
+2024-06-21 09:00:38 [9413] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9413] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9413] [INFO] Finished server process [9413]
+2024-06-21 09:00:38 [9424] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9421] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9424] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9421] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9424] [INFO] Finished server process [9424]
+2024-06-21 09:00:38 [9421] [INFO] Finished server process [9421]
+2024-06-21 09:00:38 [9419] [INFO] Waiting for application shutdown.
+2024-06-21 09:00:38 [9419] [INFO] Application shutdown complete.
+2024-06-21 09:00:38 [9419] [INFO] Finished server process [9419]
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9417) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9414) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9426) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9415) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9425) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9416) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9427) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9420) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9413) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9419) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9424) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [ERROR] Worker (pid:9421) was sent SIGINT!
+2024-06-21 09:00:38 [9412] [INFO] Shutting down: Master
+2024-06-25 10:56:57 [540133] [INFO] Starting gunicorn 22.0.0
+2024-06-25 10:56:57 [540133] [INFO] Listening at: http://0.0.0.0:5000 (540133)
+2024-06-25 10:56:57 [540133] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 10:56:57 [540142] [INFO] Booting worker with pid: 540142
+2024-06-25 10:56:57 [540143] [INFO] Booting worker with pid: 540143
+2024-06-25 10:56:57 [540145] [INFO] Booting worker with pid: 540145
+2024-06-25 10:56:57 [540163] [INFO] Booting worker with pid: 540163
+2024-06-25 10:56:57 [540172] [INFO] Booting worker with pid: 540172
+2024-06-25 10:56:57 [540175] [INFO] Booting worker with pid: 540175
+2024-06-25 10:56:57 [540176] [INFO] Booting worker with pid: 540176
+2024-06-25 10:56:57 [540177] [INFO] Booting worker with pid: 540177
+2024-06-25 10:56:57 [540178] [INFO] Booting worker with pid: 540178
+2024-06-25 10:56:57 [540179] [INFO] Booting worker with pid: 540179
+2024-06-25 10:56:57 [540180] [INFO] Booting worker with pid: 540180
+2024-06-25 10:56:57 [540182] [INFO] Booting worker with pid: 540182
+2024-06-25 10:56:57 [540201] [INFO] Booting worker with pid: 540201
+2024-06-25 10:56:57 [540211] [INFO] Booting worker with pid: 540211
+2024-06-25 10:56:57 [540222] [INFO] Booting worker with pid: 540222
+2024-06-25 10:56:57 [540223] [INFO] Booting worker with pid: 540223
+2024-06-25 10:57:00 [540172] [INFO] Started server process [540172]
+2024-06-25 10:57:00 [540172] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540172] [INFO] Application startup complete.
+2024-06-25 10:57:00 [540143] [INFO] Started server process [540143]
+2024-06-25 10:57:00 [540143] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540143] [INFO] Application startup complete.
+2024-06-25 10:57:00 [540175] [INFO] Started server process [540175]
+2024-06-25 10:57:00 [540175] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540175] [INFO] Application startup complete.
+2024-06-25 10:57:00 [540145] [INFO] Started server process [540145]
+2024-06-25 10:57:00 [540145] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540145] [INFO] Application startup complete.
+2024-06-25 10:57:00 [540163] [INFO] Started server process [540163]
+2024-06-25 10:57:00 [540163] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540163] [INFO] Application startup complete.
+2024-06-25 10:57:00 [540133] [INFO] Handling signal: winch
+2024-06-25 10:57:00 [540142] [INFO] Started server process [540142]
+2024-06-25 10:57:00 [540142] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540142] [INFO] Application startup complete.
+2024-06-25 10:57:00 [540176] [INFO] Started server process [540176]
+2024-06-25 10:57:00 [540176] [INFO] Waiting for application startup.
+2024-06-25 10:57:00 [540176] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540201] [INFO] Started server process [540201]
+2024-06-25 10:57:01 [540201] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540201] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540178] [INFO] Started server process [540178]
+2024-06-25 10:57:01 [540178] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540178] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540223] [INFO] Started server process [540223]
+2024-06-25 10:57:01 [540223] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540223] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540179] [INFO] Started server process [540179]
+2024-06-25 10:57:01 [540179] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540179] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540182] [INFO] Started server process [540182]
+2024-06-25 10:57:01 [540182] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540182] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540177] [INFO] Started server process [540177]
+2024-06-25 10:57:01 [540177] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540177] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540222] [INFO] Started server process [540222]
+2024-06-25 10:57:01 [540222] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540222] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540211] [INFO] Started server process [540211]
+2024-06-25 10:57:01 [540211] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540211] [INFO] Application startup complete.
+2024-06-25 10:57:01 [540180] [INFO] Started server process [540180]
+2024-06-25 10:57:01 [540180] [INFO] Waiting for application startup.
+2024-06-25 10:57:01 [540180] [INFO] Application startup complete.
+2024-06-25 10:57:48 [540222] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'enum', 'loc': ('response',), 'msg': 'Input should be 1 or -1', 'input': array([1.]), 'ctx': {'expected': '1 or -1'}}
+
+2024-06-25 10:58:53 [540182] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'enum', 'loc': ('response',), 'msg': 'Input should be 1 or -1', 'input': array([1.]), 'ctx': {'expected': '1 or -1'}}
+
+2024-06-25 10:59:16 [540178] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'enum', 'loc': ('response',), 'msg': 'Input should be 1 or -1', 'input': array([1.]), 'ctx': {'expected': '1 or -1'}}
+
+2024-06-25 11:00:05 [540133] [INFO] Handling signal: winch
+2024-06-25 11:00:42 [540133] [INFO] Handling signal: int
+2024-06-25 11:00:42 [540177] [INFO] Shutting down
+2024-06-25 11:00:42 [540177] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540223] [INFO] Shutting down
+2024-06-25 11:00:42 [540223] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540211] [INFO] Shutting down
+2024-06-25 11:00:42 [540211] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540145] [INFO] Shutting down
+2024-06-25 11:00:42 [540145] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540180] [INFO] Shutting down
+2024-06-25 11:00:42 [540201] [INFO] Shutting down
+2024-06-25 11:00:42 [540175] [INFO] Shutting down
+2024-06-25 11:00:42 [540180] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540201] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540175] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540163] [INFO] Shutting down
+2024-06-25 11:00:42 [540163] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540178] [INFO] Shutting down
+2024-06-25 11:00:42 [540222] [INFO] Shutting down
+2024-06-25 11:00:42 [540178] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540222] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540179] [INFO] Shutting down
+2024-06-25 11:00:42 [540179] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540182] [INFO] Shutting down
+2024-06-25 11:00:42 [540182] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540176] [INFO] Shutting down
+2024-06-25 11:00:42 [540176] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540172] [INFO] Shutting down
+2024-06-25 11:00:42 [540172] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540143] [INFO] Shutting down
+2024-06-25 11:00:42 [540143] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540142] [INFO] Shutting down
+2024-06-25 11:00:42 [540142] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:00:42 [540177] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540177] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540177] [INFO] Finished server process [540177]
+2024-06-25 11:00:42 [540223] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540223] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540223] [INFO] Finished server process [540223]
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540177) was sent SIGINT!
+2024-06-25 11:00:42 [540211] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540211] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540211] [INFO] Finished server process [540211]
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540223) was sent SIGINT!
+2024-06-25 11:00:42 [540145] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540145] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540145] [INFO] Finished server process [540145]
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540211) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540145) was sent SIGINT!
+2024-06-25 11:00:42 [540180] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540180] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540180] [INFO] Finished server process [540180]
+2024-06-25 11:00:42 [540201] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540175] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540201] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540201] [INFO] Finished server process [540201]
+2024-06-25 11:00:42 [540175] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540175] [INFO] Finished server process [540175]
+2024-06-25 11:00:42 [540163] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540163] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540163] [INFO] Finished server process [540163]
+2024-06-25 11:00:42 [540178] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540222] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540178] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540178] [INFO] Finished server process [540178]
+2024-06-25 11:00:42 [540222] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540222] [INFO] Finished server process [540222]
+2024-06-25 11:00:42 [540179] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540179] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540179] [INFO] Finished server process [540179]
+2024-06-25 11:00:42 [540176] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540176] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540176] [INFO] Finished server process [540176]
+2024-06-25 11:00:42 [540182] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540182] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540182] [INFO] Finished server process [540182]
+2024-06-25 11:00:42 [540172] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540172] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540143] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540172] [INFO] Finished server process [540172]
+2024-06-25 11:00:42 [540143] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540143] [INFO] Finished server process [540143]
+2024-06-25 11:00:42 [540142] [INFO] Waiting for application shutdown.
+2024-06-25 11:00:42 [540142] [INFO] Application shutdown complete.
+2024-06-25 11:00:42 [540142] [INFO] Finished server process [540142]
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540180) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540163) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540175) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540201) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540179) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540178) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540176) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540182) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540143) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540142) was sent SIGINT!
+2024-06-25 11:00:42 [540133] [ERROR] Worker (pid:540172) was sent SIGINT!
+2024-06-25 11:01:12 [540133] [INFO] Shutting down: Master
+2024-06-25 11:05:28 [567280] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:05:28 [567280] [INFO] Listening at: http://0.0.0.0:5000 (567280)
+2024-06-25 11:05:28 [567280] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:05:28 [567284] [INFO] Booting worker with pid: 567284
+2024-06-25 11:05:28 [567288] [INFO] Booting worker with pid: 567288
+2024-06-25 11:05:28 [567289] [INFO] Booting worker with pid: 567289
+2024-06-25 11:05:28 [567290] [INFO] Booting worker with pid: 567290
+2024-06-25 11:05:28 [567291] [INFO] Booting worker with pid: 567291
+2024-06-25 11:05:28 [567292] [INFO] Booting worker with pid: 567292
+2024-06-25 11:05:28 [567298] [INFO] Booting worker with pid: 567298
+2024-06-25 11:05:28 [567302] [INFO] Booting worker with pid: 567302
+2024-06-25 11:05:28 [567324] [INFO] Booting worker with pid: 567324
+2024-06-25 11:05:28 [567331] [INFO] Booting worker with pid: 567331
+2024-06-25 11:05:28 [567332] [INFO] Booting worker with pid: 567332
+2024-06-25 11:05:28 [567333] [INFO] Booting worker with pid: 567333
+2024-06-25 11:05:28 [567334] [INFO] Booting worker with pid: 567334
+2024-06-25 11:05:28 [567347] [INFO] Booting worker with pid: 567347
+2024-06-25 11:05:28 [567358] [INFO] Booting worker with pid: 567358
+2024-06-25 11:05:29 [567363] [INFO] Booting worker with pid: 567363
+2024-06-25 11:05:29 [567280] [INFO] Handling signal: winch
+2024-06-25 11:05:31 [567284] [INFO] Started server process [567284]
+2024-06-25 11:05:31 [567284] [INFO] Waiting for application startup.
+2024-06-25 11:05:31 [567284] [INFO] Application startup complete.
+2024-06-25 11:05:31 [567288] [INFO] Started server process [567288]
+2024-06-25 11:05:31 [567288] [INFO] Waiting for application startup.
+2024-06-25 11:05:31 [567288] [INFO] Application startup complete.
+2024-06-25 11:05:31 [567289] [INFO] Started server process [567289]
+2024-06-25 11:05:31 [567289] [INFO] Waiting for application startup.
+2024-06-25 11:05:31 [567289] [INFO] Application startup complete.
+2024-06-25 11:05:31 [567291] [INFO] Started server process [567291]
+2024-06-25 11:05:31 [567291] [INFO] Waiting for application startup.
+2024-06-25 11:05:31 [567291] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567292] [INFO] Started server process [567292]
+2024-06-25 11:05:32 [567292] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567292] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567332] [INFO] Started server process [567332]
+2024-06-25 11:05:32 [567332] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567332] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567290] [INFO] Started server process [567290]
+2024-06-25 11:05:32 [567290] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567290] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567298] [INFO] Started server process [567298]
+2024-06-25 11:05:32 [567298] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567298] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567331] [INFO] Started server process [567331]
+2024-06-25 11:05:32 [567331] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567331] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567347] [INFO] Started server process [567347]
+2024-06-25 11:05:32 [567347] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567347] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567334] [INFO] Started server process [567334]
+2024-06-25 11:05:32 [567334] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567334] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567324] [INFO] Started server process [567324]
+2024-06-25 11:05:32 [567324] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567324] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567333] [INFO] Started server process [567333]
+2024-06-25 11:05:32 [567333] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567333] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567302] [INFO] Started server process [567302]
+2024-06-25 11:05:32 [567302] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567302] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567358] [INFO] Started server process [567358]
+2024-06-25 11:05:32 [567358] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567358] [INFO] Application startup complete.
+2024-06-25 11:05:32 [567363] [INFO] Started server process [567363]
+2024-06-25 11:05:32 [567363] [INFO] Waiting for application startup.
+2024-06-25 11:05:32 [567363] [INFO] Application startup complete.
+2024-06-25 11:08:27 [567280] [INFO] Handling signal: winch
+2024-06-25 11:09:05 [567280] [INFO] Handling signal: int
+2024-06-25 11:09:05 [567291] [INFO] Shutting down
+2024-06-25 11:09:05 [567291] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567334] [INFO] Shutting down
+2024-06-25 11:09:06 [567334] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567333] [INFO] Shutting down
+2024-06-25 11:09:06 [567333] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567290] [INFO] Shutting down
+2024-06-25 11:09:06 [567290] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567332] [INFO] Shutting down
+2024-06-25 11:09:06 [567332] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567289] [INFO] Shutting down
+2024-06-25 11:09:06 [567284] [INFO] Shutting down
+2024-06-25 11:09:06 [567289] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567284] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567324] [INFO] Shutting down
+2024-06-25 11:09:06 [567324] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567363] [INFO] Shutting down
+2024-06-25 11:09:06 [567363] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567292] [INFO] Shutting down
+2024-06-25 11:09:06 [567292] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567358] [INFO] Shutting down
+2024-06-25 11:09:06 [567288] [INFO] Shutting down
+2024-06-25 11:09:06 [567302] [INFO] Shutting down
+2024-06-25 11:09:06 [567288] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567347] [INFO] Shutting down
+2024-06-25 11:09:06 [567302] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567358] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567331] [INFO] Shutting down
+2024-06-25 11:09:06 [567347] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567331] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567298] [INFO] Shutting down
+2024-06-25 11:09:06 [567298] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:09:06 [567291] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567291] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567291] [INFO] Finished server process [567291]
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567291) was sent SIGINT!
+2024-06-25 11:09:06 [567334] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567334] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567334] [INFO] Finished server process [567334]
+2024-06-25 11:09:06 [567333] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567333] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567333] [INFO] Finished server process [567333]
+2024-06-25 11:09:06 [567290] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567290] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567290] [INFO] Finished server process [567290]
+2024-06-25 11:09:06 [567332] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567332] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567332] [INFO] Finished server process [567332]
+2024-06-25 11:09:06 [567289] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567284] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567289] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567289] [INFO] Finished server process [567289]
+2024-06-25 11:09:06 [567284] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567284] [INFO] Finished server process [567284]
+2024-06-25 11:09:06 [567324] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567324] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567324] [INFO] Finished server process [567324]
+2024-06-25 11:09:06 [567363] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567363] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567363] [INFO] Finished server process [567363]
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567334) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567333) was sent SIGINT!
+2024-06-25 11:09:06 [567292] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567288] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567302] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567292] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567347] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567284) was sent SIGINT!
+2024-06-25 11:09:06 [567358] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567302] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567331] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567292] [INFO] Finished server process [567292]
+2024-06-25 11:09:06 [567347] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567288] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567358] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567331] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567302] [INFO] Finished server process [567302]
+2024-06-25 11:09:06 [567288] [INFO] Finished server process [567288]
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567289) was sent SIGINT!
+2024-06-25 11:09:06 [567347] [INFO] Finished server process [567347]
+2024-06-25 11:09:06 [567331] [INFO] Finished server process [567331]
+2024-06-25 11:09:06 [567358] [INFO] Finished server process [567358]
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567290) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567332) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567363) was sent SIGINT!
+2024-06-25 11:09:06 [567298] [INFO] Waiting for application shutdown.
+2024-06-25 11:09:06 [567298] [INFO] Application shutdown complete.
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567324) was sent SIGINT!
+2024-06-25 11:09:06 [567298] [INFO] Finished server process [567298]
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567298) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567347) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567292) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567288) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567331) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567358) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [ERROR] Worker (pid:567302) was sent SIGINT!
+2024-06-25 11:09:06 [567280] [INFO] Shutting down: Master
+2024-06-25 11:09:07 [578706] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:09:07 [578706] [INFO] Listening at: http://0.0.0.0:5000 (578706)
+2024-06-25 11:09:07 [578706] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:09:07 [578707] [INFO] Booting worker with pid: 578707
+2024-06-25 11:09:07 [578708] [INFO] Booting worker with pid: 578708
+2024-06-25 11:09:07 [578712] [INFO] Booting worker with pid: 578712
+2024-06-25 11:09:07 [578734] [INFO] Booting worker with pid: 578734
+2024-06-25 11:09:08 [578757] [INFO] Booting worker with pid: 578757
+2024-06-25 11:09:08 [578764] [INFO] Booting worker with pid: 578764
+2024-06-25 11:09:08 [578767] [INFO] Booting worker with pid: 578767
+2024-06-25 11:09:08 [578769] [INFO] Booting worker with pid: 578769
+2024-06-25 11:09:08 [578770] [INFO] Booting worker with pid: 578770
+2024-06-25 11:09:08 [578771] [INFO] Booting worker with pid: 578771
+2024-06-25 11:09:08 [578772] [INFO] Booting worker with pid: 578772
+2024-06-25 11:09:08 [578773] [INFO] Booting worker with pid: 578773
+2024-06-25 11:09:08 [578774] [INFO] Booting worker with pid: 578774
+2024-06-25 11:09:08 [578775] [INFO] Booting worker with pid: 578775
+2024-06-25 11:09:08 [578776] [INFO] Booting worker with pid: 578776
+2024-06-25 11:09:08 [578780] [INFO] Booting worker with pid: 578780
+2024-06-25 11:09:10 [578708] [INFO] Started server process [578708]
+2024-06-25 11:09:10 [578708] [INFO] Waiting for application startup.
+2024-06-25 11:09:10 [578708] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578707] [INFO] Started server process [578707]
+2024-06-25 11:09:11 [578707] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578707] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578757] [INFO] Started server process [578757]
+2024-06-25 11:09:11 [578757] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578757] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578712] [INFO] Started server process [578712]
+2024-06-25 11:09:11 [578712] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578712] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578734] [INFO] Started server process [578734]
+2024-06-25 11:09:11 [578764] [INFO] Started server process [578764]
+2024-06-25 11:09:11 [578734] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578764] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578764] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578734] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578769] [INFO] Started server process [578769]
+2024-06-25 11:09:11 [578769] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578769] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578767] [INFO] Started server process [578767]
+2024-06-25 11:09:11 [578767] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578767] [INFO] Application startup complete.
+2024-06-25 11:09:11 [578770] [INFO] Started server process [578770]
+2024-06-25 11:09:11 [578770] [INFO] Waiting for application startup.
+2024-06-25 11:09:11 [578770] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578773] [INFO] Started server process [578773]
+2024-06-25 11:09:12 [578773] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578773] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578771] [INFO] Started server process [578771]
+2024-06-25 11:09:12 [578771] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578771] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578776] [INFO] Started server process [578776]
+2024-06-25 11:09:12 [578776] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578776] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578774] [INFO] Started server process [578774]
+2024-06-25 11:09:12 [578774] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578774] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578780] [INFO] Started server process [578780]
+2024-06-25 11:09:12 [578780] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578780] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578772] [INFO] Started server process [578772]
+2024-06-25 11:09:12 [578772] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578772] [INFO] Application startup complete.
+2024-06-25 11:09:12 [578775] [INFO] Started server process [578775]
+2024-06-25 11:09:12 [578775] [INFO] Waiting for application startup.
+2024-06-25 11:09:12 [578775] [INFO] Application startup complete.
+2024-06-25 11:21:17 [578706] [INFO] Handling signal: winch
+2024-06-25 11:25:17 [578706] [INFO] Handling signal: int
+2024-06-25 11:25:18 [578708] [INFO] Shutting down
+2024-06-25 11:25:18 [578708] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578771] [INFO] Shutting down
+2024-06-25 11:25:18 [578771] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578780] [INFO] Shutting down
+2024-06-25 11:25:18 [578780] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578712] [INFO] Shutting down
+2024-06-25 11:25:18 [578712] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578775] [INFO] Shutting down
+2024-06-25 11:25:18 [578775] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578776] [INFO] Shutting down
+2024-06-25 11:25:18 [578776] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578773] [INFO] Shutting down
+2024-06-25 11:25:18 [578773] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578774] [INFO] Shutting down
+2024-06-25 11:25:18 [578774] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578764] [INFO] Shutting down
+2024-06-25 11:25:18 [578764] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578770] [INFO] Shutting down
+2024-06-25 11:25:18 [578734] [INFO] Shutting down
+2024-06-25 11:25:18 [578757] [INFO] Shutting down
+2024-06-25 11:25:18 [578734] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578757] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578770] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578767] [INFO] Shutting down
+2024-06-25 11:25:18 [578767] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578769] [INFO] Shutting down
+2024-06-25 11:25:18 [578769] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578707] [INFO] Shutting down
+2024-06-25 11:25:18 [578707] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578772] [INFO] Shutting down
+2024-06-25 11:25:18 [578772] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:25:18 [578708] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578708] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578708] [INFO] Finished server process [578708]
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578708) was sent SIGINT!
+2024-06-25 11:25:18 [578771] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578771] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578771] [INFO] Finished server process [578771]
+2024-06-25 11:25:18 [578780] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578780] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578780] [INFO] Finished server process [578780]
+2024-06-25 11:25:18 [578712] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578712] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578712] [INFO] Finished server process [578712]
+2024-06-25 11:25:18 [578775] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578775] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578775] [INFO] Finished server process [578775]
+2024-06-25 11:25:18 [578776] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578776] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578776] [INFO] Finished server process [578776]
+2024-06-25 11:25:18 [578773] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578773] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578773] [INFO] Finished server process [578773]
+2024-06-25 11:25:18 [578774] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578774] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578764] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578774] [INFO] Finished server process [578774]
+2024-06-25 11:25:18 [578764] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578764] [INFO] Finished server process [578764]
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578712) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578780) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578771) was sent SIGINT!
+2024-06-25 11:25:18 [578770] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578757] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578770] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578757] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578734] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578757] [INFO] Finished server process [578757]
+2024-06-25 11:25:18 [578770] [INFO] Finished server process [578770]
+2024-06-25 11:25:18 [578734] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578767] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578734] [INFO] Finished server process [578734]
+2024-06-25 11:25:18 [578767] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578767] [INFO] Finished server process [578767]
+2024-06-25 11:25:18 [578769] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578776) was sent SIGINT!
+2024-06-25 11:25:18 [578769] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578769] [INFO] Finished server process [578769]
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578775) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578773) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578764) was sent SIGINT!
+2024-06-25 11:25:18 [578707] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578707] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578707] [INFO] Finished server process [578707]
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578757) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578774) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578734) was sent SIGINT!
+2024-06-25 11:25:18 [578772] [INFO] Waiting for application shutdown.
+2024-06-25 11:25:18 [578772] [INFO] Application shutdown complete.
+2024-06-25 11:25:18 [578772] [INFO] Finished server process [578772]
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578770) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578767) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578769) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578707) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [ERROR] Worker (pid:578772) was sent SIGINT!
+2024-06-25 11:25:18 [578706] [INFO] Shutting down: Master
+2024-06-25 11:25:20 [624123] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:25:20 [624123] [INFO] Listening at: http://0.0.0.0:5000 (624123)
+2024-06-25 11:25:20 [624123] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:25:20 [624160] [INFO] Booting worker with pid: 624160
+2024-06-25 11:25:20 [624161] [INFO] Booting worker with pid: 624161
+2024-06-25 11:25:20 [624162] [INFO] Booting worker with pid: 624162
+2024-06-25 11:25:20 [624163] [INFO] Booting worker with pid: 624163
+2024-06-25 11:25:20 [624164] [INFO] Booting worker with pid: 624164
+2024-06-25 11:25:20 [624165] [INFO] Booting worker with pid: 624165
+2024-06-25 11:25:20 [624166] [INFO] Booting worker with pid: 624166
+2024-06-25 11:25:20 [624167] [INFO] Booting worker with pid: 624167
+2024-06-25 11:25:20 [624168] [INFO] Booting worker with pid: 624168
+2024-06-25 11:25:20 [624169] [INFO] Booting worker with pid: 624169
+2024-06-25 11:25:20 [624170] [INFO] Booting worker with pid: 624170
+2024-06-25 11:25:20 [624171] [INFO] Booting worker with pid: 624171
+2024-06-25 11:25:20 [624172] [INFO] Booting worker with pid: 624172
+2024-06-25 11:25:20 [624173] [INFO] Booting worker with pid: 624173
+2024-06-25 11:25:20 [624178] [INFO] Booting worker with pid: 624178
+2024-06-25 11:25:21 [624183] [INFO] Booting worker with pid: 624183
+2024-06-25 11:25:23 [624161] [INFO] Started server process [624161]
+2024-06-25 11:25:23 [624161] [INFO] Waiting for application startup.
+2024-06-25 11:25:23 [624161] [INFO] Application startup complete.
+2024-06-25 11:25:23 [624160] [INFO] Started server process [624160]
+2024-06-25 11:25:23 [624160] [INFO] Waiting for application startup.
+2024-06-25 11:25:23 [624160] [INFO] Application startup complete.
+2024-06-25 11:25:23 [624162] [INFO] Started server process [624162]
+2024-06-25 11:25:23 [624162] [INFO] Waiting for application startup.
+2024-06-25 11:25:23 [624162] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624163] [INFO] Started server process [624163]
+2024-06-25 11:25:24 [624163] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624163] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624165] [INFO] Started server process [624165]
+2024-06-25 11:25:24 [624165] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624164] [INFO] Started server process [624164]
+2024-06-25 11:25:24 [624164] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624164] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624165] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624166] [INFO] Started server process [624166]
+2024-06-25 11:25:24 [624166] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624166] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624169] [INFO] Started server process [624169]
+2024-06-25 11:25:24 [624169] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624169] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624178] [INFO] Started server process [624178]
+2024-06-25 11:25:24 [624178] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624178] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624168] [INFO] Started server process [624168]
+2024-06-25 11:25:24 [624168] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624168] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624167] [INFO] Started server process [624167]
+2024-06-25 11:25:24 [624167] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624167] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624173] [INFO] Started server process [624173]
+2024-06-25 11:25:24 [624173] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624173] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624172] [INFO] Started server process [624172]
+2024-06-25 11:25:24 [624170] [INFO] Started server process [624170]
+2024-06-25 11:25:24 [624172] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624170] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624172] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624170] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624171] [INFO] Started server process [624171]
+2024-06-25 11:25:24 [624171] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624171] [INFO] Application startup complete.
+2024-06-25 11:25:24 [624183] [INFO] Started server process [624183]
+2024-06-25 11:25:24 [624183] [INFO] Waiting for application startup.
+2024-06-25 11:25:24 [624183] [INFO] Application startup complete.
+2024-06-25 11:30:12 [624123] [INFO] Handling signal: int
+2024-06-25 11:30:12 [624161] [INFO] Shutting down
+2024-06-25 11:30:12 [624166] [INFO] Shutting down
+2024-06-25 11:30:12 [624161] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624170] [INFO] Shutting down
+2024-06-25 11:30:12 [624166] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624170] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624172] [INFO] Shutting down
+2024-06-25 11:30:12 [624172] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624173] [INFO] Shutting down
+2024-06-25 11:30:12 [624173] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624171] [INFO] Shutting down
+2024-06-25 11:30:12 [624171] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624160] [INFO] Shutting down
+2024-06-25 11:30:12 [624160] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624183] [INFO] Shutting down
+2024-06-25 11:30:12 [624183] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624178] [INFO] Shutting down
+2024-06-25 11:30:12 [624178] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624169] [INFO] Shutting down
+2024-06-25 11:30:12 [624169] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624165] [INFO] Shutting down
+2024-06-25 11:30:12 [624164] [INFO] Shutting down
+2024-06-25 11:30:12 [624165] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624164] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624167] [INFO] Shutting down
+2024-06-25 11:30:12 [624168] [INFO] Shutting down
+2024-06-25 11:30:12 [624167] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624168] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624163] [INFO] Shutting down
+2024-06-25 11:30:12 [624163] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624162] [INFO] Shutting down
+2024-06-25 11:30:12 [624162] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:30:12 [624161] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624170] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624166] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624161] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624161] [INFO] Finished server process [624161]
+2024-06-25 11:30:12 [624170] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624166] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624170] [INFO] Finished server process [624170]
+2024-06-25 11:30:12 [624166] [INFO] Finished server process [624166]
+2024-06-25 11:30:12 [624172] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624172] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624172] [INFO] Finished server process [624172]
+2024-06-25 11:30:12 [624173] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624173] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624173] [INFO] Finished server process [624173]
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624161) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624166) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624170) was sent SIGINT!
+2024-06-25 11:30:12 [624171] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624172) was sent SIGINT!
+2024-06-25 11:30:12 [624171] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624171] [INFO] Finished server process [624171]
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624173) was sent SIGINT!
+2024-06-25 11:30:12 [624160] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624160] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624160] [INFO] Finished server process [624160]
+2024-06-25 11:30:12 [624183] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624183] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624183] [INFO] Finished server process [624183]
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624171) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624183) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624160) was sent SIGINT!
+2024-06-25 11:30:12 [624178] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624178] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624178] [INFO] Finished server process [624178]
+2024-06-25 11:30:12 [624169] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624169] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624169] [INFO] Finished server process [624169]
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624178) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624169) was sent SIGINT!
+2024-06-25 11:30:12 [624165] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624164] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624165] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624165] [INFO] Finished server process [624165]
+2024-06-25 11:30:12 [624164] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624164] [INFO] Finished server process [624164]
+2024-06-25 11:30:12 [624167] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624168] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624167] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624168] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624167] [INFO] Finished server process [624167]
+2024-06-25 11:30:12 [624168] [INFO] Finished server process [624168]
+2024-06-25 11:30:12 [624163] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624163] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624163] [INFO] Finished server process [624163]
+2024-06-25 11:30:12 [624162] [INFO] Waiting for application shutdown.
+2024-06-25 11:30:12 [624162] [INFO] Application shutdown complete.
+2024-06-25 11:30:12 [624162] [INFO] Finished server process [624162]
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624165) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624164) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624168) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624167) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624163) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [ERROR] Worker (pid:624162) was sent SIGINT!
+2024-06-25 11:30:12 [624123] [INFO] Shutting down: Master
+2024-06-25 11:30:13 [638239] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:30:13 [638239] [INFO] Listening at: http://0.0.0.0:5000 (638239)
+2024-06-25 11:30:13 [638239] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:30:13 [638249] [INFO] Booting worker with pid: 638249
+2024-06-25 11:30:13 [638255] [INFO] Booting worker with pid: 638255
+2024-06-25 11:30:13 [638268] [INFO] Booting worker with pid: 638268
+2024-06-25 11:30:13 [638271] [INFO] Booting worker with pid: 638271
+2024-06-25 11:30:13 [638272] [INFO] Booting worker with pid: 638272
+2024-06-25 11:30:13 [638273] [INFO] Booting worker with pid: 638273
+2024-06-25 11:30:13 [638274] [INFO] Booting worker with pid: 638274
+2024-06-25 11:30:13 [638275] [INFO] Booting worker with pid: 638275
+2024-06-25 11:30:13 [638276] [INFO] Booting worker with pid: 638276
+2024-06-25 11:30:13 [638277] [INFO] Booting worker with pid: 638277
+2024-06-25 11:30:13 [638278] [INFO] Booting worker with pid: 638278
+2024-06-25 11:30:14 [638279] [INFO] Booting worker with pid: 638279
+2024-06-25 11:30:14 [638282] [INFO] Booting worker with pid: 638282
+2024-06-25 11:30:14 [638283] [INFO] Booting worker with pid: 638283
+2024-06-25 11:30:14 [638284] [INFO] Booting worker with pid: 638284
+2024-06-25 11:30:14 [638285] [INFO] Booting worker with pid: 638285
+2024-06-25 11:30:17 [638249] [INFO] Started server process [638249]
+2024-06-25 11:30:17 [638249] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638249] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638272] [INFO] Started server process [638272]
+2024-06-25 11:30:17 [638272] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638272] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638255] [INFO] Started server process [638255]
+2024-06-25 11:30:17 [638255] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638255] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638271] [INFO] Started server process [638271]
+2024-06-25 11:30:17 [638271] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638271] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638274] [INFO] Started server process [638274]
+2024-06-25 11:30:17 [638274] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638274] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638273] [INFO] Started server process [638273]
+2024-06-25 11:30:17 [638273] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638273] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638275] [INFO] Started server process [638275]
+2024-06-25 11:30:17 [638275] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638275] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638276] [INFO] Started server process [638276]
+2024-06-25 11:30:17 [638276] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638276] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638278] [INFO] Started server process [638278]
+2024-06-25 11:30:17 [638278] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638278] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638285] [INFO] Started server process [638285]
+2024-06-25 11:30:17 [638285] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638285] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638268] [INFO] Started server process [638268]
+2024-06-25 11:30:17 [638268] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638268] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638279] [INFO] Started server process [638279]
+2024-06-25 11:30:17 [638279] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638279] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638282] [INFO] Started server process [638282]
+2024-06-25 11:30:17 [638282] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638282] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638277] [INFO] Started server process [638277]
+2024-06-25 11:30:17 [638277] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638277] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638283] [INFO] Started server process [638283]
+2024-06-25 11:30:17 [638283] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638283] [INFO] Application startup complete.
+2024-06-25 11:30:17 [638284] [INFO] Started server process [638284]
+2024-06-25 11:30:17 [638284] [INFO] Waiting for application startup.
+2024-06-25 11:30:17 [638284] [INFO] Application startup complete.
+2024-06-25 11:32:02 [638239] [INFO] Handling signal: winch
+2024-06-25 11:36:33 [638282] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 106, in read_library_versions
+    return s.LibraryVersions.read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 18, in read
+    return LibraryVersions(**{k: version(k) for k in ['flightanalysis', 'flightdata', 'geometry']})
+                                 ^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for geometry
+2024-06-25 11:36:35 [638283] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 106, in read_library_versions
+    return s.LibraryVersions.read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 18, in read
+    return LibraryVersions(**{k: version(k) for k in ['flightanalysis', 'flightdata', 'geometry']})
+                                 ^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for geometry
+2024-06-25 11:36:43 [638282] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 106, in read_library_versions
+    return s.LibraryVersions.read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 18, in read
+    return LibraryVersions(**{k: version(k) for k in ['flightanalysis', 'flightdata', 'geometry']})
+                                 ^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for geometry
+2024-06-25 11:36:55 [638276] [INFO] Shutting down
+2024-06-25 11:36:55 [638271] [INFO] Shutting down
+2024-06-25 11:36:55 [638276] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638239] [INFO] Handling signal: int
+2024-06-25 11:36:55 [638271] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638279] [INFO] Shutting down
+2024-06-25 11:36:55 [638279] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638273] [INFO] Shutting down
+2024-06-25 11:36:55 [638273] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638268] [INFO] Shutting down
+2024-06-25 11:36:55 [638282] [INFO] Shutting down
+2024-06-25 11:36:55 [638275] [INFO] Shutting down
+2024-06-25 11:36:55 [638249] [INFO] Shutting down
+2024-06-25 11:36:55 [638285] [INFO] Shutting down
+2024-06-25 11:36:55 [638272] [INFO] Shutting down
+2024-06-25 11:36:55 [638282] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638249] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638268] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638275] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638277] [INFO] Shutting down
+2024-06-25 11:36:55 [638272] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638285] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638277] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638278] [INFO] Shutting down
+2024-06-25 11:36:55 [638278] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638274] [INFO] Shutting down
+2024-06-25 11:36:55 [638274] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638255] [INFO] Shutting down
+2024-06-25 11:36:55 [638255] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638284] [INFO] Shutting down
+2024-06-25 11:36:55 [638284] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638283] [INFO] Shutting down
+2024-06-25 11:36:55 [638283] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:36:55 [638271] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638276] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638271] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638271] [INFO] Finished server process [638271]
+2024-06-25 11:36:55 [638276] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638276] [INFO] Finished server process [638276]
+2024-06-25 11:36:55 [638279] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638279] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638279] [INFO] Finished server process [638279]
+2024-06-25 11:36:55 [638239] [ERROR] Worker (pid:638271) was sent SIGINT!
+2024-06-25 11:36:55 [638239] [ERROR] Worker (pid:638276) was sent SIGINT!
+2024-06-25 11:36:55 [638239] [ERROR] Worker (pid:638279) was sent SIGINT!
+2024-06-25 11:36:55 [638273] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638273] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638273] [INFO] Finished server process [638273]
+2024-06-25 11:36:55 [638272] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638272] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638249] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638282] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638272] [INFO] Finished server process [638272]
+2024-06-25 11:36:55 [638268] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638282] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638275] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638249] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638277] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638268] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638285] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:55 [638282] [INFO] Finished server process [638282]
+2024-06-25 11:36:55 [638249] [INFO] Finished server process [638249]
+2024-06-25 11:36:55 [638268] [INFO] Finished server process [638268]
+2024-06-25 11:36:55 [638277] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638285] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638277] [INFO] Finished server process [638277]
+2024-06-25 11:36:55 [638285] [INFO] Finished server process [638285]
+2024-06-25 11:36:55 [638275] [INFO] Application shutdown complete.
+2024-06-25 11:36:55 [638275] [INFO] Finished server process [638275]
+2024-06-25 11:36:55 [638239] [ERROR] Worker (pid:638273) was sent SIGINT!
+2024-06-25 11:36:56 [638278] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:56 [638278] [INFO] Application shutdown complete.
+2024-06-25 11:36:56 [638278] [INFO] Finished server process [638278]
+2024-06-25 11:36:56 [638274] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:56 [638255] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:56 [638255] [INFO] Application shutdown complete.
+2024-06-25 11:36:56 [638274] [INFO] Application shutdown complete.
+2024-06-25 11:36:56 [638255] [INFO] Finished server process [638255]
+2024-06-25 11:36:56 [638274] [INFO] Finished server process [638274]
+2024-06-25 11:36:56 [638284] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:56 [638284] [INFO] Application shutdown complete.
+2024-06-25 11:36:56 [638284] [INFO] Finished server process [638284]
+2024-06-25 11:36:56 [638283] [INFO] Waiting for application shutdown.
+2024-06-25 11:36:56 [638283] [INFO] Application shutdown complete.
+2024-06-25 11:36:56 [638283] [INFO] Finished server process [638283]
+2024-06-25 11:36:56 [638239] [ERROR] Worker (pid:638268) was sent SIGINT!
+2024-06-25 11:36:56 [638239] [ERROR] Worker (pid:638272) was sent SIGINT!
+2024-06-25 11:36:56 [638239] [ERROR] Worker (pid:638285) was sent SIGINT!
+2024-06-25 11:36:56 [638239] [ERROR] Worker (pid:638275) was sent SIGINT!
+2024-06-25 11:36:56 [638239] [ERROR] Worker (pid:638249) was sent SIGINT!
+2024-06-25 11:36:56 [638239] [ERROR] Worker (pid:638277) was sent SIGINT!
+2024-06-25 11:37:03 [657734] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:37:03 [657734] [INFO] Listening at: http://0.0.0.0:5000 (657734)
+2024-06-25 11:37:03 [657734] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:37:03 [657735] [INFO] Booting worker with pid: 657735
+2024-06-25 11:37:03 [657736] [INFO] Booting worker with pid: 657736
+2024-06-25 11:37:03 [657737] [INFO] Booting worker with pid: 657737
+2024-06-25 11:37:03 [657738] [INFO] Booting worker with pid: 657738
+2024-06-25 11:37:03 [657739] [INFO] Booting worker with pid: 657739
+2024-06-25 11:37:03 [657740] [INFO] Booting worker with pid: 657740
+2024-06-25 11:37:03 [657741] [INFO] Booting worker with pid: 657741
+2024-06-25 11:37:03 [657742] [INFO] Booting worker with pid: 657742
+2024-06-25 11:37:03 [657743] [INFO] Booting worker with pid: 657743
+2024-06-25 11:37:03 [657744] [INFO] Booting worker with pid: 657744
+2024-06-25 11:37:03 [657745] [INFO] Booting worker with pid: 657745
+2024-06-25 11:37:03 [657752] [INFO] Booting worker with pid: 657752
+2024-06-25 11:37:03 [657755] [INFO] Booting worker with pid: 657755
+2024-06-25 11:37:04 [657766] [INFO] Booting worker with pid: 657766
+2024-06-25 11:37:04 [657768] [INFO] Booting worker with pid: 657768
+2024-06-25 11:37:04 [657774] [INFO] Booting worker with pid: 657774
+2024-06-25 11:37:06 [657735] [INFO] Started server process [657735]
+2024-06-25 11:37:06 [657735] [INFO] Waiting for application startup.
+2024-06-25 11:37:06 [657735] [INFO] Application startup complete.
+2024-06-25 11:37:06 [657736] [INFO] Started server process [657736]
+2024-06-25 11:37:06 [657736] [INFO] Waiting for application startup.
+2024-06-25 11:37:06 [657736] [INFO] Application startup complete.
+2024-06-25 11:37:06 [657737] [INFO] Started server process [657737]
+2024-06-25 11:37:06 [657737] [INFO] Waiting for application startup.
+2024-06-25 11:37:06 [657737] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657738] [INFO] Started server process [657738]
+2024-06-25 11:37:07 [657738] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657738] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657740] [INFO] Started server process [657740]
+2024-06-25 11:37:07 [657740] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657740] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657741] [INFO] Started server process [657741]
+2024-06-25 11:37:07 [657741] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657741] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657739] [INFO] Started server process [657739]
+2024-06-25 11:37:07 [657739] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657739] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657742] [INFO] Started server process [657742]
+2024-06-25 11:37:07 [657742] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657742] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657755] [INFO] Started server process [657755]
+2024-06-25 11:37:07 [657755] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657755] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657766] [INFO] Started server process [657766]
+2024-06-25 11:37:07 [657766] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657766] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657744] [INFO] Started server process [657744]
+2024-06-25 11:37:07 [657744] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657744] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657743] [INFO] Started server process [657743]
+2024-06-25 11:37:07 [657743] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657743] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657745] [INFO] Started server process [657745]
+2024-06-25 11:37:07 [657745] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657745] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657752] [INFO] Started server process [657752]
+2024-06-25 11:37:07 [657752] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657752] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657768] [INFO] Started server process [657768]
+2024-06-25 11:37:07 [657768] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657768] [INFO] Application startup complete.
+2024-06-25 11:37:07 [657774] [INFO] Started server process [657774]
+2024-06-25 11:37:07 [657774] [INFO] Waiting for application startup.
+2024-06-25 11:37:07 [657774] [INFO] Application startup complete.
+2024-06-25 11:37:10 [657768] [ERROR] Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 397, in from_name
+    return next(cls.discover(name=name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 399, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 106, in read_library_versions
+    return s.LibraryVersions.read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 18, in read
+    return LibraryVersions(**{k: version(k) for k in ['flightanalysis', 'flightdata', 'geometry']})
+                                 ^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 889, in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 862, in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/metadata/__init__.py", line 399, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for geometry
+2024-06-25 11:37:25 [638239] [INFO] Shutting down: Master
+2024-06-25 11:37:41 [657740] [INFO] Shutting down
+2024-06-25 11:37:41 [657740] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657734] [INFO] Handling signal: int
+2024-06-25 11:37:41 [657738] [INFO] Shutting down
+2024-06-25 11:37:41 [657738] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657736] [INFO] Shutting down
+2024-06-25 11:37:41 [657736] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657752] [INFO] Shutting down
+2024-06-25 11:37:41 [657752] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657741] [INFO] Shutting down
+2024-06-25 11:37:41 [657741] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657766] [INFO] Shutting down
+2024-06-25 11:37:41 [657766] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657735] [INFO] Shutting down
+2024-06-25 11:37:41 [657735] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657737] [INFO] Shutting down
+2024-06-25 11:37:41 [657737] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657742] [INFO] Shutting down
+2024-06-25 11:37:41 [657742] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657755] [INFO] Shutting down
+2024-06-25 11:37:41 [657755] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657739] [INFO] Shutting down
+2024-06-25 11:37:41 [657739] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657744] [INFO] Shutting down
+2024-06-25 11:37:41 [657744] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657768] [INFO] Shutting down
+2024-06-25 11:37:41 [657743] [INFO] Shutting down
+2024-06-25 11:37:41 [657768] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657743] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657745] [INFO] Shutting down
+2024-06-25 11:37:41 [657745] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657774] [INFO] Shutting down
+2024-06-25 11:37:41 [657774] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:37:41 [657740] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657740] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657740] [INFO] Finished server process [657740]
+2024-06-25 11:37:41 [657738] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657738] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657738] [INFO] Finished server process [657738]
+2024-06-25 11:37:41 [657736] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657736] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657736] [INFO] Finished server process [657736]
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657740) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657736) was sent SIGINT!
+2024-06-25 11:37:41 [657752] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657752] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657752] [INFO] Finished server process [657752]
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657738) was sent SIGINT!
+2024-06-25 11:37:41 [657741] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657741] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657741] [INFO] Finished server process [657741]
+2024-06-25 11:37:41 [657766] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657766] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657766] [INFO] Finished server process [657766]
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657752) was sent SIGINT!
+2024-06-25 11:37:41 [657735] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657735] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657735] [INFO] Finished server process [657735]
+2024-06-25 11:37:41 [657737] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657742] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657737] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657737] [INFO] Finished server process [657737]
+2024-06-25 11:37:41 [657742] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657742] [INFO] Finished server process [657742]
+2024-06-25 11:37:41 [657755] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657755] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657755] [INFO] Finished server process [657755]
+2024-06-25 11:37:41 [657739] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657739] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657739] [INFO] Finished server process [657739]
+2024-06-25 11:37:41 [657744] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657744] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657744] [INFO] Finished server process [657744]
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657741) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657766) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657735) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657737) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657742) was sent SIGINT!
+2024-06-25 11:37:41 [657768] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657743] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657743] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657768] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657743] [INFO] Finished server process [657743]
+2024-06-25 11:37:41 [657768] [INFO] Finished server process [657768]
+2024-06-25 11:37:41 [657745] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657745] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657745] [INFO] Finished server process [657745]
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657744) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657739) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657755) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657768) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657743) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657745) was sent SIGINT!
+2024-06-25 11:37:41 [657774] [INFO] Waiting for application shutdown.
+2024-06-25 11:37:41 [657774] [INFO] Application shutdown complete.
+2024-06-25 11:37:41 [657774] [INFO] Finished server process [657774]
+2024-06-25 11:37:41 [657734] [ERROR] Worker (pid:657774) was sent SIGINT!
+2024-06-25 11:37:41 [657734] [INFO] Shutting down: Master
+2024-06-25 11:39:26 [665731] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:39:26 [665731] [INFO] Listening at: http://0.0.0.0:5000 (665731)
+2024-06-25 11:39:26 [665731] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:39:26 [665732] [INFO] Booting worker with pid: 665732
+2024-06-25 11:39:26 [665733] [INFO] Booting worker with pid: 665733
+2024-06-25 11:39:26 [665734] [INFO] Booting worker with pid: 665734
+2024-06-25 11:39:26 [665735] [INFO] Booting worker with pid: 665735
+2024-06-25 11:39:26 [665736] [INFO] Booting worker with pid: 665736
+2024-06-25 11:39:26 [665737] [INFO] Booting worker with pid: 665737
+2024-06-25 11:39:26 [665738] [INFO] Booting worker with pid: 665738
+2024-06-25 11:39:26 [665739] [INFO] Booting worker with pid: 665739
+2024-06-25 11:39:26 [665740] [INFO] Booting worker with pid: 665740
+2024-06-25 11:39:26 [665741] [INFO] Booting worker with pid: 665741
+2024-06-25 11:39:26 [665742] [INFO] Booting worker with pid: 665742
+2024-06-25 11:39:26 [665743] [INFO] Booting worker with pid: 665743
+2024-06-25 11:39:26 [665744] [INFO] Booting worker with pid: 665744
+2024-06-25 11:39:26 [665745] [INFO] Booting worker with pid: 665745
+2024-06-25 11:39:27 [665746] [INFO] Booting worker with pid: 665746
+2024-06-25 11:39:27 [665749] [INFO] Booting worker with pid: 665749
+2024-06-25 11:39:27 [665731] [INFO] Handling signal: winch
+2024-06-25 11:39:29 [665733] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/td6834/source/FCScore/project/FCScoreServer/main.py", line 5, in <module>
+    from fcscore.routes import router
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 5, in <module>
+    import fcscore.schemas as s
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/__init__.py", line 1, in <module>
+    from .pfc import *
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 30, in <module>
+    class Point(BaseModel):
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 36, in Point
+    def build(p: g.Point):
+                 ^
+NameError: name 'g' is not defined
+2024-06-25 11:39:29 [665733] [INFO] Worker exiting (pid: 665733)
+2024-06-25 11:39:29 [665732] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/td6834/source/FCScore/project/FCScoreServer/main.py", line 5, in <module>
+    from fcscore.routes import router
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 5, in <module>
+    import fcscore.schemas as s
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/__init__.py", line 1, in <module>
+    from .pfc import *
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 30, in <module>
+    class Point(BaseModel):
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 36, in Point
+    def build(p: g.Point):
+                 ^
+NameError: name 'g' is not defined
+2024-06-25 11:39:29 [665732] [INFO] Worker exiting (pid: 665732)
+2024-06-25 11:39:29 [665731] [ERROR] Worker (pid:665733) exited with code 3
+2024-06-25 11:39:29 [665731] [ERROR] Worker (pid:665732) exited with code 3
+2024-06-25 11:39:29 [665731] [ERROR] Worker (pid:665746) was sent SIGTERM!
+2024-06-25 11:39:29 [665731] [ERROR] Worker (pid:665745) was sent SIGTERM!
+2024-06-25 11:39:44 [667034] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:39:44 [667034] [INFO] Listening at: http://0.0.0.0:5000 (667034)
+2024-06-25 11:39:44 [667034] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:39:44 [667035] [INFO] Booting worker with pid: 667035
+2024-06-25 11:39:44 [667036] [INFO] Booting worker with pid: 667036
+2024-06-25 11:39:44 [667052] [INFO] Booting worker with pid: 667052
+2024-06-25 11:39:44 [667063] [INFO] Booting worker with pid: 667063
+2024-06-25 11:39:44 [667064] [INFO] Booting worker with pid: 667064
+2024-06-25 11:39:44 [667065] [INFO] Booting worker with pid: 667065
+2024-06-25 11:39:44 [667066] [INFO] Booting worker with pid: 667066
+2024-06-25 11:39:44 [667067] [INFO] Booting worker with pid: 667067
+2024-06-25 11:39:44 [667068] [INFO] Booting worker with pid: 667068
+2024-06-25 11:39:45 [667080] [INFO] Booting worker with pid: 667080
+2024-06-25 11:39:45 [667092] [INFO] Booting worker with pid: 667092
+2024-06-25 11:39:45 [667093] [INFO] Booting worker with pid: 667093
+2024-06-25 11:39:45 [667097] [INFO] Booting worker with pid: 667097
+2024-06-25 11:39:45 [667098] [INFO] Booting worker with pid: 667098
+2024-06-25 11:39:45 [667100] [INFO] Booting worker with pid: 667100
+2024-06-25 11:39:45 [667099] [INFO] Booting worker with pid: 667099
+2024-06-25 11:39:47 [667035] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/td6834/source/FCScore/project/FCScoreServer/main.py", line 5, in <module>
+    from fcscore.routes import router
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 5, in <module>
+    import fcscore.schemas as s
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/__init__.py", line 1, in <module>
+    from .pfc import *
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 30, in <module>
+    class Point(BaseModel):
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 36, in Point
+    def build(p: g.Point):
+                 ^
+NameError: name 'g' is not defined
+2024-06-25 11:39:47 [667035] [INFO] Worker exiting (pid: 667035)
+2024-06-25 11:39:47 [667063] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/td6834/source/FCScore/project/FCScoreServer/main.py", line 5, in <module>
+    from fcscore.routes import router
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 5, in <module>
+    import fcscore.schemas as s
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/__init__.py", line 1, in <module>
+    from .pfc import *
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 30, in <module>
+    class Point(BaseModel):
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 36, in Point
+    def build(p: g.Point):
+                 ^
+NameError: name 'g' is not defined
+2024-06-25 11:39:47 [667063] [INFO] Worker exiting (pid: 667063)
+2024-06-25 11:39:47 [667036] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/uvicorn/workers.py", line 75, in init_process
+    super().init_process()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+                ^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+                    ^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/td6834/mambaforge/envs/fcs_fast/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/td6834/source/FCScore/project/FCScoreServer/main.py", line 5, in <module>
+    from fcscore.routes import router
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/routes.py", line 5, in <module>
+    import fcscore.schemas as s
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/__init__.py", line 1, in <module>
+    from .pfc import *
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 30, in <module>
+    class Point(BaseModel):
+  File "/home/td6834/source/FCScore/project/FCScoreServer/fcscore/schemas/pfc.py", line 36, in Point
+    def build(p: g.Point):
+                 ^
+NameError: name 'g' is not defined
+2024-06-25 11:39:47 [667036] [INFO] Worker exiting (pid: 667036)
+2024-06-25 11:39:47 [667034] [ERROR] Worker (pid:667035) exited with code 3
+2024-06-25 11:39:47 [667034] [ERROR] Worker (pid:667099) was sent SIGTERM!
+2024-06-25 11:39:47 [667034] [ERROR] Worker (pid:667092) was sent SIGTERM!
+2024-06-25 11:39:47 [667034] [ERROR] Worker (pid:667098) was sent SIGTERM!
+2024-06-25 11:39:47 [667034] [ERROR] Worker (pid:667052) was sent SIGTERM!
+2024-06-25 11:39:48 [667034] [ERROR] Shutting down: Master
+2024-06-25 11:39:48 [667034] [ERROR] Reason: Worker failed to boot.
+2024-06-25 11:40:58 [671340] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:40:58 [671340] [INFO] Listening at: http://0.0.0.0:5000 (671340)
+2024-06-25 11:40:58 [671340] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:40:58 [671372] [INFO] Booting worker with pid: 671372
+2024-06-25 11:40:58 [671373] [INFO] Booting worker with pid: 671373
+2024-06-25 11:40:58 [671374] [INFO] Booting worker with pid: 671374
+2024-06-25 11:40:58 [671375] [INFO] Booting worker with pid: 671375
+2024-06-25 11:40:58 [671376] [INFO] Booting worker with pid: 671376
+2024-06-25 11:40:58 [671377] [INFO] Booting worker with pid: 671377
+2024-06-25 11:40:58 [671378] [INFO] Booting worker with pid: 671378
+2024-06-25 11:40:58 [671379] [INFO] Booting worker with pid: 671379
+2024-06-25 11:40:59 [671381] [INFO] Booting worker with pid: 671381
+2024-06-25 11:40:59 [671383] [INFO] Booting worker with pid: 671383
+2024-06-25 11:40:59 [671413] [INFO] Booting worker with pid: 671413
+2024-06-25 11:40:59 [671422] [INFO] Booting worker with pid: 671422
+2024-06-25 11:40:59 [671423] [INFO] Booting worker with pid: 671423
+2024-06-25 11:40:59 [671424] [INFO] Booting worker with pid: 671424
+2024-06-25 11:40:59 [671425] [INFO] Booting worker with pid: 671425
+2024-06-25 11:40:59 [671426] [INFO] Booting worker with pid: 671426
+2024-06-25 11:41:01 [671373] [INFO] Started server process [671373]
+2024-06-25 11:41:01 [671373] [INFO] Waiting for application startup.
+2024-06-25 11:41:01 [671373] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671374] [INFO] Started server process [671374]
+2024-06-25 11:41:02 [671374] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671374] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671377] [INFO] Started server process [671377]
+2024-06-25 11:41:02 [671377] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671377] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671372] [INFO] Started server process [671372]
+2024-06-25 11:41:02 [671372] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671372] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671375] [INFO] Started server process [671375]
+2024-06-25 11:41:02 [671375] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671375] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671376] [INFO] Started server process [671376]
+2024-06-25 11:41:02 [671376] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671376] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671378] [INFO] Started server process [671378]
+2024-06-25 11:41:02 [671378] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671378] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671379] [INFO] Started server process [671379]
+2024-06-25 11:41:02 [671379] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671379] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671381] [INFO] Started server process [671381]
+2024-06-25 11:41:02 [671381] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671381] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671413] [INFO] Started server process [671413]
+2024-06-25 11:41:02 [671413] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671413] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671422] [INFO] Started server process [671422]
+2024-06-25 11:41:02 [671422] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671422] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671423] [INFO] Started server process [671423]
+2024-06-25 11:41:02 [671423] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671423] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671383] [INFO] Started server process [671383]
+2024-06-25 11:41:02 [671383] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671383] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671424] [INFO] Started server process [671424]
+2024-06-25 11:41:02 [671424] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671424] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671425] [INFO] Started server process [671425]
+2024-06-25 11:41:02 [671425] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671425] [INFO] Application startup complete.
+2024-06-25 11:41:02 [671426] [INFO] Started server process [671426]
+2024-06-25 11:41:02 [671426] [INFO] Waiting for application startup.
+2024-06-25 11:41:02 [671426] [INFO] Application startup complete.
+2024-06-25 11:47:36 [671340] [INFO] Handling signal: int
+2024-06-25 11:47:36 [671377] [INFO] Shutting down
+2024-06-25 11:47:36 [671377] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671373] [INFO] Shutting down
+2024-06-25 11:47:36 [671373] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671374] [INFO] Shutting down
+2024-06-25 11:47:36 [671374] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671375] [INFO] Shutting down
+2024-06-25 11:47:36 [671375] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671372] [INFO] Shutting down
+2024-06-25 11:47:36 [671372] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671376] [INFO] Shutting down
+2024-06-25 11:47:36 [671376] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671379] [INFO] Shutting down
+2024-06-25 11:47:36 [671379] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 11:47:36 [671377] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671377] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671377] [INFO] Finished server process [671377]
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671377) was sent SIGINT!
+2024-06-25 11:47:36 [671373] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671373] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671373] [INFO] Finished server process [671373]
+2024-06-25 11:47:36 [671374] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671374] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671374] [INFO] Finished server process [671374]
+2024-06-25 11:47:36 [671375] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671375] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671375] [INFO] Finished server process [671375]
+2024-06-25 11:47:36 [671372] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671372] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671372] [INFO] Finished server process [671372]
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671374) was sent SIGINT!
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671373) was sent SIGINT!
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671375) was sent SIGINT!
+2024-06-25 11:47:36 [671376] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671376] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671376] [INFO] Finished server process [671376]
+2024-06-25 11:47:36 [671379] [INFO] Waiting for application shutdown.
+2024-06-25 11:47:36 [671379] [INFO] Application shutdown complete.
+2024-06-25 11:47:36 [671379] [INFO] Finished server process [671379]
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671372) was sent SIGINT!
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671376) was sent SIGINT!
+2024-06-25 11:47:36 [671340] [ERROR] Worker (pid:671379) was sent SIGINT!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671381) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671378) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671422) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671425) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671383) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671424) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [ERROR] Worker (pid:671426) was sent SIGHUP!
+2024-06-25 11:47:40 [671340] [INFO] Shutting down: Master
+2024-06-25 11:47:42 [691740] [INFO] Starting gunicorn 22.0.0
+2024-06-25 11:47:42 [691740] [INFO] Listening at: http://0.0.0.0:5000 (691740)
+2024-06-25 11:47:42 [691740] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-25 11:47:42 [691741] [INFO] Booting worker with pid: 691741
+2024-06-25 11:47:42 [691742] [INFO] Booting worker with pid: 691742
+2024-06-25 11:47:42 [691743] [INFO] Booting worker with pid: 691743
+2024-06-25 11:47:42 [691752] [INFO] Booting worker with pid: 691752
+2024-06-25 11:47:42 [691756] [INFO] Booting worker with pid: 691756
+2024-06-25 11:47:42 [691771] [INFO] Booting worker with pid: 691771
+2024-06-25 11:47:42 [691772] [INFO] Booting worker with pid: 691772
+2024-06-25 11:47:42 [691773] [INFO] Booting worker with pid: 691773
+2024-06-25 11:47:42 [691774] [INFO] Booting worker with pid: 691774
+2024-06-25 11:47:42 [691775] [INFO] Booting worker with pid: 691775
+2024-06-25 11:47:42 [691776] [INFO] Booting worker with pid: 691776
+2024-06-25 11:47:43 [691779] [INFO] Booting worker with pid: 691779
+2024-06-25 11:47:43 [691780] [INFO] Booting worker with pid: 691780
+2024-06-25 11:47:43 [691781] [INFO] Booting worker with pid: 691781
+2024-06-25 11:47:43 [691782] [INFO] Booting worker with pid: 691782
+2024-06-25 11:47:43 [691786] [INFO] Booting worker with pid: 691786
+2024-06-25 11:47:45 [691741] [INFO] Started server process [691741]
+2024-06-25 11:47:45 [691741] [INFO] Waiting for application startup.
+2024-06-25 11:47:45 [691741] [INFO] Application startup complete.
+2024-06-25 11:47:45 [691742] [INFO] Started server process [691742]
+2024-06-25 11:47:45 [691742] [INFO] Waiting for application startup.
+2024-06-25 11:47:45 [691742] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691752] [INFO] Started server process [691752]
+2024-06-25 11:47:46 [691752] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691752] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691756] [INFO] Started server process [691756]
+2024-06-25 11:47:46 [691756] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691756] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691743] [INFO] Started server process [691743]
+2024-06-25 11:47:46 [691743] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691743] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691773] [INFO] Started server process [691773]
+2024-06-25 11:47:46 [691773] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691773] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691781] [INFO] Started server process [691781]
+2024-06-25 11:47:46 [691781] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691781] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691775] [INFO] Started server process [691775]
+2024-06-25 11:47:46 [691775] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691775] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691779] [INFO] Started server process [691779]
+2024-06-25 11:47:46 [691779] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691779] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691772] [INFO] Started server process [691772]
+2024-06-25 11:47:46 [691772] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691772] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691776] [INFO] Started server process [691776]
+2024-06-25 11:47:46 [691776] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691776] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691774] [INFO] Started server process [691774]
+2024-06-25 11:47:46 [691774] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691774] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691771] [INFO] Started server process [691771]
+2024-06-25 11:47:46 [691771] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691771] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691780] [INFO] Started server process [691780]
+2024-06-25 11:47:46 [691780] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691780] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691786] [INFO] Started server process [691786]
+2024-06-25 11:47:46 [691786] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691786] [INFO] Application startup complete.
+2024-06-25 11:47:46 [691782] [INFO] Started server process [691782]
+2024-06-25 11:47:46 [691782] [INFO] Waiting for application startup.
+2024-06-25 11:47:46 [691782] [INFO] Application startup complete.
+2024-06-25 12:02:50 [691740] [INFO] Handling signal: int
+2024-06-25 12:02:50 [691782] [INFO] Shutting down
+2024-06-25 12:02:50 [691782] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691776] [INFO] Shutting down
+2024-06-25 12:02:50 [691756] [INFO] Shutting down
+2024-06-25 12:02:50 [691772] [INFO] Shutting down
+2024-06-25 12:02:50 [691771] [INFO] Shutting down
+2024-06-25 12:02:50 [691752] [INFO] Shutting down
+2024-06-25 12:02:50 [691776] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691752] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691756] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691772] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691771] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691786] [INFO] Shutting down
+2024-06-25 12:02:50 [691786] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691781] [INFO] Shutting down
+2024-06-25 12:02:50 [691781] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691741] [INFO] Shutting down
+2024-06-25 12:02:50 [691741] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691742] [INFO] Shutting down
+2024-06-25 12:02:50 [691742] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691780] [INFO] Shutting down
+2024-06-25 12:02:50 [691780] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691773] [INFO] Shutting down
+2024-06-25 12:02:50 [691773] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691774] [INFO] Shutting down
+2024-06-25 12:02:50 [691774] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691743] [INFO] Shutting down
+2024-06-25 12:02:50 [691743] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691775] [INFO] Shutting down
+2024-06-25 12:02:50 [691779] [INFO] Shutting down
+2024-06-25 12:02:50 [691779] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691775] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-25 12:02:50 [691782] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691782] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691782] [INFO] Finished server process [691782]
+2024-06-25 12:02:50 [691776] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691756] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691752] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691772] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691771] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691756] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691776] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691752] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691772] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691756] [INFO] Finished server process [691756]
+2024-06-25 12:02:50 [691752] [INFO] Finished server process [691752]
+2024-06-25 12:02:50 [691771] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691772] [INFO] Finished server process [691772]
+2024-06-25 12:02:50 [691776] [INFO] Finished server process [691776]
+2024-06-25 12:02:50 [691771] [INFO] Finished server process [691771]
+2024-06-25 12:02:50 [691786] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691786] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691786] [INFO] Finished server process [691786]
+2024-06-25 12:02:50 [691781] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691781] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691781] [INFO] Finished server process [691781]
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691782) was sent SIGINT!
+2024-06-25 12:02:50 [691741] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691741] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691741] [INFO] Finished server process [691741]
+2024-06-25 12:02:50 [691742] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691742] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691780] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691742] [INFO] Finished server process [691742]
+2024-06-25 12:02:50 [691780] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691780] [INFO] Finished server process [691780]
+2024-06-25 12:02:50 [691773] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691773] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691773] [INFO] Finished server process [691773]
+2024-06-25 12:02:50 [691774] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691774] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691774] [INFO] Finished server process [691774]
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691752) was sent SIGINT!
+2024-06-25 12:02:50 [691743] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691743] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691743] [INFO] Finished server process [691743]
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691771) was sent SIGINT!
+2024-06-25 12:02:50 [691775] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691779] [INFO] Waiting for application shutdown.
+2024-06-25 12:02:50 [691775] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691779] [INFO] Application shutdown complete.
+2024-06-25 12:02:50 [691779] [INFO] Finished server process [691779]
+2024-06-25 12:02:50 [691775] [INFO] Finished server process [691775]
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691776) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691772) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691756) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691741) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691742) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691786) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691781) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691773) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691780) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691743) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691774) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691775) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [ERROR] Worker (pid:691779) was sent SIGINT!
+2024-06-25 12:02:50 [691740] [INFO] Shutting down: Master

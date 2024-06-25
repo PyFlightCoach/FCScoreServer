@@ -2,7 +2,31 @@ from pydantic import BaseModel
 from flightanalysis import ma
 import geometry as g
 from typing import Any
+from enum import Enum
+from importlib.metadata import version
+from numbers import Number
+from datetime import datetime
 
+
+class LibraryVersions(BaseModel):
+    flightanalysis: str
+    flightdata: str
+    pfc_geometry: str
+
+    @staticmethod
+    def read():
+        return LibraryVersions(**{k: version(k) for k in ['flightanalysis', 'flightdata', 'pfc_geometry']})
+
+
+class Direction(Enum):
+    LEFT_TO_RIGHT=1
+    RIGHT_TO_LEFT=-1
+
+
+class Difficulty(Enum):
+    EASY=1
+    MEDIUM=2
+    HARD=3
 
 class Point(BaseModel):
     x: float
@@ -47,31 +71,46 @@ class El(BaseModel):
     stop: int
 
 
+class ScoreProps(BaseModel):
+    difficulty: int
+    truncate: bool
+    fa_version: str
+    time: datetime
+    
+
 class Score(BaseModel):
     intra: float
     inter: float
     positioning: float
     total: float
     k: float
+    properties: ScoreProps
 
 
 class ShortOutput(BaseModel):
     els: list[El]
-    score: Score
+    scores: list[Score]
+    fa_version: str = version('flightanalysis')
 
     @staticmethod
-    def build(man: ma.Scored):
+    def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | list[bool]=False):
+        difficulty = [difficulty] if isinstance(difficulty, Number) else [1,2,3]
+        truncate = [truncate] if isinstance(truncate, bool) else [False, True]
+        
         df = man.flown.label_ranges('element').iloc[:,:3]
         df.columns = ['name', 'start', 'stop']
         return ShortOutput(
             els=[El(**v) for v in df.to_dict('records')],
-            score = Score(
-                intra=man.scores.intra.total,
-                inter=man.scores.inter.total,
-                positioning=man.scores.positioning.total,
-                total=man.scores.score(),
-                k=man.mdef.info.k
-            )
+            scores = [Score(
+                **man.scores.score_summary(diff, trunc),
+                k=man.mdef.info.k,
+                properties=ScoreProps(
+                    difficulty=diff, 
+                    truncate=trunc,
+                    fa_version=version('flightanalysis'),
+                    time=datetime.now()
+                )
+            ) for diff in difficulty for trunc in truncate]
         )
 
 class LongOutout(ShortOutput):
@@ -84,9 +123,9 @@ class LongOutout(ShortOutput):
     full_scores: ManResult
 
     @staticmethod
-    def build(man: ma.Scored):
+    def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | list[bool]=False):
         return LongOutout(
-            **ShortOutput.build(man).__dict__,
+            **ShortOutput.build(man, difficulty, truncate).__dict__,
             mdef=man.mdef.to_dict(),
             flown=man.flown.to_dict(),
             manoeuvre=man.manoeuvre.to_dict(),

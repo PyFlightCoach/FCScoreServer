@@ -19,17 +19,21 @@ def fcj() -> dict:
 def short_manoeuvre(fcj: dict):
     return dict(
         id=0,
-        direction=0,
-        sinfo=dict(category='f3a', name='f25'),
-        origin=dict(
+        direction=1,
+        sinfo=dict(category='F3A FAI', name='F25'),
+        site=dict(
             lat=fcj['parameters']['pilotLat'],
             lng=fcj['parameters']['pilotLng'],
             alt=fcj['parameters']['pilotAlt'],
-            heading=fcj['parameters']['rotation']
+            heading=fcj['parameters']['rotation'],
+            move_north=fcj['parameters']['moveNorth'],
+            move_east=fcj['parameters']['moveEast']
         ),
         data=fcj['data'][fcj['mans'][1]['start']:fcj['mans'][1]['stop']],
         optimise_alignment=False,
-        long_output=False
+        long_output=False,
+        difficulty='all',
+        truncate='both'
     )
 
 

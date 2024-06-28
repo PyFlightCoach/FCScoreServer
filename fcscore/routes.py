@@ -3,7 +3,6 @@ from flightdata import State, Flight
 from fastapi import Body, HTTPException, APIRouter
 import pandas as pd
 import fcscore.schemas as s
-import os
 from typing import Any, Annotated
 import traceback
 from time import time
@@ -12,6 +11,8 @@ from fastapi.responses import FileResponse
 import geometry as g
 import numpy as np
 from importlib.metadata import version
+import git
+
 
 logger = logging.getLogger(__name__)
 
@@ -96,10 +97,14 @@ async def run_long_manouevre(
 
 @router.get("/version")
 async def read_version() -> str:
-    ver = os.getenv("PUBLIC_VERSION")
-    if ver is None:
-        ver = "next"
-    return ver
+    repo = git.Repo()
+    tags = sorted(repo.tags, key=lambda t: t.commit.committed_datetime)
+    return str(tags[-1])
+
+@router.get("/fa_version")
+async def read_fa_version() -> str:
+    return version('flightanalysis')
+
 
 @router.get("/library_versions")
 async def read_library_versions() -> s.LibraryVersions:

@@ -3,21 +3,19 @@ from fastapi import FastAPI
 
 from fastapi.middleware.cors import CORSMiddleware
 from fcscore.routes import router
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def create_app() -> FastAPI:
     app = FastAPI()
     app.include_router(router)
 
-    origins = [
-        "http://localhost:5173",
-        "http://localhost:4173",
-        "https://pyflightcoach.github.io"
-    ]
-
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=origins,
+        allow_origins=os.getenv("CLIENTS").split(","),
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],

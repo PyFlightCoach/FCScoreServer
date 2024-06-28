@@ -74,24 +74,21 @@ class El(BaseModel):
 class ScoreProps(BaseModel):
     difficulty: int
     truncate: bool
-    fa_version: str
-    time: datetime
-    
 
 class Score(BaseModel):
     intra: float
     inter: float
     positioning: float
     total: float
-    k: float
+    
+class Result(BaseModel):
+    score: Score
     properties: ScoreProps
-
 
 class ShortOutput(BaseModel):
     els: list[El]
-    scores: list[Score]
-    fa_version: str = version('flightanalysis')
-
+    results: list[Result]
+    
     @staticmethod
     def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | list[bool]=False):
         difficulty = [difficulty] if isinstance(difficulty, Number) else [1,2,3]
@@ -101,15 +98,12 @@ class ShortOutput(BaseModel):
         df.columns = ['name', 'start', 'stop']
         return ShortOutput(
             els=[El(**v) for v in df.to_dict('records')],
-            scores = [Score(
-                **man.scores.score_summary(diff, trunc),
-                k=man.mdef.info.k,
+            results = [Result(
+                score=Score(**man.scores.score_summary(diff, trunc)),
                 properties=ScoreProps(
                     difficulty=diff, 
-                    truncate=trunc,
-                    fa_version=version('flightanalysis'),
-                    time=datetime.now()
-                )
+                    truncate=trunc
+                ),
             ) for diff in difficulty for trunc in truncate]
         )
 

@@ -4,7 +4,8 @@ A simple Flask API built around the pyflightcoach project to analyse aerobatic f
 To run locally:
 ```bash
     pip install -r requirements.txt
-
+    export CLIENTS="http://localhost:5173,https://pyflightcoach.github.io" 
+    gunicorn main:app
 ```
 
 

@@ -1,0 +1,248 @@
+2024-06-28 20:28:40 [32186] [INFO] Starting gunicorn 22.0.0
+2024-06-28 20:28:40 [32186] [INFO] Listening at: http://0.0.0.0:5000 (32186)
+2024-06-28 20:28:40 [32186] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-28 20:28:40 [32196] [INFO] Booting worker with pid: 32196
+2024-06-28 20:28:40 [32216] [INFO] Booting worker with pid: 32216
+2024-06-28 20:28:41 [32231] [INFO] Booting worker with pid: 32231
+2024-06-28 20:28:41 [32243] [INFO] Booting worker with pid: 32243
+2024-06-28 20:28:41 [32244] [INFO] Booting worker with pid: 32244
+2024-06-28 20:28:41 [32245] [INFO] Booting worker with pid: 32245
+2024-06-28 20:28:41 [32246] [INFO] Booting worker with pid: 32246
+2024-06-28 20:28:41 [32247] [INFO] Booting worker with pid: 32247
+2024-06-28 20:28:41 [32248] [INFO] Booting worker with pid: 32248
+2024-06-28 20:28:41 [32249] [INFO] Booting worker with pid: 32249
+2024-06-28 20:28:41 [32252] [INFO] Booting worker with pid: 32252
+2024-06-28 20:28:41 [32253] [INFO] Booting worker with pid: 32253
+2024-06-28 20:28:41 [32257] [INFO] Booting worker with pid: 32257
+2024-06-28 20:28:41 [32258] [INFO] Booting worker with pid: 32258
+2024-06-28 20:28:41 [32259] [INFO] Booting worker with pid: 32259
+2024-06-28 20:28:41 [32260] [INFO] Booting worker with pid: 32260
+2024-06-28 20:28:54 [32186] [INFO] Handling signal: winch
+2024-06-28 20:31:06 [32186] [INFO] Handling signal: winch
+2024-06-28 21:13:48 [32186] [INFO] Handling signal: winch
+2024-06-28 21:13:48 [32186] [INFO] Handling signal: winch
+2024-06-28 21:43:48 [32186] [INFO] Handling signal: int
+2024-06-28 21:43:48 [32245] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32247] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32196] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32257] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32216] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32258] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32231] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32260] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32246] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32248] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32244] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32249] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32243] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32259] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32252] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32253] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32245) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32257) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32196) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32258) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32216) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32247) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32231) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32260) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32248) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32246) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32244) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32243) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32259) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32249) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32252) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [ERROR] Worker (pid:32253) was sent SIGINT!
+2024-06-28 21:43:48 [32186] [INFO] Shutting down: Master
+2024-06-29 06:25:47 [33928] [INFO] Starting gunicorn 22.0.0
+2024-06-29 06:25:47 [33928] [INFO] Listening at: http://0.0.0.0:5000 (33928)
+2024-06-29 06:25:47 [33928] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-29 06:25:47 [33941] [INFO] Booting worker with pid: 33941
+2024-06-29 06:25:47 [33955] [INFO] Booting worker with pid: 33955
+2024-06-29 06:25:47 [33970] [INFO] Booting worker with pid: 33970
+2024-06-29 06:25:47 [33971] [INFO] Booting worker with pid: 33971
+2024-06-29 06:25:47 [33976] [INFO] Booting worker with pid: 33976
+2024-06-29 06:25:47 [33977] [INFO] Booting worker with pid: 33977
+2024-06-29 06:25:47 [33978] [INFO] Booting worker with pid: 33978
+2024-06-29 06:25:47 [33979] [INFO] Booting worker with pid: 33979
+2024-06-29 06:25:47 [34010] [INFO] Booting worker with pid: 34010
+2024-06-29 06:25:47 [34054] [INFO] Booting worker with pid: 34054
+2024-06-29 06:25:47 [34051] [INFO] Booting worker with pid: 34051
+2024-06-29 06:25:47 [34056] [INFO] Booting worker with pid: 34056
+2024-06-29 06:25:47 [34089] [INFO] Booting worker with pid: 34089
+2024-06-29 06:25:47 [34121] [INFO] Booting worker with pid: 34121
+2024-06-29 06:25:47 [34125] [INFO] Booting worker with pid: 34125
+2024-06-29 06:25:47 [34126] [INFO] Booting worker with pid: 34126
+2024-06-29 06:27:32 [33928] [INFO] Handling signal: winch
+2024-06-29 06:28:16 [34051] [INFO] run_short,1.5413103103637695,trgle,6.256359678432571
+2024-06-29 06:33:16 [34121] [INFO] run_short,1.557563066482544,trgle,6.143702240752836
+2024-06-29 06:35:35 [33955] [INFO] run_short,0.7586679458618164,stall,8.325988652973534
+2024-06-29 06:38:16 [33928] [INFO] Handling signal: int
+2024-06-29 06:38:16 [34121] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [34056] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [34051] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [34125] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [33955] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [34089] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [33941] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:16 [33970] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [34054] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [33979] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [33977] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [34010] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [33978] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [33976] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [34126] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [33971] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34056) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34121) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34051) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34125) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34089) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33955) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33941) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33970) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33979) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34054) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33977) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34010) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33978) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:34126) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33976) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [ERROR] Worker (pid:33971) was sent SIGINT!
+2024-06-29 06:38:17 [33928] [INFO] Shutting down: Master
+2024-06-29 14:51:52 [412595] [INFO] Starting gunicorn 22.0.0
+2024-06-29 14:51:52 [412595] [INFO] Listening at: http://0.0.0.0:5000 (412595)
+2024-06-29 14:51:52 [412595] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-06-29 14:51:52 [412598] [INFO] Booting worker with pid: 412598
+2024-06-29 14:51:53 [412602] [INFO] Booting worker with pid: 412602
+2024-06-29 14:51:53 [412603] [INFO] Booting worker with pid: 412603
+2024-06-29 14:51:53 [412604] [INFO] Booting worker with pid: 412604
+2024-06-29 14:51:53 [412605] [INFO] Booting worker with pid: 412605
+2024-06-29 14:51:53 [412606] [INFO] Booting worker with pid: 412606
+2024-06-29 14:51:53 [412607] [INFO] Booting worker with pid: 412607
+2024-06-29 14:51:53 [412623] [INFO] Booting worker with pid: 412623
+2024-06-29 14:51:53 [412639] [INFO] Booting worker with pid: 412639
+2024-06-29 14:51:53 [412640] [INFO] Booting worker with pid: 412640
+2024-06-29 14:51:53 [412656] [INFO] Booting worker with pid: 412656
+2024-06-29 14:51:53 [412657] [INFO] Booting worker with pid: 412657
+2024-06-29 14:51:53 [412674] [INFO] Booting worker with pid: 412674
+2024-06-29 14:51:53 [412677] [INFO] Booting worker with pid: 412677
+2024-06-29 14:51:53 [412709] [INFO] Booting worker with pid: 412709
+2024-06-29 14:51:53 [412712] [INFO] Booting worker with pid: 412712
+2024-06-29 15:02:07 [412712] [INFO] run_short,3.9731154441833496,fig9,8.044505791559374
+2024-06-29 15:02:08 [412656] [INFO] run_short,4.511482238769531,rollC,8.807264114206236
+2024-06-29 15:02:09 [412674] [INFO] run_short,5.279880046844482,hSqL,9.222269493636482
+2024-06-29 15:02:09 [412639] [INFO] run_short,5.814588785171509,dImm,7.766272098242957
+2024-06-29 15:02:11 [412657] [INFO] run_short,7.9681220054626465,hSqL2,8.053435572669311
+2024-06-29 15:02:13 [412656] [INFO] run_short,5.16325569152832,figS,7.061774522695631
+2024-06-29 15:02:13 [412605] [INFO] run_short,10.134762525558472,trgle,6.265995736136813
+2024-06-29 15:02:14 [412606] [INFO] run_short,11.227633476257324,loop,6.944928532519225
+2024-06-29 15:02:15 [412639] [INFO] run_short,5.912757873535156,Com,7.092745941994963
+2024-06-29 15:02:16 [412712] [INFO] run_short,9.069003820419312,hClov,5.496574751066707
+2024-06-29 15:02:17 [412657] [INFO] run_short,5.5334250926971436,rEt,8.071560749484629
+2024-06-29 15:02:17 [412674] [INFO] run_short,8.73752760887146,stall,8.302344924641755
+2024-06-29 15:02:18 [412677] [INFO] run_short,14.746492385864258,hB,7.681302156291953
+2024-06-29 15:02:18 [412605] [INFO] run_short,4.607527017593384,iSpin,8.408731075015012
+2024-06-29 15:02:20 [412656] [INFO] run_short,6.467021226882935,Z,8.215954843727152
+2024-06-29 15:02:21 [412709] [INFO] run_short,17.89961338043213,sqL,7.110765471431438
+2024-06-29 15:02:22 [412606] [INFO] run_short,7.416449546813965,tHat,8.034024091735521
+2024-06-29 15:03:57 [412677] [INFO] run_short,12.12727665901184,hSqL,9.182223952188687
+2024-06-29 15:03:57 [412623] [INFO] run_short,12.633689641952515,stall,8.705339259458599
+2024-06-29 15:03:58 [412657] [INFO] run_short,13.282153129577637,hB,8.32443899350223
+2024-06-29 15:03:58 [412674] [INFO] run_short,13.611715078353882,fig9,8.817835842244955
+2024-06-29 15:04:00 [412607] [INFO] run_short,15.172643184661865,loop,7.563860222155145
+2024-06-29 15:04:01 [412709] [INFO] run_short,16.47003746032715,rollC,8.215790955709902
+2024-06-29 15:04:04 [412639] [INFO] run_short,19.19823431968689,dImm,7.364276683559291
+2024-06-29 15:04:06 [412712] [INFO] run_short,21.069408893585205,trgle,6.79183384778035
+2024-06-29 15:04:06 [412606] [INFO] run_short,21.532393217086792,sqL,6.1448957542798
+2024-06-29 15:04:11 [412607] [INFO] run_short,10.574653387069702,Z,8.053678538752738
+2024-06-29 15:04:14 [412623] [INFO] run_short,17.143007040023804,hSqL2,8.436555770022723
+2024-06-29 15:04:17 [412677] [INFO] run_short,19.70158839225769,figS,7.2552100712938925
+2024-06-29 15:04:17 [412712] [INFO] run_short,11.122042655944824,iSpin,8.998793443822972
+2024-06-29 15:04:20 [412709] [INFO] run_short,18.395614624023438,rEt,8.13755279620322
+2024-06-29 15:04:20 [412657] [INFO] run_short,22.065924882888794,Com,7.001070871655665
+2024-06-29 15:04:24 [412639] [INFO] run_short,19.721417903900146,tHat,8.566215462672531
+2024-06-29 15:04:29 [412623] [INFO] run_short,7.884001731872559,hCirc,5.029774971654536
+2024-06-29 15:04:34 [412709] [INFO] run_short,12.542574167251587,fig9,7.64147398084871
+2024-06-29 15:04:37 [412674] [INFO] run_short,38.95327877998352,hClov,6.43423629784498
+2024-06-29 15:04:38 [412606] [INFO] run_short,17.175061225891113,sFin,5.71217484034373
+2024-06-29 15:04:43 [412712] [INFO] run_short,22.138574600219727,spin,8.551032310908694
+2024-06-29 15:04:45 [412623] [INFO] run_short,16.083060026168823,h8L,8.540346597484973
+2024-06-29 15:04:46 [412640] [INFO] run_short,24.816123008728027,rollC,8.679955367915046
+2024-06-29 15:04:49 [412606] [INFO] run_short,10.553295612335205,dl45,8.65228982171766
+2024-06-29 15:04:51 [412623] [INFO] run_short,5.338689088821411,hLoop,8.520710910328335
+2024-06-29 15:04:51 [412709] [INFO] run_short,17.2974271774292,hB,6.152717975450829
+2024-06-29 15:04:54 [412677] [INFO] run_short,32.63277769088745,hB2,8.37533990996912
+2024-06-29 15:04:57 [412657] [INFO] run_short,35.60220527648926,sLoop,-14.16977423678925
+2024-06-29 15:04:58 [412640] [INFO] run_short,11.982007503509521,keS,8.181629806247825
+2024-06-29 15:04:58 [412605] [INFO] run_short,37.071088552474976,keTrg,5.255645909509144
+2024-06-29 15:05:00 [412606] [INFO] run_short,10.67584490776062,hSLoop,8.79603024120337
+2024-06-29 15:05:03 [412623] [INFO] run_short,12.023520231246948,Aval,2.7926823923042856
+2024-06-29 15:05:04 [412712] [INFO] run_short,21.036259651184082,stall,3.184851585792817
+2024-06-29 15:05:13 [412656] [INFO] run_short,52.27791929244995,sV8,3.126965955570725
+2024-06-29 15:06:14 [412623] [INFO] run_long,9.278520345687866,sLoop,5.993123442377989
+2024-06-29 15:06:36 [412712] [INFO] run_long,2.1752090454101562,Aval,3.726602925995533
+2024-06-29 15:06:52 [412674] [INFO] run_long,2.410205364227295,Aval,4.101903592344889
+2024-06-29 15:07:02 [412677] [INFO] run_long,3.8175344467163086,Aval,6.563107335783537
+2024-06-29 15:07:36 [412712] [INFO] run_long,8.658796072006226,stall,6.29220831395831
+2024-06-29 15:08:15 [412677] [INFO] run_long,3.8894283771514893,hCirc,1.3562637566053586
+2024-06-29 15:08:24 [412709] [INFO] run_long,2.8502609729766846,hCirc,-1.9159629480687235
+2024-06-29 15:08:49 [412709] [INFO] run_long,3.5545310974121094,hCirc,1.1830909605458477
+2024-06-29 15:08:59 [412709] [INFO] run_long,2.2313685417175293,hCirc,-0.1233527509444533
+2024-06-29 15:09:21 [412677] [INFO] run_long,3.2580132484436035,hCirc,5.0445510762487995
+2024-06-29 15:11:15 [412607] [INFO] run_short,7.989214658737183,loop,7.563860222155145
+2024-06-29 15:11:15 [412674] [INFO] run_short,8.278733730316162,rollC,8.215790955709902
+2024-06-29 15:11:19 [412712] [INFO] run_short,11.420108795166016,hSqL,9.182223952188687
+2024-06-29 15:11:19 [412639] [INFO] run_short,12.178909301757812,hB,8.32443899350223
+2024-06-29 15:11:20 [412677] [INFO] run_short,13.023110151290894,fig9,8.817835842244955
+2024-06-29 15:11:23 [412607] [INFO] run_short,7.713155269622803,figS,7.2552100712938925
+2024-06-29 15:11:26 [412674] [INFO] run_short,10.31366777420044,hSqL2,8.436555770022723
+2024-06-29 15:11:26 [412657] [INFO] run_short,19.307745456695557,dImm,7.364276683559291
+2024-06-29 15:11:30 [412623] [INFO] run_short,23.118656158447266,stall,8.705339259458599
+2024-06-29 15:11:35 [412712] [INFO] run_short,16.37495446205139,Com,7.001070871655665
+2024-06-29 15:11:35 [412606] [INFO] run_short,28.037692070007324,sqL,6.1448957542798
+2024-06-29 15:11:37 [412607] [INFO] run_short,14.138139009475708,rEt,8.13755279620322
+2024-06-29 15:11:38 [412677] [INFO] run_short,18.045968770980835,Z,8.053678538752738
+2024-06-29 15:11:39 [412639] [INFO] run_short,19.332335472106934,hClov,6.43423629784498
+2024-06-29 15:11:40 [412709] [INFO] run_short,33.17596888542175,trgle,6.79183384778035
+2024-06-29 15:11:41 [412657] [INFO] run_short,14.770562887191772,iSpin,8.998793443822972
+2024-06-29 15:11:41 [412674] [INFO] run_short,15.598022699356079,tHat,8.566215462672531
+2024-06-29 15:13:34 [412677] [INFO] run_short,1.0392968654632568,hClov,6.43423629784498
+2024-06-29 15:14:12 [412709] [INFO] run_short,1.3622372150421143,trgle,6.79183384778035
+2024-06-29 15:14:55 [412674] [INFO] run_long,9.523085117340088,trgle,7.109087245553426
+2024-06-29 15:16:47 [412595] [INFO] Handling signal: int
+2024-06-29 15:16:47 [412674] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412709] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412603] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412605] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412607] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412623] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412677] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412656] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412604] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412639] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412602] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412606] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412598] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412712] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412657] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412640] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412674) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412709) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412603) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412605) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412607) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412623) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412604) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412677) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412656) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412639) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412602) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412598) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412606) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412657) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412640) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [ERROR] Worker (pid:412712) was sent SIGINT!
+2024-06-29 15:16:47 [412595] [INFO] Shutting down: Master

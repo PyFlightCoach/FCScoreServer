@@ -3,6 +3,7 @@ from flightdata import State, Flight
 from fastapi import Body, HTTPException, APIRouter
 import pandas as pd
 import fcscore.schemas as s
+import fcscore.schemas.artur as sa
 from typing import Any, Annotated
 import traceback
 from time import time
@@ -43,8 +44,8 @@ async def run_short_manouevre(
     optimise_alignment: Annotated[bool, Body(description="Should an alignment optimisation be performed? Aligmnent optimisation takes longer but gives kinder scores")], 
     long_output: Annotated[bool, Body(description="Control the data contained in the response. False for scores and splits only, True for all plotting infrmation.")]=False,
     els: Annotated[list[s.El], Body(description="Optional, list of element split information from a previous run")]=None,
-    difficulty: Annotated[int | str, Body(description="Optional, the difficulty level of the manoeuvre, 1, 2 or 3, or 'all'")]='all',
-    truncate: Annotated[bool | str, Body(description="Optional, truncate the downgrades before adding up, or 'both'")]=False
+    difficulty: Annotated[s.Difficulty | str, Body(description="Optional, the difficulty level of the manoeuvre or 'all'")]='all',
+    truncate: Annotated[bool | str, Body(description="Optional, truncate the downgrades before adding up, or 'both'")]='both'
 ) -> s.ShortOutput | s.LongOutout:
     start = time()
     try:
@@ -76,8 +77,8 @@ async def run_long_manouevre(
     id: Annotated[int, Body()],
     flown: list[s.State],
     optimise_alignment: Annotated[int, Body()],
-    difficulty: Annotated[int | str, Body(description="Optional, the difficulty level of the manoeuvre, 1, 2 or 3, or 'all'")]=3,
-    truncate: Annotated[bool | str, Body(description="Optional, truncate the downgrades before adding up, or 'both'")]=False
+    difficulty: Annotated[int | str, Body(description="Optional, the difficulty level of the manoeuvre or 'all'")]='all',
+    truncate: Annotated[bool | str, Body(description="Optional, truncate the downgrades before adding up, or 'both'")]='both'
 ) -> s.LongOutout:
     start=time()
     try:
@@ -116,3 +117,49 @@ async def read_telemetry():
     return 'logs/gunicorn.root.log'
 
 
+
+async def analyse_manoeuvre(man: sa.ScoreManoeuvre) -> sa.ScoreManoeuvreResponse:
+
+
+    res = run_short_manouevre(
+        id=man.manoeuvre.id,
+        direction=man.flight.direction,
+        sinfo=ScheduleInfo(man.flight.schedule, man.flight.style),
+        site=s.FCJOrigin(man.site.pilotdB.lat, man.site.pilotdB.lng, man.site.pilotdB.alt, man.site.rotation,man.site.move_east,man.site.move_north),
+        data=man.manoeuvre.data,
+        optimise_alignment=man.request.optimise,
+        long_output=False,
+        els=man.manoeuvre.els,
+        difficulty=man.request.difficulty,
+        truncate=man.request.truncate
+    )
+    scores = []
+    for diff in [1,2,3] if isinstance(man.request.difficulty, str) else [man.request.difficulty]:
+        scores.append(sa.ScoreData(
+            difficulty=diff,
+            penalties=[
+                res.results[diff-1].score.intra,
+                res.results[diff-1].score.inter,
+                res.results[diff-1].score.positioning
+            ],
+            truncatedPenalties=None,
+            score=res.results[diff-1].score.positioning,
+            truncatedScore=res.results[diff-1].score.total,
+            total=res.results[diff-1].properties.truncate,
+            truncatedTotal=res.results[diff-1].properties.difficulty
+        ))
+        
+
+    return sa.ScoreManoeuvreResponse(
+        fcscore=man.fcscore,
+        request=man.request,
+        flight=man.flight,
+        site=man.site,
+        manoeuvre=sa.ManoeuvreOutData(
+            id=man.manoeuvre.id,
+            shortName=man.manoeuvre.shortName,
+            k=man.manoeuvre.k,
+            els=res.els,
+            scores=[]
+        ),
+    )

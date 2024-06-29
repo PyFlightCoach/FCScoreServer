@@ -1,14 +1,17 @@
 from pydantic import BaseModel
-from enum import Enum
-from fcscore.schemas.pfc  import Difficulty
+from .pfc import Difficulty
+from .fcj import FCJData, El
 
+
+class FCScoreInfo(BaseModel):
+    id: int
+    userID: str
 
 class CalcOptions(BaseModel):
     operation: str
-    difficulty: list[Difficulty]
-    truncate: bool
     optimise: bool
-
+    difficulty: Difficulty | str
+    truncate: bool | str
 
 class GPS(BaseModel):
     lat: float
@@ -37,9 +40,46 @@ class SiteInfo(BaseModel):
     rotation: float
     pilotdB: GPS
     centerdB: GPS
+    move_east: float
+    move_north: float
 
-class Manoeuvre(BaseModel)
+class ManoeuvreInData(BaseModel):
+    id: int
+    shortName: str
+    k: float
+    els: list[El] | None
+    data: list[FCJData]
 
-class ScoreInput(BaseModel):
-    requese: CalcOptions
+
+class ScoreData(BaseModel):
+    difficulty:  int
+    penalties: list[float]
+    truncatedPenalties: list[float]
+    score: float
+    truncatedScore: float
+    total: float
+    truncatedTotal: float
+
+
+class ManoeuvreOutData(BaseModel):
+    id: int
+    shortName: str
+    k: float
+    els: list[El]
+    scores: list[ScoreData]
+    
+
+class ScoreManoeuvre(BaseModel):
+    fcscore: FCScoreInfo
+    request: CalcOptions
     flight: FlightInfo
+    site: SiteInfo
+    manoeuvre: ManoeuvreInData
+
+
+class ScoreManoeuvreResponse(BaseModel):
+    fcscore: FCScoreInfo
+    request: CalcOptions
+    flight: FlightInfo
+    site: SiteInfo
+    manoeuvre: ManoeuvreOutData

@@ -4,4 +4,3 @@ joblib
 uvicorn[standard]
 gunicorn
 PyYAML
-gitpython

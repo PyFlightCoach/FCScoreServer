@@ -12,8 +12,7 @@ from fastapi.responses import FileResponse
 import geometry as g
 import numpy as np
 from importlib.metadata import version
-import git
-
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -98,9 +97,7 @@ async def run_long_manouevre(
 
 @router.get("/version")
 async def read_version() -> str:
-    repo = git.Repo()
-    tags = sorted(repo.tags, key=lambda t: t.commit.committed_datetime)
-    return str(tags[-1])
+    return os.environ['PUBLIC_VERSION'] if 'PUBLIC_VERSION' in os.environ else 'next'
 
 @router.get("/fa_version")
 async def read_fa_version() -> str:

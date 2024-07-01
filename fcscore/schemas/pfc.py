@@ -90,7 +90,7 @@ class ShortOutput(BaseModel):
     results: list[Result]
     
     @staticmethod
-    def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | list[bool]=False):
+    def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | str='all'):
         difficulty = [difficulty] if isinstance(difficulty, Number) else [1,2,3]
         truncate = [truncate] if isinstance(truncate, bool) else [False, True]
         
@@ -117,7 +117,7 @@ class LongOutout(ShortOutput):
     full_scores: ManResult
 
     @staticmethod
-    def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | list[bool]=False):
+    def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | str='all'):
         return LongOutout(
             **ShortOutput.build(man, difficulty, truncate).__dict__,
             mdef=man.mdef.to_dict(),

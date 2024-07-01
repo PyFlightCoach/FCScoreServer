@@ -21,6 +21,6 @@ ARG TAG
 ENV PUBLIC_VERSION $TAG
 RUN echo "VERSION = $TAG"
 
-EXPOSE 8000
+EXPOSE 5000
 CMD [ "gunicorn", "main:app"]
 

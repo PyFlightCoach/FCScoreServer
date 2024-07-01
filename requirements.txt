@@ -1,6 +1,7 @@
-flightanalysis==0.2.15
+flightanalysis==0.2.16
 fastapi
 joblib
 uvicorn[standard]
 gunicorn
 PyYAML
+python-dotenv

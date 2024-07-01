@@ -8,14 +8,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 def create_app() -> FastAPI:
     app = FastAPI()
     app.include_router(router)
 
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=os.getenv("CLIENTS").split(","),
+        allow_origins=list(set(
+            ['https://pyflightcoach.github.io', 'http://localhost:5173'] + \
+            (os.getenv("CLIENTS").split(",") if 'CLIENTS' in os.environ else [])
+        )),
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],

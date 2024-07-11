@@ -12,7 +12,7 @@ import os
 class LibraryVersions(BaseModel):
     flightanalysis: str
     flightdata: str
-    geometry: str
+    pfc_geometry: str
 
     @staticmethod
     def get_version(lib: str):
@@ -22,13 +22,13 @@ class LibraryVersions(BaseModel):
                 shell=True, 
                 check=True, 
                 capture_output=True,
-                cwd=os.path.dirname(find_spec(lib).origin) 
+                cwd=os.path.dirname(find_spec(lib.split("_")[-1]).origin) 
             ).stdout.decode('utf-8').strip()
         except subprocess.CalledProcessError:
             return version(lib)
 
 versions = LibraryVersions(
-    **{k: LibraryVersions.get_version(k) for k in ['flightanalysis', 'flightdata', 'geometry']}
+    **{k: LibraryVersions.get_version(k) for k in ['flightanalysis', 'flightdata', 'pfc_geometry']}
 )
 
 class Direction(Enum):

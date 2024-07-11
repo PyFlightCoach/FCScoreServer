@@ -1,6 +1,6 @@
 FROM python:3.12-slim-bookworm
 
-LABEL maintainer "Thomas David, thomasdavid0@gmail.com"
+LABEL maintainer="Thomas David, thomasdavid0@gmail.com"
 
 WORKDIR /usr/src
 
@@ -18,7 +18,7 @@ RUN touch logs/gunicorn.error.log
 RUN touch logs/gunicorn.root.log
 
 ARG TAG
-ENV PUBLIC_VERSION $TAG
+ENV PUBLIC_VERSION=$TAG
 RUN echo "VERSION = $TAG"
 
 EXPOSE 5000

@@ -4,19 +4,32 @@ import geometry as g
 from typing import Any
 from enum import Enum
 from importlib.metadata import version
+from importlib.util import find_spec
 from numbers import Number
-from datetime import datetime
-
+import subprocess
+import os
 
 class LibraryVersions(BaseModel):
     flightanalysis: str
     flightdata: str
-    pfc_geometry: str
+    geometry: str
 
     @staticmethod
-    def read():
-        return LibraryVersions(**{k: version(k) for k in ['flightanalysis', 'flightdata', 'pfc_geometry']})
+    def get_version(lib: str):
+        try:
+            return subprocess.run(
+                'git describe --tags', 
+                shell=True, 
+                check=True, 
+                capture_output=True,
+                cwd=os.path.dirname(find_spec(lib).origin) 
+            ).stdout.decode('utf-8').strip()
+        except subprocess.CalledProcessError:
+            return version(lib)
 
+versions = LibraryVersions(
+    **{k: LibraryVersions.get_version(k) for k in ['flightanalysis', 'flightdata', 'geometry']}
+)
 
 class Direction(Enum):
     LEFT_TO_RIGHT=1
@@ -88,6 +101,7 @@ class Result(BaseModel):
 class ShortOutput(BaseModel):
     els: list[El]
     results: list[Result]
+    fa_version: str
     
     @staticmethod
     def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | str='all'):
@@ -104,7 +118,8 @@ class ShortOutput(BaseModel):
                     difficulty=diff, 
                     truncate=trunc
                 ),
-            ) for diff in difficulty for trunc in truncate]
+            ) for diff in difficulty for trunc in truncate],
+            fa_version=versions.flightanalysis
         )
 
 class LongOutout(ShortOutput):
@@ -120,7 +135,7 @@ class LongOutout(ShortOutput):
     def build(man: ma.Scored, difficulty: int | str='all', truncate: bool | str='all'):
         return LongOutout(
             **ShortOutput.build(man, difficulty, truncate).__dict__,
-            mdef=man.mdef.to_dict(),
+            mdef=man.mdef.to_dict(True),
             flown=man.flown.to_dict(),
             manoeuvre=man.manoeuvre.to_dict(),
             template=man.template.to_dict(),

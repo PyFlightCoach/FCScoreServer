@@ -4,7 +4,7 @@ from loguru import logger
 from fcscore.schemas.pfc import LongOutout
 
 logger.enable('flightanalysis')
-file = Path('~/projects/logs/2024_06_30/manual_F3A FAI_P25_24_06_30_00000169.json').expanduser()
+file = Path('~/projects/logs/2024_07_05/manual_F3A FAI_P25_24_07_05_00000186.json').expanduser()
 
 
 sa = ScheduleAnalysis.from_fcj(file)

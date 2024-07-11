@@ -39,16 +39,16 @@ def short_manoeuvre(fcj: dict):
 
 @fixture(scope='module')
 def man():
-    return ma.parse_dict(load(open('tests/data/sLoop_complete.json' ,'r')))
+    return ma.parse_dict(load(open('tests/data/sqL.json' ,'r')))
 
 @fixture(scope='module')
 def long_manoeuvre(man: ma.Scored):
     return dict(
         mdef=man.mdef.to_dict(),
-        direction=0,
-        id=0,
+        direction=1,
+        id=2,
         flown=man.flown.to_dict(),
-        manoeuvre=man.manoeuvre.to_dict(),
-        template=man.template.to_dict(),
-        optimise_alignment=False
+        optimise_alignment=False,
+        difficulty='all',
+        truncate='both'
     )

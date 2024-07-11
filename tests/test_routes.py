@@ -17,7 +17,7 @@ def test_run_short_manoeuvre(client: TestClient, short_manoeuvre: dict):
     assert response.status_code == 200, response.json()['detail']
     data = response.json()
     assert 'els' in data
-    assert data['scores'][0]['positioning'] > 0
+    assert data['results'][0]['score']['positioning'] > 0
 
 
 def test_run_long_manoeuvre(client: TestClient, long_manoeuvre: dict):

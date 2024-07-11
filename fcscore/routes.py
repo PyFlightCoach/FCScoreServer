@@ -11,7 +11,6 @@ import logging
 from fastapi.responses import FileResponse
 import geometry as g
 import numpy as np
-from importlib.metadata import version
 import os
 
 logger = logging.getLogger(__name__)
@@ -49,8 +48,9 @@ async def run_short_manouevre(
     start = time()
     try:
         st = State.from_flight(Flight.parse_fcj_data(
-            site.create(), 
-            pd.DataFrame([d.__dict__ for d in data])
+            pd.DataFrame([d.__dict__ for d in data]),
+            site.origin(), 
+            site.shift()
         ))
         mdef = SchedDef.load(sinfo.fcj_to_pfc())[id]
 
@@ -72,10 +72,10 @@ async def run_short_manouevre(
 @router.post("/run_long_manoeuvre")
 async def run_long_manouevre(
     mdef: Annotated[dict[str, Any], Body()],
-    direction: Annotated[int, Body()],
-    id: Annotated[int, Body()],
+    direction: Annotated[s.Direction, Body(description="The direction the schedule is flown in, 1 for left to right, -1 for right to left")],
+    id: Annotated[int, Body(description="The id of the manoeuvre, zero index")],
     flown: list[s.State],
-    optimise_alignment: Annotated[int, Body()],
+    optimise_alignment: Annotated[bool, Body(description="Should an alignment optimisation be performed? Aligmnent optimisation takes longer but gives kinder scores")],
     difficulty: Annotated[int | str, Body(description="Optional, the difficulty level of the manoeuvre or 'all'")]='all',
     truncate: Annotated[bool | str, Body(description="Optional, truncate the downgrades before adding up, or 'both'")]='both'
 ) -> s.LongOutout:
@@ -86,7 +86,7 @@ async def run_long_manouevre(
             id, 
             ManDef.from_dict(mdef), 
             State(pd.DataFrame([fl.__dict__ for fl in flown])), 
-            -direction, 
+            -direction.value, 
         ).proceed().run_all(optimise_alignment)
 
         logger.info(f'run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}')
@@ -101,12 +101,12 @@ async def read_version() -> str:
 
 @router.get("/fa_version")
 async def read_fa_version() -> str:
-    return version('flightanalysis')
+    return s.versions.flightanalysis#version("flightanalysis")
 
 
 @router.get("/library_versions")
 async def read_library_versions() -> s.LibraryVersions:
-    return s.LibraryVersions.read()
+    return s.versions
 
 
 @router.get("/telemetry", response_class=FileResponse)

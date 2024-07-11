@@ -29,16 +29,22 @@ class FCJOrigin(BaseModel):
     move_east: float
     move_north: float
 
-    def create(self):
+    def origin(self):
         """Create a flightdata.Origin object from the FCJOrigin object."""
         return Origin(
             'fcj', 
             g.GPS(self.lat, self.lng, self.alt).offset(
-                -g.Point(self.move_north,self.move_east,0)
+                g.Point(self.move_north, self.move_east,0)
             ), 
             self.heading
         )
-            
+
+    def shift(self):
+        return self.origin().rotation.transform_point(g.Point(
+            self.move_east,
+            -self.move_north,
+            0
+        ))
 
 class FCJParameters(BaseModel):
     rotation: float

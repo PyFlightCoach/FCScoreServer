@@ -41,7 +41,7 @@ async def run_short_manouevre(
     data: Annotated[list[s.FCJData], Body(description="A slice of the flight coach json data corresponding to this manoeuvre")], 
     optimise_alignment: Annotated[bool, Body(description="Should an alignment optimisation be performed? Aligmnent optimisation takes longer but gives kinder scores")], 
     long_output: Annotated[bool, Body(description="Control the data contained in the response. False for scores and splits only, True for all plotting infrmation.")]=False,
-    els: Annotated[list[s.El], Body(description="Optional, list of element split information from a previous run")]=None,
+    els: Annotated[list[s.El] | None, Body(description="Optional, list of element split information from a previous run")]=None,
     difficulty: Annotated[s.Difficulty | str, Body(description="Optional, the difficulty level of the manoeuvre or 'all'")]='all',
     truncate: Annotated[bool | str, Body(description="Optional, truncate the downgrades before adding up, or 'both'")]='both'
 ) -> s.ShortOutput | s.LongOutout:

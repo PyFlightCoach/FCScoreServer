@@ -15,5 +15,6 @@ sa.append_scores_to_fcj(file, '../FCScoreClient/static/example/example_p25.json'
 
 
 for man in sa:
+    print(man.mdef.info.short_name)
     with open(f'../FCScoreClient/static/example/{man.mdef.info.short_name}.json', 'w') as f:
         f.write(LongOutout.build(man, 'all').model_dump_json())

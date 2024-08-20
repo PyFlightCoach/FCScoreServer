@@ -92,7 +92,7 @@ async def run_long_manouevre(
         logger.info(f'run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}')
         return s.LongOutout.build(man, difficulty, truncate)
     except Exception as ex:
-        logger.error(traceback.format_exc(ex))
+        logger.error(ex)
         raise HTTPException(status_code=500, detail=str(ex))
 
 @router.get("/version")

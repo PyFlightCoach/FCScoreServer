@@ -32,6 +32,11 @@ async def calculate_direction(
     ))
     return s.Direction(int(State.from_transform(g.Transformation(g.P0(), att), vel=vel).direction()[0]))
 
+def rate_check(st: State):
+    log_rate = len(st.data) / st.duration
+    assert abs(log_rate - 25) < 2, f'FCScore expects a logging rate of {25}Hz, but the data provided is at {int(log_rate)}Hz'
+
+
 @router.post("/run_short_manoeuvre")
 async def run_short_manouevre(
     id: Annotated[int, Body(description="The id of the manoeuvre, zero index")],
@@ -52,6 +57,8 @@ async def run_short_manouevre(
             site.origin(), 
             site.shift()
         ))
+        rate_check(st)
+
         mdef = SchedDef.load(sinfo.fcj_to_pfc())[id]
 
         if els is not None:
@@ -66,6 +73,7 @@ async def run_short_manouevre(
         return s.LongOutout.build(man, difficulty, truncate) if long_output else s.ShortOutput.build(man, difficulty, truncate)
     except Exception as ex:
         logger.error(traceback.format_exc())
+        logger.info(str(ex))
         raise HTTPException(status_code=500, detail=str(ex))
 
 
@@ -81,18 +89,20 @@ async def run_long_manouevre(
 ) -> s.LongOutout:
     start=time()
     try:
-        
+        st = State(pd.DataFrame([fl.__dict__ for fl in flown]).set_index('t', drop=False))
+        rate_check(st)
+
         man = ma.Basic(
             id, 
             ManDef.from_dict(mdef), 
-            State(pd.DataFrame([fl.__dict__ for fl in flown])), 
+            st, 
             -direction.value, 
         ).proceed().run_all(optimise_alignment)
 
         logger.info(f'run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}')
         return s.LongOutout.build(man, difficulty, truncate)
     except Exception as ex:
-        logger.error(ex)
+        logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(ex))
 
 @router.get("/version")

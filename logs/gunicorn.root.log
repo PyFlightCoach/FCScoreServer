@@ -1,0 +1,656 @@
+2024-09-04 11:57:19 [783575] [INFO] Starting gunicorn 22.0.0
+2024-09-04 11:57:19 [783575] [INFO] Listening at: http://0.0.0.0:5000 (783575)
+2024-09-04 11:57:19 [783575] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-04 11:57:19 [783576] [INFO] Booting worker with pid: 783576
+2024-09-04 11:57:19 [783582] [INFO] Booting worker with pid: 783582
+2024-09-04 11:57:19 [783586] [INFO] Booting worker with pid: 783586
+2024-09-04 11:57:19 [783587] [INFO] Booting worker with pid: 783587
+2024-09-04 11:57:19 [783588] [INFO] Booting worker with pid: 783588
+2024-09-04 11:57:19 [783589] [INFO] Booting worker with pid: 783589
+2024-09-04 11:57:19 [783591] [INFO] Booting worker with pid: 783591
+2024-09-04 11:57:19 [783592] [INFO] Booting worker with pid: 783592
+2024-09-04 11:57:19 [783627] [INFO] Booting worker with pid: 783627
+2024-09-04 11:57:20 [783628] [INFO] Booting worker with pid: 783628
+2024-09-04 11:57:20 [783646] [INFO] Booting worker with pid: 783646
+2024-09-04 11:57:20 [783648] [INFO] Booting worker with pid: 783648
+2024-09-04 11:57:20 [783672] [INFO] Booting worker with pid: 783672
+2024-09-04 11:57:20 [783689] [INFO] Booting worker with pid: 783689
+2024-09-04 11:57:20 [783708] [INFO] Booting worker with pid: 783708
+2024-09-04 11:57:20 [783739] [INFO] Booting worker with pid: 783739
+2024-09-04 12:01:21 [783575] [INFO] Handling signal: int
+2024-09-04 12:01:21 [783588] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783582] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783587] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783592] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783708] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783589] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783646] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783628] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783672] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783576] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783591] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783689] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783648] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783739] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783627] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783586] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783587) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783588) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783582) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783592) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783646) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783589) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783628) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783672) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783576) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783689) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [ERROR] Worker (pid:783648) was sent SIGINT!
+2024-09-04 12:01:21 [783575] [INFO] Shutting down: Master
+2024-09-04 12:01:22 [798891] [INFO] Starting gunicorn 22.0.0
+2024-09-04 12:01:22 [798891] [INFO] Listening at: http://0.0.0.0:5000 (798891)
+2024-09-04 12:01:22 [798891] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-04 12:01:22 [798910] [INFO] Booting worker with pid: 798910
+2024-09-04 12:01:22 [798911] [INFO] Booting worker with pid: 798911
+2024-09-04 12:01:22 [798912] [INFO] Booting worker with pid: 798912
+2024-09-04 12:01:22 [798913] [INFO] Booting worker with pid: 798913
+2024-09-04 12:01:22 [798914] [INFO] Booting worker with pid: 798914
+2024-09-04 12:01:22 [798915] [INFO] Booting worker with pid: 798915
+2024-09-04 12:01:22 [798916] [INFO] Booting worker with pid: 798916
+2024-09-04 12:01:22 [798943] [INFO] Booting worker with pid: 798943
+2024-09-04 12:01:22 [798971] [INFO] Booting worker with pid: 798971
+2024-09-04 12:01:23 [798976] [INFO] Booting worker with pid: 798976
+2024-09-04 12:01:23 [798990] [INFO] Booting worker with pid: 798990
+2024-09-04 12:01:23 [799008] [INFO] Booting worker with pid: 799008
+2024-09-04 12:01:23 [799009] [INFO] Booting worker with pid: 799009
+2024-09-04 12:01:23 [799010] [INFO] Booting worker with pid: 799010
+2024-09-04 12:01:23 [799046] [INFO] Booting worker with pid: 799046
+2024-09-04 12:01:23 [799069] [INFO] Booting worker with pid: 799069
+2024-09-04 12:01:58 [798891] [INFO] Handling signal: int
+2024-09-04 12:01:58 [798971] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [799069] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798943] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [799010] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798912] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798915] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798911] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798910] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798976] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [799009] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798913] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [799046] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798914] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [799008] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798916] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798990] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798971) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:799069) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798943) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798915) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798912) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798911) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798976) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798910) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:799009) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798913) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:799046) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:799010) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798914) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798990) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:798916) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [ERROR] Worker (pid:799008) was sent SIGINT!
+2024-09-04 12:01:58 [798891] [INFO] Shutting down: Master
+2024-09-05 10:16:03 [744530] [INFO] Starting gunicorn 22.0.0
+2024-09-05 10:16:03 [744530] [INFO] Listening at: http://0.0.0.0:5000 (744530)
+2024-09-05 10:16:03 [744530] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-05 10:16:03 [744587] [INFO] Booting worker with pid: 744587
+2024-09-05 10:16:03 [744588] [INFO] Booting worker with pid: 744588
+2024-09-05 10:16:03 [744589] [INFO] Booting worker with pid: 744589
+2024-09-05 10:16:03 [744592] [INFO] Booting worker with pid: 744592
+2024-09-05 10:16:03 [744593] [INFO] Booting worker with pid: 744593
+2024-09-05 10:16:03 [744598] [INFO] Booting worker with pid: 744598
+2024-09-05 10:16:03 [744599] [INFO] Booting worker with pid: 744599
+2024-09-05 10:16:03 [744600] [INFO] Booting worker with pid: 744600
+2024-09-05 10:16:03 [744601] [INFO] Booting worker with pid: 744601
+2024-09-05 10:16:03 [744602] [INFO] Booting worker with pid: 744602
+2024-09-05 10:16:03 [744603] [INFO] Booting worker with pid: 744603
+2024-09-05 10:16:03 [744604] [INFO] Booting worker with pid: 744604
+2024-09-05 10:16:03 [744659] [INFO] Booting worker with pid: 744659
+2024-09-05 10:16:03 [744660] [INFO] Booting worker with pid: 744660
+2024-09-05 10:16:03 [744661] [INFO] Booting worker with pid: 744661
+2024-09-05 10:16:03 [744666] [INFO] Booting worker with pid: 744666
+2024-09-05 10:24:43 [744530] [INFO] Handling signal: winch
+2024-09-05 10:24:47 [744530] [INFO] Handling signal: winch
+2024-09-05 10:24:47 [744530] [INFO] Handling signal: winch
+2024-09-05 10:24:47 [744530] [INFO] Handling signal: winch
+2024-09-05 10:24:47 [744530] [INFO] Handling signal: winch
+2024-09-05 10:24:47 [744530] [INFO] Handling signal: winch
+2024-09-05 10:30:10 [744530] [INFO] Handling signal: int
+2024-09-05 10:30:10 [744599] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744593] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744602] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744661] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744600] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744588] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744592] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744601] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744660] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744598] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744603] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744604] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744587] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744666] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744589] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744659] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744599) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744593) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744602) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744589) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744603) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744661) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744666) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744659) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744587) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744601) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744660) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744604) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744598) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744592) was sent SIGINT!
+2024-09-05 10:30:10 [744530] [ERROR] Worker (pid:744588) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [ERROR] Worker (pid:744600) was sent SIGINT!
+2024-09-05 10:30:11 [744530] [INFO] Shutting down: Master
+2024-09-05 15:56:17 [412941] [INFO] Starting gunicorn 22.0.0
+2024-09-05 15:56:17 [412941] [INFO] Listening at: http://0.0.0.0:5000 (412941)
+2024-09-05 15:56:17 [412941] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-05 15:56:17 [412948] [INFO] Booting worker with pid: 412948
+2024-09-05 15:56:18 [412949] [INFO] Booting worker with pid: 412949
+2024-09-05 15:56:18 [412950] [INFO] Booting worker with pid: 412950
+2024-09-05 15:56:18 [412951] [INFO] Booting worker with pid: 412951
+2024-09-05 15:56:18 [412952] [INFO] Booting worker with pid: 412952
+2024-09-05 15:56:18 [412953] [INFO] Booting worker with pid: 412953
+2024-09-05 15:56:18 [412954] [INFO] Booting worker with pid: 412954
+2024-09-05 15:56:18 [412972] [INFO] Booting worker with pid: 412972
+2024-09-05 15:56:18 [412990] [INFO] Booting worker with pid: 412990
+2024-09-05 15:56:18 [413009] [INFO] Booting worker with pid: 413009
+2024-09-05 15:56:18 [413013] [INFO] Booting worker with pid: 413013
+2024-09-05 15:56:18 [413020] [INFO] Booting worker with pid: 413020
+2024-09-05 15:56:18 [413032] [INFO] Booting worker with pid: 413032
+2024-09-05 15:56:18 [413049] [INFO] Booting worker with pid: 413049
+2024-09-05 15:56:18 [413050] [INFO] Booting worker with pid: 413050
+2024-09-05 15:56:18 [413066] [INFO] Booting worker with pid: 413066
+2024-09-05 15:57:23 [413049] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412941] [INFO] Handling signal: int
+2024-09-05 15:57:23 [413050] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412990] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412950] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [413066] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [413020] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [413013] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412952] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412953] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [413009] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412972] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412954] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412948] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412951] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [413032] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412949] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413049) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413050) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412990) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412950) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413020) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413013) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412952) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413009) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412954) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412953) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412948) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412949) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413032) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412951) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:413066) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [ERROR] Worker (pid:412972) was sent SIGINT!
+2024-09-05 15:57:23 [412941] [INFO] Shutting down: Master
+2024-09-06 07:24:17 [13171] [INFO] Starting gunicorn 22.0.0
+2024-09-06 07:24:17 [13171] [INFO] Listening at: http://0.0.0.0:5000 (13171)
+2024-09-06 07:24:17 [13171] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 07:24:17 [13173] [INFO] Booting worker with pid: 13173
+2024-09-06 07:24:17 [13190] [INFO] Booting worker with pid: 13190
+2024-09-06 07:24:17 [13201] [INFO] Booting worker with pid: 13201
+2024-09-06 07:24:17 [13202] [INFO] Booting worker with pid: 13202
+2024-09-06 07:24:17 [13203] [INFO] Booting worker with pid: 13203
+2024-09-06 07:24:17 [13204] [INFO] Booting worker with pid: 13204
+2024-09-06 07:24:17 [13205] [INFO] Booting worker with pid: 13205
+2024-09-06 07:24:17 [13206] [INFO] Booting worker with pid: 13206
+2024-09-06 07:24:17 [13207] [INFO] Booting worker with pid: 13207
+2024-09-06 07:24:18 [13208] [INFO] Booting worker with pid: 13208
+2024-09-06 07:24:18 [13269] [INFO] Booting worker with pid: 13269
+2024-09-06 07:24:18 [13270] [INFO] Booting worker with pid: 13270
+2024-09-06 07:24:18 [13271] [INFO] Booting worker with pid: 13271
+2024-09-06 07:24:18 [13276] [INFO] Booting worker with pid: 13276
+2024-09-06 07:24:18 [13309] [INFO] Booting worker with pid: 13309
+2024-09-06 07:24:18 [13325] [INFO] Booting worker with pid: 13325
+2024-09-06 07:25:54 [13270] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 07:30:43 [13206] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 07:38:37 [13202] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 07:41:23 [13271] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 07:45:28 [13325] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 07:49:43 [13309] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 08:53:05 [13171] [INFO] Handling signal: winch
+2024-09-06 08:53:09 [13171] [INFO] Handling signal: winch
+2024-09-06 08:53:13 [13171] [INFO] Handling signal: winch
+2024-09-06 08:53:17 [13171] [INFO] Handling signal: winch
+2024-09-06 08:53:55 [13171] [INFO] Handling signal: winch
+2024-09-06 08:53:59 [13171] [INFO] Handling signal: winch
+2024-09-06 08:54:12 [13173] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:11:01 [13276] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:19:21 [13309] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:26:55 [13171] [INFO] Handling signal: winch
+2024-09-06 09:26:57 [13171] [INFO] Handling signal: winch
+2024-09-06 09:34:18 [13171] [INFO] Handling signal: int
+2024-09-06 09:34:18 [13173] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13270] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13202] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13208] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13203] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13325] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13201] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13271] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13276] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13204] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13207] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13269] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13190] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13206] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13205] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13309] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13208) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13201) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13203) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13270) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13202) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13173) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13325) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13207) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13204) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13190) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13269) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13205) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13271) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13206) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13276) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [ERROR] Worker (pid:13309) was sent SIGINT!
+2024-09-06 09:34:18 [13171] [INFO] Shutting down: Master
+2024-09-06 09:34:19 [328059] [INFO] Starting gunicorn 22.0.0
+2024-09-06 09:34:19 [328059] [INFO] Listening at: http://0.0.0.0:5000 (328059)
+2024-09-06 09:34:19 [328059] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 09:34:19 [328089] [INFO] Booting worker with pid: 328089
+2024-09-06 09:34:19 [328118] [INFO] Booting worker with pid: 328118
+2024-09-06 09:34:20 [328119] [INFO] Booting worker with pid: 328119
+2024-09-06 09:34:20 [328125] [INFO] Booting worker with pid: 328125
+2024-09-06 09:34:20 [328127] [INFO] Booting worker with pid: 328127
+2024-09-06 09:34:20 [328128] [INFO] Booting worker with pid: 328128
+2024-09-06 09:34:20 [328146] [INFO] Booting worker with pid: 328146
+2024-09-06 09:34:20 [328147] [INFO] Booting worker with pid: 328147
+2024-09-06 09:34:20 [328148] [INFO] Booting worker with pid: 328148
+2024-09-06 09:34:20 [328166] [INFO] Booting worker with pid: 328166
+2024-09-06 09:34:20 [328193] [INFO] Booting worker with pid: 328193
+2024-09-06 09:34:20 [328206] [INFO] Booting worker with pid: 328206
+2024-09-06 09:34:20 [328222] [INFO] Booting worker with pid: 328222
+2024-09-06 09:34:20 [328225] [INFO] Booting worker with pid: 328225
+2024-09-06 09:34:20 [328258] [INFO] Booting worker with pid: 328258
+2024-09-06 09:34:20 [328274] [INFO] Booting worker with pid: 328274
+2024-09-06 09:38:45 [328274] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:52:43 [328222] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:53:33 [328059] [INFO] Handling signal: int
+2024-09-06 09:53:33 [328274] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328146] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328258] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328127] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328148] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328222] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328119] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328089] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328128] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328193] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328166] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328147] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328206] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328225] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328118] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328125] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328146) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328258) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328127) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328148) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328119) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328089) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328128) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328274) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328222) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328166) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328193) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328225) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328206) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328147) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328118) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [ERROR] Worker (pid:328125) was sent SIGINT!
+2024-09-06 09:53:33 [328059] [INFO] Shutting down: Master
+2024-09-06 09:53:34 [394755] [INFO] Starting gunicorn 22.0.0
+2024-09-06 09:53:34 [394755] [INFO] Listening at: http://0.0.0.0:5000 (394755)
+2024-09-06 09:53:34 [394755] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 09:53:34 [394756] [INFO] Booting worker with pid: 394756
+2024-09-06 09:53:34 [394757] [INFO] Booting worker with pid: 394757
+2024-09-06 09:53:34 [394758] [INFO] Booting worker with pid: 394758
+2024-09-06 09:53:35 [394770] [INFO] Booting worker with pid: 394770
+2024-09-06 09:53:35 [394793] [INFO] Booting worker with pid: 394793
+2024-09-06 09:53:35 [394794] [INFO] Booting worker with pid: 394794
+2024-09-06 09:53:35 [394795] [INFO] Booting worker with pid: 394795
+2024-09-06 09:53:35 [394813] [INFO] Booting worker with pid: 394813
+2024-09-06 09:53:35 [394816] [INFO] Booting worker with pid: 394816
+2024-09-06 09:53:35 [394832] [INFO] Booting worker with pid: 394832
+2024-09-06 09:53:35 [394833] [INFO] Booting worker with pid: 394833
+2024-09-06 09:53:35 [394851] [INFO] Booting worker with pid: 394851
+2024-09-06 09:53:35 [394852] [INFO] Booting worker with pid: 394852
+2024-09-06 09:53:35 [394853] [INFO] Booting worker with pid: 394853
+2024-09-06 09:53:35 [394854] [INFO] Booting worker with pid: 394854
+2024-09-06 09:53:35 [394858] [INFO] Booting worker with pid: 394858
+2024-09-06 09:53:54 [394795] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:54:30 [394755] [INFO] Handling signal: int
+2024-09-06 09:54:30 [394794] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394757] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394853] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394832] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394833] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394770] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394813] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394758] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394851] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394795] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394793] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394854] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394858] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394756] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394852] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394816] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394757) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394794) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394853) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394832) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394813) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394833) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394758) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394770) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394851) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394852) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394858) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394793) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394854) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394756) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394816) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [ERROR] Worker (pid:394795) was sent SIGINT!
+2024-09-06 09:54:30 [394755] [INFO] Shutting down: Master
+2024-09-06 09:54:31 [398766] [INFO] Starting gunicorn 22.0.0
+2024-09-06 09:54:31 [398766] [INFO] Listening at: http://0.0.0.0:5000 (398766)
+2024-09-06 09:54:31 [398766] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 09:54:31 [398805] [INFO] Booting worker with pid: 398805
+2024-09-06 09:54:31 [398806] [INFO] Booting worker with pid: 398806
+2024-09-06 09:54:31 [398807] [INFO] Booting worker with pid: 398807
+2024-09-06 09:54:31 [398809] [INFO] Booting worker with pid: 398809
+2024-09-06 09:54:31 [398810] [INFO] Booting worker with pid: 398810
+2024-09-06 09:54:31 [398811] [INFO] Booting worker with pid: 398811
+2024-09-06 09:54:31 [398812] [INFO] Booting worker with pid: 398812
+2024-09-06 09:54:31 [398813] [INFO] Booting worker with pid: 398813
+2024-09-06 09:54:31 [398843] [INFO] Booting worker with pid: 398843
+2024-09-06 09:54:31 [398887] [INFO] Booting worker with pid: 398887
+2024-09-06 09:54:31 [398889] [INFO] Booting worker with pid: 398889
+2024-09-06 09:54:31 [398891] [INFO] Booting worker with pid: 398891
+2024-09-06 09:54:31 [398907] [INFO] Booting worker with pid: 398907
+2024-09-06 09:54:31 [398908] [INFO] Booting worker with pid: 398908
+2024-09-06 09:54:31 [398909] [INFO] Booting worker with pid: 398909
+2024-09-06 09:54:31 [398910] [INFO] Booting worker with pid: 398910
+2024-09-06 09:54:45 [398843] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:56:43 [398766] [INFO] Handling signal: int
+2024-09-06 09:56:43 [398889] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398813] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398811] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398909] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398891] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398908] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398910] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398843] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398805] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398806] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398809] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398812] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398810] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398807] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398907] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398887] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398889) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398813) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398811) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398909) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398908) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398891) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398910) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398805) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398806) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398812) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398810) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398809) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398807) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398907) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398843) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [ERROR] Worker (pid:398887) was sent SIGINT!
+2024-09-06 09:56:43 [398766] [INFO] Shutting down: Master
+2024-09-06 09:56:44 [407018] [INFO] Starting gunicorn 22.0.0
+2024-09-06 09:56:44 [407018] [INFO] Listening at: http://0.0.0.0:5000 (407018)
+2024-09-06 09:56:44 [407018] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 09:56:44 [407019] [INFO] Booting worker with pid: 407019
+2024-09-06 09:56:44 [407020] [INFO] Booting worker with pid: 407020
+2024-09-06 09:56:44 [407021] [INFO] Booting worker with pid: 407021
+2024-09-06 09:56:44 [407022] [INFO] Booting worker with pid: 407022
+2024-09-06 09:56:44 [407023] [INFO] Booting worker with pid: 407023
+2024-09-06 09:56:44 [407041] [INFO] Booting worker with pid: 407041
+2024-09-06 09:56:44 [407042] [INFO] Booting worker with pid: 407042
+2024-09-06 09:56:45 [407062] [INFO] Booting worker with pid: 407062
+2024-09-06 09:56:45 [407064] [INFO] Booting worker with pid: 407064
+2024-09-06 09:56:45 [407069] [INFO] Booting worker with pid: 407069
+2024-09-06 09:56:45 [407070] [INFO] Booting worker with pid: 407070
+2024-09-06 09:56:45 [407086] [INFO] Booting worker with pid: 407086
+2024-09-06 09:56:45 [407087] [INFO] Booting worker with pid: 407087
+2024-09-06 09:56:45 [407095] [INFO] Booting worker with pid: 407095
+2024-09-06 09:56:45 [407101] [INFO] Booting worker with pid: 407101
+2024-09-06 09:56:45 [407146] [INFO] Booting worker with pid: 407146
+2024-09-06 09:56:58 [407146] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 09:59:34 [407018] [INFO] Handling signal: int
+2024-09-06 09:59:34 [407022] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407146] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407086] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407087] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407070] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407020] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407101] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407041] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407019] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407095] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407062] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407042] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407023] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407021] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407069] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407064] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407022) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407086) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407087) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407020) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407101) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407070) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407146) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407041) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407019) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407062) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407095) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407042) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407069) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407064) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [ERROR] Worker (pid:407021) was sent SIGINT!
+2024-09-06 09:59:34 [407018] [INFO] Shutting down: Master
+2024-09-06 09:59:36 [417605] [INFO] Starting gunicorn 22.0.0
+2024-09-06 09:59:36 [417605] [INFO] Listening at: http://0.0.0.0:5000 (417605)
+2024-09-06 09:59:36 [417605] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 09:59:36 [417608] [INFO] Booting worker with pid: 417608
+2024-09-06 09:59:36 [417609] [INFO] Booting worker with pid: 417609
+2024-09-06 09:59:36 [417610] [INFO] Booting worker with pid: 417610
+2024-09-06 09:59:36 [417611] [INFO] Booting worker with pid: 417611
+2024-09-06 09:59:36 [417638] [INFO] Booting worker with pid: 417638
+2024-09-06 09:59:36 [417654] [INFO] Booting worker with pid: 417654
+2024-09-06 09:59:36 [417670] [INFO] Booting worker with pid: 417670
+2024-09-06 09:59:36 [417686] [INFO] Booting worker with pid: 417686
+2024-09-06 09:59:36 [417721] [INFO] Booting worker with pid: 417721
+2024-09-06 09:59:36 [417722] [INFO] Booting worker with pid: 417722
+2024-09-06 09:59:37 [417725] [INFO] Booting worker with pid: 417725
+2024-09-06 09:59:37 [417729] [INFO] Booting worker with pid: 417729
+2024-09-06 09:59:37 [417748] [INFO] Booting worker with pid: 417748
+2024-09-06 09:59:37 [417764] [INFO] Booting worker with pid: 417764
+2024-09-06 09:59:37 [417782] [INFO] Booting worker with pid: 417782
+2024-09-06 09:59:37 [417799] [INFO] Booting worker with pid: 417799
+2024-09-06 09:59:53 [417729] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 10:03:18 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 10:49:47 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 11:48:09 [417605] [INFO] Handling signal: winch
+2024-09-06 11:48:12 [417605] [INFO] Handling signal: winch
+2024-09-06 11:58:13 [417605] [INFO] Handling signal: winch
+2024-09-06 11:58:14 [417605] [INFO] Handling signal: winch
+2024-09-06 11:58:14 [417605] [INFO] Handling signal: winch
+2024-09-06 11:58:14 [417605] [INFO] Handling signal: winch
+2024-09-06 11:58:54 [417725] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 12:03:11 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 13:47:54 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 15:01:46 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 15:01:46 [417764] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 15:08:48 [417782] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 15:24:58 [417748] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 15:47:10 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 15:57:46 [417782] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 16:39:51 [417729] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 16:41:15 [417654] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 17:01:21 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 17:12:22 [417782] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 17:30:27 [417782] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 18:35:18 [417605] [INFO] Handling signal: winch
+2024-09-06 18:35:19 [417605] [INFO] Handling signal: winch
+2024-09-06 18:35:19 [417605] [INFO] Handling signal: winch
+2024-09-06 18:43:39 [417605] [INFO] Handling signal: winch
+2024-09-06 18:43:40 [417605] [INFO] Handling signal: winch
+2024-09-06 18:43:40 [417605] [INFO] Handling signal: winch
+2024-09-06 18:43:40 [417605] [INFO] Handling signal: winch
+2024-09-06 18:49:52 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 18:54:28 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:40:30 [417638] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:42:21 [417686] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:45:40 [417782] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:46:09 [417764] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:47:08 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:50:03 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 19:59:26 [417748] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:02:43 [417748] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:03:20 [417729] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:05:16 [417721] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:07:36 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:24:49 [417605] [INFO] Handling signal: winch
+2024-09-06 20:24:51 [417605] [INFO] Handling signal: winch
+2024-09-06 20:24:51 [417605] [INFO] Handling signal: winch
+2024-09-06 20:26:51 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:30:09 [417799] [INFO] run_short,2.28484845161438,sLoop,0
+2024-09-06 20:30:25 [417764] [INFO] run_short,1.4918653964996338,fig9,0
+2024-09-06 20:30:51 [417764] [INFO] run_short,3.2024853229522705,trgle,0
+2024-09-06 20:32:21 [417799] [INFO] Error parsing MSG: Mixing dicts with non-Series may lead to ambiguous ordering.
+2024-09-06 20:33:41 [417748] [INFO] run_short,14.272849321365356,trgle,0
+2024-09-06 20:34:44 [417605] [INFO] Handling signal: winch
+2024-09-06 20:35:17 [417605] [INFO] Handling signal: int
+2024-09-06 20:35:17 [417609] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417722] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417748] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417721] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417670] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417611] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417686] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417725] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417782] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417610] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417764] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417799] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417638] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417654] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417608] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417729] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417609) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417670) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417722) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417611) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417610) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417686) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417721) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417748) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417725) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417782) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417608) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417638) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417764) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417654) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417799) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [ERROR] Worker (pid:417729) was sent SIGINT!
+2024-09-06 20:35:17 [417605] [INFO] Shutting down: Master
+2024-09-06 20:35:18 [2518301] [INFO] Starting gunicorn 22.0.0
+2024-09-06 20:35:18 [2518301] [INFO] Listening at: http://0.0.0.0:5000 (2518301)
+2024-09-06 20:35:18 [2518301] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-09-06 20:35:18 [2518314] [INFO] Booting worker with pid: 2518314
+2024-09-06 20:35:18 [2518353] [INFO] Booting worker with pid: 2518353
+2024-09-06 20:35:18 [2518369] [INFO] Booting worker with pid: 2518369
+2024-09-06 20:35:19 [2518381] [INFO] Booting worker with pid: 2518381
+2024-09-06 20:35:19 [2518382] [INFO] Booting worker with pid: 2518382
+2024-09-06 20:35:19 [2518383] [INFO] Booting worker with pid: 2518383
+2024-09-06 20:35:19 [2518384] [INFO] Booting worker with pid: 2518384
+2024-09-06 20:35:19 [2518388] [INFO] Booting worker with pid: 2518388
+2024-09-06 20:35:19 [2518389] [INFO] Booting worker with pid: 2518389
+2024-09-06 20:35:19 [2518390] [INFO] Booting worker with pid: 2518390
+2024-09-06 20:35:19 [2518391] [INFO] Booting worker with pid: 2518391
+2024-09-06 20:35:19 [2518392] [INFO] Booting worker with pid: 2518392
+2024-09-06 20:35:19 [2518393] [INFO] Booting worker with pid: 2518393
+2024-09-06 20:35:19 [2518396] [INFO] Booting worker with pid: 2518396
+2024-09-06 20:35:19 [2518446] [INFO] Booting worker with pid: 2518446
+2024-09-06 20:35:19 [2518447] [INFO] Booting worker with pid: 2518447
+2024-09-06 20:35:29 [2518393] [INFO] run_long,5.689808368682861,trgle,0
+2024-09-06 20:35:50 [2518446] [INFO] run_short,3.4076180458068848,sLoop,7.517114230097612
+2024-09-06 20:35:57 [2518446] [INFO] run_short,1.4374849796295166,fig9,8.336010489936186
+2024-09-06 20:36:23 [2518301] [INFO] Handling signal: int
+2024-09-06 20:36:23 [2518390] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518393] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518446] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518389] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518388] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518369] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518392] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518382] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518353] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518391] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518383] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518314] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518384] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518447] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518396] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518381] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518390) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518393) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518446) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518389) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518388) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518392) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518369) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518382) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518391) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518353) was sent SIGINT!
+2024-09-06 20:36:23 [2518301] [ERROR] Worker (pid:2518314) was sent SIGINT!
+2024-09-06 20:36:53 [2518301] [INFO] Shutting down: Master

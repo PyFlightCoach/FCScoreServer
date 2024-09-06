@@ -3,6 +3,7 @@ import geometry as g
 from flightdata import Origin
 from .pfc import Point, Score, El
 import datetime
+import numpy as np
 
 
 class FCJData(BaseModel):
@@ -36,7 +37,7 @@ class FCJOrigin(BaseModel):
             g.GPS(self.lat, self.lng, self.alt).offset(
                 g.Point(self.move_north, self.move_east,0)
             ), 
-            self.heading
+            np.radians(self.heading)
         )
 
     def shift(self):

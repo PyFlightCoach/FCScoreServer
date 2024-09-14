@@ -1,15 +1,21 @@
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, status
+import logging
+
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 
 from fastapi.middleware.cors import CORSMiddleware
 from fcscore.routes import router
 import os
 from dotenv import load_dotenv
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 
 def create_app() -> FastAPI:
     app = FastAPI()
+
     app.include_router(router)
 
     app.add_middleware(

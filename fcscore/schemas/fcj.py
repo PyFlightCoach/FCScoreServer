@@ -1,9 +1,11 @@
-from pydantic import BaseModel
-import geometry as g
-from flightdata import Origin
-from .pfc import Point, Score, El
 import datetime
+
+import geometry as g
 import numpy as np
+from flightdata import Origin
+from pydantic import BaseModel
+
+from .pfc import El, Point, Score
 
 
 class FCJData(BaseModel):
@@ -22,6 +24,7 @@ class FCJData(BaseModel):
     pitch: float
     yaw: float
 
+
 class FCJOrigin(BaseModel):
     lat: float
     lng: float
@@ -33,19 +36,18 @@ class FCJOrigin(BaseModel):
     def origin(self):
         """Create a flightdata.Origin object from the FCJOrigin object."""
         return Origin(
-            'fcj', 
+            "fcj",
             g.GPS(self.lat, self.lng, self.alt).offset(
-                g.Point(self.move_north, self.move_east,0)
-            ), 
-            np.radians(self.heading)
+                g.Point(self.move_north, self.move_east, 0)
+            ),
+            np.radians(self.heading),
         )
 
     def shift(self):
-        return self.origin().rotation.transform_point(g.Point(
-            self.move_east,
-            -self.move_north,
-            0
-        ))
+        return self.origin().rotation.transform_point(
+            g.Point(self.move_east, -self.move_north, 0)
+        )
+
 
 class FCJParameters(BaseModel):
     rotation: float
@@ -67,6 +69,7 @@ class FCJParameters(BaseModel):
     centerAlt: str
     schedule: list[str]
 
+
 class FCJMan(BaseModel):
     name: str
     k: float
@@ -83,9 +86,11 @@ class FCJView(BaseModel):
     position: Point
     target: Point
 
+
 class FCJManResult(BaseModel):
     score: Score
     els: list[El]
+
 
 class FCSResult(BaseModel):
     fcs_version: str
@@ -94,10 +99,12 @@ class FCSResult(BaseModel):
     manresults: list[FCJManResult]
     total: float
 
+
 class FCJHumanResult(BaseModel):
     name: str
     date: datetime.date
     scores: list[float]
+
 
 class FCJ(BaseModel):
     version: str
@@ -106,8 +113,8 @@ class FCJ(BaseModel):
     view: FCJView
     parameters: FCJParameters
     scored: bool
-    scores: list[float] 
-    human_scores: list[FCJHumanResult] 
+    scores: list[float]
+    human_scores: list[FCJHumanResult]
     fcs_scores: list[FCSResult]
     mans: list[FCJMan]
     data: list[FCJData]

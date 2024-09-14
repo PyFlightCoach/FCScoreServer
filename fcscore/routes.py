@@ -1,17 +1,19 @@
-from flightanalysis import ma, ScheduleInfo, SchedDef, ManDef, schedule_library
-from flightdata import State, Flight, BinData, Flight
-from fastapi import Body, HTTPException, APIRouter
-import pandas as pd
-import fcscore.schemas as s
-import fcscore.schemas.artur as sa
-from typing import Any, Annotated
+import logging
+import os
 import traceback
 from time import time
-import logging
-from fastapi.responses import FileResponse
+from typing import Annotated, Any
+
 import geometry as g
 import numpy as np
-import os
+import pandas as pd
+from fastapi import APIRouter, Body, HTTPException
+from fastapi.responses import FileResponse
+from flightanalysis import ManDef, SchedDef, ScheduleInfo, ma, schedule_library
+from flightdata import BinData, Flight, State
+
+import fcscore.schemas as s
+import fcscore.schemas.artur as sa
 
 logger = logging.getLogger(__name__)
 
@@ -25,10 +27,7 @@ router = APIRouter()
 async def calculate_direction(
     heading: Annotated[float, Body(description="Pilot heading to locate the box")],
     data: Annotated[
-        s.FCJData,
-        Body(
-            description="A data point from the flight coach json data, usually the first point of the first manoeuvre"
-        ),
+        s.State, Body(description="the first point of the first manoeuvre")
     ],
 ) -> s.Direction:
     rotation = g.Euler(np.pi, 0, np.radians(heading) + np.pi / 2)
@@ -47,147 +46,39 @@ def rate_check(st: State):
         abs(log_rate - 25) < 2
     ), f"FCScore expects a logging rate of {25}Hz, but the data provided is at {int(log_rate)}Hz"
 
-
-@router.post("/run_short_manoeuvre")
-async def run_short_manouevre(
-    id: Annotated[int, Body(description="The id of the manoeuvre, zero index")],
-    direction: Annotated[
-        s.Direction,
-        Body(
-            description="The direction the schedule is flown in, 1 for left to right, -1 for right to left"
-        ),
-    ],
-    sinfo: Annotated[
-        ScheduleInfo,
-        Body(
-            description="The category and schedule, as per names in flight coach plotter "
-        ),
-    ],
-    site: Annotated[
-        s.FCJOrigin, Body(description="Pilot position and heading to locate the box")
-    ],
-    data: Annotated[
-        list[s.FCJData],
-        Body(
-            description="A slice of the flight coach json data corresponding to this manoeuvre"
-        ),
-    ],
-    optimise_alignment: Annotated[
-        bool,
-        Body(
-            description="Should an alignment optimisation be performed? Aligmnent optimisation takes longer but gives kinder scores"
-        ),
-    ],
-    long_output: Annotated[
-        bool,
-        Body(
-            description="Control the data contained in the response. False for scores and splits only, True for all plotting infrmation."
-        ),
-    ] = False,
-    els: Annotated[
-        list[s.El] | None,
-        Body(
-            description="Optional, list of element split information from a previous run"
-        ),
-    ] = None,
-    difficulty: Annotated[
-        s.Difficulty | str,
-        Body(description="Optional, the difficulty level of the manoeuvre or 'all'"),
-    ] = "all",
-    truncate: Annotated[
-        bool | str,
-        Body(
-            description="Optional, truncate the downgrades before adding up, or 'both'"
-        ),
-    ] = "both",
-) -> s.ShortOutput | s.LongOutout:
-    start = time()
-    try:
-        st = State.from_flight(
-            Flight.parse_fcj_data(
-                pd.DataFrame([d.__dict__ for d in data]), site.origin(), site.shift()
-            )
-        )
-        rate_check(st)
-
-        mdef = SchedDef.load(sinfo.fcj_to_pfc())[id]
-
-        if els is not None:
-            df = pd.DataFrame([el.__dict__ for el in els])
-            st = st.splitter_labels(df.to_dict("records"), target_col="element").label(
-                manoeuvre=mdef.info.short_name
-            )
-
-        man = (
-            ma.Basic(id, mdef, st, -direction.value)
-            .proceed()
-            .run_all(optimise_alignment, False)
-        )
-
-        logger.info(
-            f"run_short,{time()-start},{man.mdef.info.short_name},{man.scores.score()}"
-        )
-        return (
-            s.LongOutout.build(man, difficulty, truncate)
-            if long_output
-            else s.ShortOutput.build(man, difficulty, truncate)
-        )
-    except Exception as ex:
-        logger.error(traceback.format_exc())
-        logger.info(str(ex))
-        raise HTTPException(status_code=500, detail=str(ex))
+    
+def create_state_from_states(sts: list[s.State]) -> State:
+    return State(pd.DataFrame([fl.__dict__ for fl in sts]).set_index("t", drop=False))
 
 
-@router.post("/run_long_manoeuvre")
-async def run_long_manouevre(
-    mdef: Annotated[dict[str, Any], Body()],
-    direction: Annotated[
-        s.Direction,
-        Body(
-            description="The direction the schedule is flown in, 1 for left to right, -1 for right to left"
-        ),
-    ],
-    id: Annotated[int, Body(description="The id of the manoeuvre, zero index")],
-    flown: list[s.State],
-    optimise_alignment: Annotated[
-        bool,
-        Body(
-            description="Should an alignment optimisation be performed? Aligmnent optimisation takes longer but gives kinder scores"
-        ),
-    ],
-    difficulty: Annotated[
-        int | str,
-        Body(description="Optional, the difficulty level of the manoeuvre or 'all'"),
-    ] = "all",
-    truncate: Annotated[
-        bool | str,
-        Body(
-            description="Optional, truncate the downgrades before adding up, or 'both'"
-        ),
-    ] = "both",
+@router.post("/run_manoeuvre_new")
+async def run_manoeuvre_new(
+    name: Annotated[str, Body()],
+    category: Annotated[str, Body()],
+    schedule: Annotated[str, Body()],
+    optimise_alignment: Annotated[bool, Body()],
+    schedule_direction: Annotated[str, Body(description="LefttoRight, RighttoLeft or Infer")],
+    flown: Annotated[list[s.State], Body()],
 ) -> s.LongOutout:
     start = time()
     try:
-        st = State(
-            pd.DataFrame([fl.__dict__ for fl in flown]).set_index("t", drop=False)
-        )
+        st = create_state_from_states(flown)
         rate_check(st)
+        mdef = SchedDef.load(ScheduleInfo(category, schedule)).data[name]
 
+        direction = s.Direction.parse(schedule_direction).value
+        if direction == 0:
+            direction = mdef.info.start.d.infer(st[0].direction()[0])
         man = (
-            ma.Basic(
-                id,
-                ManDef.from_dict(mdef),
-                st,
-                -direction.value,
-            )
+            ma.Basic(id, mdef, st, -direction)
             .proceed()
             .run_all(optimise_alignment)
         )
-
+#
         logger.info(
             f"run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}"
         )
-        return s.LongOutout.build(man, difficulty, truncate)
+        return s.LongOutout.build(man, "all", "both")
     except Exception as ex:
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(ex))
@@ -217,11 +108,26 @@ async def read_telemetry():
 def create_state(data: dict, site: s.FCJOrigin) -> list[dict]:
     fl = Flight.from_log(BinData.parse_json(data))
 
+    return State.from_flight(fl, site.origin()).to_dict()
+
+
+@router.post(
+    "/create_state_fcj",
+    description="Convert a list of FCJData to a list of State",
+)
+async def create_state_fcj(data: list[s.FCJData], site: s.FCJOrigin) -> list[dict]:
     return State.from_flight(
-        fl, site.origin()
+        Flight.parse_fcj_data(
+            pd.DataFrame([d.__dict__ for d in data]), site.origin(), site.shift()
+        )
     ).to_dict()
 
 
+@router.post("/convert_schedule_info")
+def convert_schedule_info(
+    sinfo: Annotated[ScheduleInfo, Body()],
+) -> ScheduleInfo:
+    return sinfo.fcj_to_pfc()
 
 @router.get("/categories")
 def list_disciplines() -> list[str]:
@@ -230,66 +136,13 @@ def list_disciplines() -> list[str]:
 
 @router.get("/{category}/schedules")
 def list_schedules(category: str) -> list[str]:
-    return [s.name for s in schedule_library if s.category.lower() == category.lower()]
+    return [s.name for s in schedule_library if s.category == category]
 
 
-@router.get("/{category}/{sname}/manoeuvre_names")
-def list_manoeuvre_names(category: str, sname: str) -> list[str]:
-    return list(SchedDef.load(ScheduleInfo(category,sname)).data.keys())
-
-
-async def analyse_manoeuvre(man: sa.ScoreManoeuvre) -> sa.ScoreManoeuvreResponse:
-    res = run_short_manouevre(
-        id=man.manoeuvre.id,
-        direction=man.flight.direction,
-        sinfo=ScheduleInfo(man.flight.schedule, man.flight.style),
-        site=s.FCJOrigin(
-            man.site.pilotdB.lat,
-            man.site.pilotdB.lng,
-            man.site.pilotdB.alt,
-            man.site.rotation,
-            man.site.move_east,
-            man.site.move_north,
-        ),
-        data=man.manoeuvre.data,
-        optimise_alignment=man.request.optimise,
-        long_output=False,
-        els=man.manoeuvre.els,
-        difficulty=man.request.difficulty,
-        truncate=man.request.truncate,
-    )
-    scores = []
-    for diff in (
-        [1, 2, 3]
-        if isinstance(man.request.difficulty, str)
-        else [man.request.difficulty]
-    ):
-        scores.append(
-            sa.ScoreData(
-                difficulty=diff,
-                penalties=[
-                    res.results[diff - 1].score.intra,
-                    res.results[diff - 1].score.inter,
-                    res.results[diff - 1].score.positioning,
-                ],
-                truncatedPenalties=None,
-                score=res.results[diff - 1].score.positioning,
-                truncatedScore=res.results[diff - 1].score.total,
-                total=res.results[diff - 1].properties.truncate,
-                truncatedTotal=res.results[diff - 1].properties.difficulty,
-            )
-        )
-
-    return sa.ScoreManoeuvreResponse(
-        fcscore=man.fcscore,
-        request=man.request,
-        flight=man.flight,
-        site=man.site,
-        manoeuvre=sa.ManoeuvreOutData(
-            id=man.manoeuvre.id,
-            shortName=man.manoeuvre.shortName,
-            k=man.manoeuvre.k,
-            els=res.els,
-            scores=[],
-        ),
-    )
+@router.get("/{category}/{schedule}/manoeuvres")
+def list_manoeuvres(category: str, schedule: str) -> list[s.ManDetails]:
+    sinfo = ScheduleInfo(category, schedule).fcj_to_pfc()
+    return [
+        s.ManDetails(name=mdef.info.short_name, id=i + 1, k=mdef.info.k)
+        for i, mdef in enumerate(SchedDef.load(sinfo))
+    ]

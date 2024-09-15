@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from flightanalysis import ma
-from flightanalysis import ScheduleInfo, ManDef, SchedDef, schedule_library
+from flightanalysis import ScheduleInfo, ManDef, SchedDef, schedule_library, ManDetails
 from flightdata import State as St
 import geometry as g
 from typing import Any
@@ -42,21 +42,6 @@ versions = LibraryVersions(
         for k in ["flightanalysis", "flightdata", "pfc_geometry"]
     }
 )
-
-
-class Direction(Enum):
-    LEFT_TO_RIGHT = 1
-    RIGHT_TO_LEFT = -1
-    INFER = 0
-
-    @staticmethod
-    def parse(s: str):
-        try:
-            lind = s.lower().index("l")
-            rind = s.lower().index("r")
-        except ValueError:
-            return Direction.INFER
-        return Direction.LEFT_TO_RIGHT if lind < rind else Direction.RIGHT_TO_LEFT
 
 
 class Difficulty(Enum):
@@ -133,7 +118,6 @@ class ShortOutput(BaseModel):
     els: list[El]
     results: list[Result]
     fa_version: str
-    k: float
 
     @staticmethod
     def build(
@@ -155,7 +139,6 @@ class ShortOutput(BaseModel):
                 for trunc in truncate
             ],
             fa_version=versions.flightanalysis,
-            k=man.mdef.info.k,
         )
 
 
@@ -190,10 +173,3 @@ class TLog(BaseModel):
     score: float
     duration: float
     optimised: bool
-
-
-class ManDetails(BaseModel):
-    name: str
-    id: int
-    k: float
-

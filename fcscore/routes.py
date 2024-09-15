@@ -2,18 +2,18 @@ import logging
 import os
 import traceback
 from time import time
-from typing import Annotated, Any
+from typing import Annotated
 
 import geometry as g
 import numpy as np
 import pandas as pd
 from fastapi import APIRouter, Body, HTTPException
 from fastapi.responses import FileResponse
-from flightanalysis import ManDef, SchedDef, ScheduleInfo, ma, schedule_library
+from flightanalysis import ManDetails, ManDef, ScheduleInfo, ma, schedule_library
+from flightanalysis.definition.maninfo import Heading
 from flightdata import BinData, Flight, State
 
 import fcscore.schemas as s
-import fcscore.schemas.artur as sa
 
 logger = logging.getLogger(__name__)
 
@@ -51,26 +51,24 @@ def create_state_from_states(sts: list[s.State]) -> State:
     return State(pd.DataFrame([fl.__dict__ for fl in sts]).set_index("t", drop=False))
 
 
-@router.post("/run_manoeuvre_new")
-async def run_manoeuvre_new(
+@router.post("/analyse_manoeuvre")
+async def analyse_manoeuvre(
     name: Annotated[str, Body()],
     category: Annotated[str, Body()],
     schedule: Annotated[str, Body()],
     optimise_alignment: Annotated[bool, Body()],
-    schedule_direction: Annotated[str, Body(description="LefttoRight, RighttoLeft or Infer")],
+    entry: Annotated[Heading, Body(description="The direction the manoeuvre should start in")],
+    exit: Annotated[Heading, Body(description="The direction the manoeuvre should end in")],
     flown: Annotated[list[s.State], Body()],
 ) -> s.LongOutout:
     start = time()
     try:
         st = create_state_from_states(flown)
         rate_check(st)
-        mdef = SchedDef.load(ScheduleInfo(category, schedule)).data[name]
-
-        direction = s.Direction.parse(schedule_direction).value
-        if direction == 0:
-            direction = mdef.info.start.d.infer(st[0].direction()[0])
+        mdef = ManDef.load(ScheduleInfo(category, schedule), name)
+        
         man = (
-            ma.Basic(id, mdef, st, -direction)
+            ma.Basic(id, mdef, st, entry, exit)
             .proceed()
             .run_all(optimise_alignment)
         )
@@ -140,9 +138,5 @@ def list_schedules(category: str) -> list[str]:
 
 
 @router.get("/{category}/{schedule}/manoeuvres")
-def list_manoeuvres(category: str, schedule: str) -> list[s.ManDetails]:
-    sinfo = ScheduleInfo(category, schedule).fcj_to_pfc()
-    return [
-        s.ManDetails(name=mdef.info.short_name, id=i + 1, k=mdef.info.k)
-        for i, mdef in enumerate(SchedDef.load(sinfo))
-    ]
+def list_manoeuvres(category: str, schedule: str) -> list[ManDetails]:
+    return ScheduleInfo(category, schedule).manoeuvre_details()

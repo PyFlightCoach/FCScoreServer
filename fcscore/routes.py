@@ -22,31 +22,30 @@ router = APIRouter()
 
 @router.post(
     "/calculate_direction",
-    description="given a single datapoint in the flight coach json data work out if the plane is pointing to the left or right of the box",
+    description="given a single datapoint in the flight coach json data work out if the plane is going in, out, left or right",
 )
 async def calculate_direction(
     heading: Annotated[float, Body(description="Pilot heading to locate the box")],
     data: Annotated[
         s.State, Body(description="the first point of the first manoeuvre")
     ],
-) -> s.Direction:
+) -> Heading:
     rotation = g.Euler(np.pi, 0, np.radians(heading) + np.pi / 2)
     att = rotation * g.Euldeg(data.r, data.p, data.yw)
     vel = att.inverse().transform_point(
         rotation.transform_point(g.Point(data.VN, data.VE, data.VD))
     )
-    return s.Direction(
-        int(State.from_transform(g.Transformation(g.P0(), att), vel=vel).direction()[0])
+    return Heading.infer(
+        State.from_transform(g.Transformation(g.P0(), att), vel=vel).bearing()[0]
     )
 
 
 def rate_check(st: State):
     log_rate = len(st.data) / st.duration
-    assert (
-        abs(log_rate - 25) < 2
-    ), f"FCScore expects a logging rate of {25}Hz, but the data provided is at {int(log_rate)}Hz"
+    if abs(log_rate - 25) > 2:
+        return f"FCScore expects a logging rate of {25}Hz, but the data provided is at {int(log_rate)}Hz"
 
-    
+
 def create_state_from_states(sts: list[s.State]) -> State:
     return State(pd.DataFrame([fl.__dict__ for fl in sts]).set_index("t", drop=False))
 
@@ -57,26 +56,45 @@ async def analyse_manoeuvre(
     category: Annotated[str, Body()],
     schedule: Annotated[str, Body()],
     optimise_alignment: Annotated[bool, Body()],
-    entry: Annotated[Heading, Body(description="The direction the manoeuvre should start in")],
-    exit: Annotated[Heading, Body(description="The direction the manoeuvre should end in")],
     flown: Annotated[list[s.State], Body()],
+    schedule_direction: Annotated[
+        str | None,
+        Body(
+            description="The direction the schedule is flown in (LefttoRight or RighttoLeft), None for inferred"
+        ),
+    ],
 ) -> s.LongOutout:
     start = time()
     try:
+        schedule_direction = (
+            Heading.parse(schedule_direction) if schedule_direction else None
+        )
         st = create_state_from_states(flown)
-        rate_check(st)
-        mdef = ManDef.load(ScheduleInfo(category, schedule), name)
         
+        
+        mdef = ManDef.load(ScheduleInfo(category, schedule), name)
+
         man = (
-            ma.Basic(id, mdef, st, entry, exit)
+            ma.Basic(
+                id,
+                mdef,
+                st,
+                mdef.info.start.direction.wind_swap_heading(schedule_direction)
+                if schedule_direction
+                else None,
+                mdef.info.end.direction.wind_swap_heading(schedule_direction)
+                if (schedule_direction is not None)
+                & (mdef.info.end.direction is not None)
+                else None,
+            )
             .proceed()
             .run_all(optimise_alignment)
         )
-#
+        #
         logger.info(
             f"run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}"
         )
-        return s.LongOutout.build(man, "all", "both")
+        return s.LongOutout.build(man, "all", "both", rate_check(st))
     except Exception as ex:
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(ex))
@@ -126,6 +144,7 @@ def convert_schedule_info(
     sinfo: Annotated[ScheduleInfo, Body()],
 ) -> ScheduleInfo:
     return sinfo.fcj_to_pfc()
+
 
 @router.get("/categories")
 def list_disciplines() -> list[str]:

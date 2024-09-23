@@ -4,7 +4,7 @@ from flightdata import Flight, BinData, State, Origin
 
 from loguru import logger
 from fcscore.schemas.pfc import LongOutout
-from json import load
+from json import load, dump
 
 
 logger.enable("flightanalysis")
@@ -15,6 +15,9 @@ fl = Flight.from_log(bd)
 fcj_path = Path("../FCScoreClient/static/example/example_fcjson.json")
 fcj = load(fcj_path.open("r"))
 sinfo = ScheduleInfo(*fcj["parameters"]["schedule"]).fcj_to_pfc()
+
+st = State.from_flight(fl, Origin.from_fcjson_parameters(fcj["parameters"]))
+dump(st.to_dict(), open("../FCScoreClient/static/example/example_state.json", "w"))
 
 sa = ScheduleAnalysis.from_fcj(fcj,  fl, True)
 

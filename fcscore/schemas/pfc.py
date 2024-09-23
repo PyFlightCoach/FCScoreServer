@@ -118,10 +118,12 @@ class ShortOutput(BaseModel):
     els: list[El]
     results: list[Result]
     fa_version: str
+    info: str
 
     @staticmethod
     def build(
-        man: ma.Scored, difficulty: int | str = "all", truncate: bool | str = "all"
+        man: ma.Scored, difficulty: int | str = "all", truncate: bool | str = "all",
+        msg: str = None
     ):
         difficulty = [difficulty] if isinstance(difficulty, Number) else [1, 2, 3]
         truncate = [truncate] if isinstance(truncate, bool) else [False, True]
@@ -139,6 +141,7 @@ class ShortOutput(BaseModel):
                 for trunc in truncate
             ],
             fa_version=versions.flightanalysis,
+            info= msg if msg else "Analysis Complete at " + str(pd.Timestamp.now()),
         )
 
 
@@ -153,17 +156,18 @@ class LongOutout(ShortOutput):
 
     @staticmethod
     def build(
-        man: ma.Scored, difficulty: int | str = "all", truncate: bool | str = "all"
+        man: ma.Scored, difficulty: int | str = "all", truncate: bool | str = "all",
+        msg: str=None
     ):
         return LongOutout(
-            **ShortOutput.build(man, difficulty, truncate).__dict__,
+            **ShortOutput.build(man, difficulty, truncate, msg).__dict__,
             mdef=man.mdef.to_dict(True),
             flown=man.flown.to_dict(),
             manoeuvre=man.manoeuvre.to_dict(),
             template=man.template.to_dict(),
             corrected=man.corrected.to_dict(),
             corrected_template=man.corrected_template.to_dict(),
-            full_scores=man.scores.to_dict(),
+            full_scores=ManResult(**man.scores.to_dict()),
         )
 
 

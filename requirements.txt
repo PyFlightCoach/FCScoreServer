@@ -1,4 +1,4 @@
-flightanalysis==0.3.5
+flightanalysis==0.3.6
 fastapi
 joblib
 uvicorn[standard]

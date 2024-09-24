@@ -116,7 +116,7 @@ class Result(BaseModel):
 
 class ShortOutput(BaseModel):
     els: list[El]
-    results: list[Result]
+    results: list[Result] | None
     fa_version: str
     info: str
 
@@ -130,6 +130,12 @@ class ShortOutput(BaseModel):
 
         df = man.flown.label_ranges("element").iloc[:, :3]
         df.columns = ["name", "start", "stop"]
+        
+        if isinstance(man, ma.Scored):
+            if not msg:
+                msg = f"Analysis Finished at {pd.Timestamp.now().strftime("%H:%M:%S")}"
+        else:
+            msg = f"Analysis Failed at {pd.Timestamp.now().strftime("%H:%M:%S")}"
         return ShortOutput(
             els=[El(**v) for v in df.to_dict("records")],
             results=[
@@ -139,9 +145,9 @@ class ShortOutput(BaseModel):
                 )
                 for diff in difficulty
                 for trunc in truncate
-            ],
+            ] if isinstance(man, ma.Scored) else None,
             fa_version=versions.flightanalysis,
-            info= msg if msg else "Analysis Complete at " + str(pd.Timestamp.now()),
+            info=msg
         )
 
 
@@ -150,9 +156,9 @@ class LongOutout(ShortOutput):
     flown: list[State]
     manoeuvre: dict[str, Any]
     template: list[State]
-    corrected: dict[str, Any]
-    corrected_template: list[State]
-    full_scores: ManResult
+    corrected: dict[str, Any] | None
+    corrected_template: list[State] | None
+    full_scores: ManResult | None
 
     @staticmethod
     def build(
@@ -165,9 +171,9 @@ class LongOutout(ShortOutput):
             flown=man.flown.to_dict(),
             manoeuvre=man.manoeuvre.to_dict(),
             template=man.template.to_dict(),
-            corrected=man.corrected.to_dict(),
-            corrected_template=man.corrected_template.to_dict(),
-            full_scores=ManResult(**man.scores.to_dict()),
+            corrected= man.corrected.to_dict() if isinstance(man, ma.Scored) else None,
+            corrected_template=man.corrected_template.to_dict() if isinstance(man, ma.Scored) else None,
+            full_scores=ManResult(**man.scores.to_dict()) if isinstance(man, ma.Scored) else None,
         )
 
 

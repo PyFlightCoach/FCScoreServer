@@ -70,30 +70,27 @@ async def analyse_manoeuvre(
             Heading.parse(schedule_direction) if schedule_direction else None
         )
         st = create_state_from_states(flown)
-        
-        
+
         mdef = ManDef.load(ScheduleInfo(category, schedule), name)
 
-        man = (
-            ma.Basic(
-                id,
-                mdef,
-                st,
-                mdef.info.start.direction.wind_swap_heading(schedule_direction)
-                if schedule_direction
-                else None,
-                mdef.info.end.direction.wind_swap_heading(schedule_direction)
-                if (schedule_direction is not None)
-                & (mdef.info.end.direction is not None)
-                else None,
-            )
-            .proceed()
-            .run_all(optimise_alignment)
+        man = ma.Basic(
+            id,
+            mdef,
+            st,
+            mdef.info.start.direction.wind_swap_heading(schedule_direction)
+            if schedule_direction
+            else None,
+            mdef.info.end.direction.wind_swap_heading(schedule_direction)
+            if (schedule_direction is not None) & (mdef.info.end.direction is not None)
+            else None,
         )
+        man = man.proceed()
+        man = man.run_all(optimise_alignment)
         #
         logger.info(
-            f"run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score()}"
+            f"run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score() if isinstance(man, ma.Scored) else 'FAILED'}"
         )
+
         return s.LongOutout.build(man, "all", "both", rate_check(st))
     except Exception as ex:
         logger.error(traceback.format_exc())

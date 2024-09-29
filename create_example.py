@@ -3,7 +3,7 @@ from flightanalysis import ScheduleAnalysis, ScheduleInfo, SchedDef
 from flightdata import Flight, BinData, State, Origin
 
 from loguru import logger
-from fcscore.schemas.pfc import LongOutout
+from fcscore.schemas import LongOutout
 from json import load, dump
 
 

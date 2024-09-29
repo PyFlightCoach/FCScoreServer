@@ -47,7 +47,12 @@ def rate_check(st: State):
 
 
 def create_state_from_states(sts: list[s.State]) -> State:
-    return State(pd.DataFrame([fl.__dict__ for fl in sts]).set_index("t", drop=False))
+    return State(
+        pd.DataFrame([fl.__dict__ for fl in sts])
+        .set_index("t", drop=False)
+        .fillna(value=np.nan)
+        .dropna(axis=1)
+    )
 
 
 @router.post("/analyse_manoeuvre")
@@ -56,7 +61,7 @@ async def analyse_manoeuvre(
     category: Annotated[str, Body()],
     schedule: Annotated[str, Body()],
     optimise_alignment: Annotated[bool, Body()],
-    flown: Annotated[list[s.State], Body()],
+    flown: Annotated[list[s.State] | s.BinDataInput, Body()],
     schedule_direction: Annotated[
         str | None,
         Body(
@@ -66,17 +71,20 @@ async def analyse_manoeuvre(
 ) -> s.LongOutout:
     start = time()
     try:
+        sinfo = ScheduleInfo(category, schedule)
+        mdef = ManDef.load(sinfo, name)
         schedule_direction = (
             Heading.parse(schedule_direction) if schedule_direction else None
         )
-        st = create_state_from_states(flown)
-
-        mdef = ManDef.load(ScheduleInfo(category, schedule), name)
-
         man = ma.Basic(
             id,
             mdef,
-            st,
+            create_state_from_states(flown)
+            if isinstance(flown, list)
+            else State.from_flight(
+                Flight.from_log(BinData.parse_json(flown.bin_data)).remove_time_flutter(),
+                flown.origin.origin(),
+            ),
             mdef.info.start.direction.wind_swap_heading(schedule_direction)
             if schedule_direction
             else None,
@@ -86,12 +94,11 @@ async def analyse_manoeuvre(
         )
         man = man.proceed()
         man = man.run_all(optimise_alignment)
-        #
         logger.info(
             f"run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score() if isinstance(man, ma.Scored) else 'FAILED'}"
         )
 
-        return s.LongOutout.build(man, "all", "both", rate_check(st))
+        return s.LongOutout.build(man, "all", "both", rate_check(man.flown))
     except Exception as ex:
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(ex))

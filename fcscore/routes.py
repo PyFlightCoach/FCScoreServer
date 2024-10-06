@@ -50,7 +50,7 @@ def create_state_from_states(sts: list[s.State]) -> State:
     return State(
         pd.DataFrame([fl.__dict__ for fl in sts])
         .set_index("t", drop=False)
-        .fillna(value=np.nan)
+        .infer_objects(copy=False) #.fillna(value=np.nan)
         .dropna(axis=1)
     )
 
@@ -74,7 +74,7 @@ async def analyse_manoeuvre(
         sinfo = ScheduleInfo(category, schedule)
         mdef = ManDef.load(sinfo, name)
         schedule_direction = (
-            Heading.parse(schedule_direction) if schedule_direction else None
+            Heading.parse(schedule_direction) if schedule_direction and schedule_direction != 'Infer' else None
         )
         man = ma.Basic(
             id,

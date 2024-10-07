@@ -50,7 +50,7 @@ def create_state_from_states(sts: list[s.State]) -> State:
     return State(
         pd.DataFrame([fl.__dict__ for fl in sts])
         .set_index("t", drop=False)
-        .infer_objects(copy=False) #.fillna(value=np.nan)
+        .infer_objects(copy=False)  # .fillna(value=np.nan)
         .dropna(axis=1)
     )
 
@@ -61,7 +61,8 @@ async def analyse_manoeuvre(
     category: Annotated[str, Body()],
     schedule: Annotated[str, Body()],
     optimise_alignment: Annotated[bool, Body()],
-    flown: Annotated[list[s.State] | s.BinDataInput, Body()],
+    flown: Annotated[list[s.State] | dict, Body()],
+    origin: s.FCJOrigin,
     schedule_direction: Annotated[
         str | None,
         Body(
@@ -69,12 +70,13 @@ async def analyse_manoeuvre(
         ),
     ],
 ) -> s.LongOutout:
-    start = time()
     try:
         sinfo = ScheduleInfo(category, schedule)
         mdef = ManDef.load(sinfo, name)
         schedule_direction = (
-            Heading.parse(schedule_direction) if schedule_direction and schedule_direction != 'Infer' else None
+            Heading.parse(schedule_direction)
+            if schedule_direction and schedule_direction != "Infer"
+            else None
         )
         man = ma.Basic(
             id,
@@ -82,8 +84,8 @@ async def analyse_manoeuvre(
             create_state_from_states(flown)
             if isinstance(flown, list)
             else State.from_flight(
-                Flight.from_log(BinData.parse_json(flown.bin_data)).remove_time_flutter(),
-                flown.origin.origin(),
+                Flight.from_log(BinData.parse_json(flown)).remove_time_flutter(),
+                origin.origin(),
             ),
             mdef.info.start.direction.wind_swap_heading(schedule_direction)
             if schedule_direction
@@ -94,8 +96,9 @@ async def analyse_manoeuvre(
         )
         man = man.proceed()
         man = man.run_all(optimise_alignment)
+
         logger.info(
-            f"run_long,{time()-start},{man.mdef.info.short_name},{man.scores.score() if isinstance(man, ma.Scored) else 'FAILED'}"
+            f"Analysis {str(sinfo)} {man.mdef.info.short_name} {origin.lat} {origin.lng} {man.scores.score() if isinstance(man, ma.Scored) else 'FAILED'}"
         )
 
         return s.LongOutout.build(man, "all", "both", rate_check(man.flown))
@@ -119,9 +122,29 @@ async def read_library_versions() -> s.LibraryVersions:
     return s.versions
 
 
-@router.get("/telemetry", response_class=FileResponse)
+@router.get("/telemetry")
 async def read_telemetry():
-    return "logs/gunicorn.root.log"
+    with open("logs/gunicorn.root.log", "r") as f:
+        data = f.readlines()
+
+    data = pd.DataFrame(
+        [d.strip().split(" ") for d in data if " [INFO] Analysis " in d],
+        columns=[
+            "date",
+            "time",
+            "worker",
+            "level",
+            "message",
+            "sinfo",
+            "man",
+            "lat",
+            "lng",
+            "score",
+        ],
+    )
+    dates = pd.to_datetime(data.date.str.cat(data.time, sep=' '))
+    
+    return pd.concat([dates, data.iloc[:,5:]], axis=1).reset_index().to_dict(orient='list')
 
 
 @router.post("/create_state")

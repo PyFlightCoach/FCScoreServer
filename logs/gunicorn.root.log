@@ -1,0 +1,75 @@
+2024-10-10 16:27:58 [2314439] [INFO] Starting gunicorn 22.0.0
+2024-10-10 16:27:58 [2314439] [INFO] Listening at: http://0.0.0.0:5000 (2314439)
+2024-10-10 16:27:58 [2314439] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-10-10 16:27:58 [2314468] [INFO] Booting worker with pid: 2314468
+2024-10-10 16:27:58 [2314469] [INFO] Booting worker with pid: 2314469
+2024-10-10 16:27:58 [2314475] [INFO] Booting worker with pid: 2314475
+2024-10-10 16:27:58 [2314501] [INFO] Booting worker with pid: 2314501
+2024-10-10 16:27:58 [2314502] [INFO] Booting worker with pid: 2314502
+2024-10-10 16:27:58 [2314503] [INFO] Booting worker with pid: 2314503
+2024-10-10 16:27:58 [2314506] [INFO] Booting worker with pid: 2314506
+2024-10-10 16:27:58 [2314509] [INFO] Booting worker with pid: 2314509
+2024-10-10 16:27:58 [2314511] [INFO] Booting worker with pid: 2314511
+2024-10-10 16:27:58 [2314512] [INFO] Booting worker with pid: 2314512
+2024-10-10 16:27:58 [2314543] [INFO] Booting worker with pid: 2314543
+2024-10-10 16:27:58 [2314550] [INFO] Booting worker with pid: 2314550
+2024-10-10 16:27:58 [2314596] [INFO] Booting worker with pid: 2314596
+2024-10-10 16:27:58 [2314627] [INFO] Booting worker with pid: 2314627
+2024-10-10 16:27:58 [2314632] [INFO] Booting worker with pid: 2314632
+2024-10-10 16:27:58 [2314673] [INFO] Booting worker with pid: 2314673
+2024-10-10 16:28:28 [2314509] [INFO] Analysis f3a_f25 hLoop 51.6417039 -2.5257703 9.060820994251493
+2024-10-10 16:28:34 [2314596] [INFO] Analysis f3a_f25 hCirc 51.6417039 -2.5257703 5.92972062045857
+2024-10-10 16:28:42 [2314509] [INFO] Analysis f3a_f25 hB2 51.6417039 -2.5257703 8.26142691904386
+2024-10-10 16:28:42 [2314550] [INFO] Analysis f3a_f25 hB 51.6417039 -2.5257703 7.280154869120787
+2024-10-10 16:28:42 [2314512] [INFO] Analysis f3a_f25 spin 51.6417039 -2.5257703 6.9680569292783865
+2024-10-10 16:28:42 [2314627] [INFO] Analysis f3a_f25 fig9 51.6417039 -2.5257703 7.919484594629788
+2024-10-10 16:28:47 [2314543] [INFO] Analysis f3a_f25 sFin 51.6417039 -2.5257703 7.617050029905697
+2024-10-10 16:28:51 [2314627] [INFO] Analysis f3a_f25 keS 51.6417039 -2.5257703 9.032999578359828
+2024-10-10 16:28:52 [2314596] [INFO] Analysis f3a_f25 keTrg 51.6417039 -2.5257703 7.82572392297423
+2024-10-10 16:28:53 [2314673] [INFO] Analysis f3a_f25 rollC 51.6417039 -2.5257703 8.400226007362534
+2024-10-10 16:28:56 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:56 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:56 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:57 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:57 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:59 [2314543] [INFO] Analysis f3a_f25 hSLoop 51.6417039 -2.5257703 8.02214438108437
+2024-10-10 16:29:04 [2314632] [INFO] Analysis f3a_f25 sLoop 51.6417039 -2.5257703 6.420536340228253
+2024-10-10 16:29:04 [2314512] [INFO] Analysis f3a_f25 dl45 51.6417039 -2.5257703 8.195712739392663
+2024-10-10 16:29:07 [2314627] [INFO] Analysis f3a_f25 Aval 51.6417039 -2.5257703 7.401476244468054
+2024-10-10 16:29:10 [2314509] [INFO] Analysis f3a_f25 h8L 51.6417039 -2.5257703 9.11276072538945
+2024-10-10 16:29:14 [2314550] [INFO] Analysis f3a_f25 stall 51.6417039 -2.5257703 5.926129294255024
+2024-10-10 16:29:16 [2314502] [INFO] Analysis f3a_f25 sV8 51.6417039 -2.5257703 4.548403484377085
+2024-10-10 16:29:18 [2314439] [INFO] Handling signal: int
+2024-10-10 16:29:18 [2314632] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314502] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314627] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314506] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314509] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314469] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314673] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314468] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314501] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314512] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314543] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314596] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314475] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314550] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314511] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314503] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314632) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314627) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314469) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314506) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314502) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314509) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314501) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314468) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314673) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314512) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314543) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314475) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314596) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314511) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314550) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314503) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [INFO] Shutting down: Master

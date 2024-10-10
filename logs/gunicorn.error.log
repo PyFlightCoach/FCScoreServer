@@ -1,0 +1,170 @@
+2024-10-10 16:27:58 [2314439] [INFO] Starting gunicorn 22.0.0
+2024-10-10 16:27:58 [2314439] [INFO] Listening at: http://0.0.0.0:5000 (2314439)
+2024-10-10 16:27:58 [2314439] [INFO] Using worker: uvicorn.workers.UvicornWorker
+2024-10-10 16:27:58 [2314468] [INFO] Booting worker with pid: 2314468
+2024-10-10 16:27:58 [2314469] [INFO] Booting worker with pid: 2314469
+2024-10-10 16:27:58 [2314475] [INFO] Booting worker with pid: 2314475
+2024-10-10 16:27:58 [2314501] [INFO] Booting worker with pid: 2314501
+2024-10-10 16:27:58 [2314502] [INFO] Booting worker with pid: 2314502
+2024-10-10 16:27:58 [2314503] [INFO] Booting worker with pid: 2314503
+2024-10-10 16:27:58 [2314506] [INFO] Booting worker with pid: 2314506
+2024-10-10 16:27:58 [2314509] [INFO] Booting worker with pid: 2314509
+2024-10-10 16:27:58 [2314511] [INFO] Booting worker with pid: 2314511
+2024-10-10 16:27:58 [2314512] [INFO] Booting worker with pid: 2314512
+2024-10-10 16:27:58 [2314543] [INFO] Booting worker with pid: 2314543
+2024-10-10 16:27:58 [2314550] [INFO] Booting worker with pid: 2314550
+2024-10-10 16:27:58 [2314596] [INFO] Booting worker with pid: 2314596
+2024-10-10 16:27:58 [2314627] [INFO] Booting worker with pid: 2314627
+2024-10-10 16:27:58 [2314632] [INFO] Booting worker with pid: 2314632
+2024-10-10 16:27:58 [2314673] [INFO] Booting worker with pid: 2314673
+2024-10-10 16:28:00 [2314469] [INFO] Started server process [2314469]
+2024-10-10 16:28:00 [2314469] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314469] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314475] [INFO] Started server process [2314475]
+2024-10-10 16:28:00 [2314475] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314475] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314506] [INFO] Started server process [2314506]
+2024-10-10 16:28:00 [2314506] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314506] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314468] [INFO] Started server process [2314468]
+2024-10-10 16:28:00 [2314468] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314468] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314501] [INFO] Started server process [2314501]
+2024-10-10 16:28:00 [2314501] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314501] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314503] [INFO] Started server process [2314503]
+2024-10-10 16:28:00 [2314503] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314503] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314502] [INFO] Started server process [2314502]
+2024-10-10 16:28:00 [2314502] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314502] [INFO] Application startup complete.
+2024-10-10 16:28:00 [2314511] [INFO] Started server process [2314511]
+2024-10-10 16:28:00 [2314511] [INFO] Waiting for application startup.
+2024-10-10 16:28:00 [2314511] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314509] [INFO] Started server process [2314509]
+2024-10-10 16:28:01 [2314509] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314509] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314550] [INFO] Started server process [2314550]
+2024-10-10 16:28:01 [2314550] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314550] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314543] [INFO] Started server process [2314543]
+2024-10-10 16:28:01 [2314543] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314543] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314512] [INFO] Started server process [2314512]
+2024-10-10 16:28:01 [2314512] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314512] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314632] [INFO] Started server process [2314632]
+2024-10-10 16:28:01 [2314632] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314632] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314596] [INFO] Started server process [2314596]
+2024-10-10 16:28:01 [2314596] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314596] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314627] [INFO] Started server process [2314627]
+2024-10-10 16:28:01 [2314627] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314627] [INFO] Application startup complete.
+2024-10-10 16:28:01 [2314673] [INFO] Started server process [2314673]
+2024-10-10 16:28:01 [2314673] [INFO] Waiting for application startup.
+2024-10-10 16:28:01 [2314673] [INFO] Application startup complete.
+2024-10-10 16:28:56 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:56 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:56 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:57 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:28:57 [2314439] [INFO] Handling signal: winch
+2024-10-10 16:29:18 [2314439] [INFO] Handling signal: int
+2024-10-10 16:29:18 [2314632] [INFO] Shutting down
+2024-10-10 16:29:18 [2314632] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314502] [INFO] Shutting down
+2024-10-10 16:29:18 [2314502] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314627] [INFO] Shutting down
+2024-10-10 16:29:18 [2314627] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314506] [INFO] Shutting down
+2024-10-10 16:29:18 [2314506] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314509] [INFO] Shutting down
+2024-10-10 16:29:18 [2314509] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314469] [INFO] Shutting down
+2024-10-10 16:29:18 [2314469] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314673] [INFO] Shutting down
+2024-10-10 16:29:18 [2314468] [INFO] Shutting down
+2024-10-10 16:29:18 [2314673] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314468] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314501] [INFO] Shutting down
+2024-10-10 16:29:18 [2314501] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314512] [INFO] Shutting down
+2024-10-10 16:29:18 [2314543] [INFO] Shutting down
+2024-10-10 16:29:18 [2314512] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314543] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314596] [INFO] Shutting down
+2024-10-10 16:29:18 [2314596] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314475] [INFO] Shutting down
+2024-10-10 16:29:18 [2314475] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314550] [INFO] Shutting down
+2024-10-10 16:29:18 [2314550] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314511] [INFO] Shutting down
+2024-10-10 16:29:18 [2314511] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314503] [INFO] Shutting down
+2024-10-10 16:29:18 [2314503] [INFO] Error while closing socket [Errno 9] Bad file descriptor
+2024-10-10 16:29:18 [2314632] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314632] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314632] [INFO] Finished server process [2314632]
+2024-10-10 16:29:18 [2314502] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314502] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314502] [INFO] Finished server process [2314502]
+2024-10-10 16:29:18 [2314627] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314627] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314627] [INFO] Finished server process [2314627]
+2024-10-10 16:29:18 [2314506] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314506] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314506] [INFO] Finished server process [2314506]
+2024-10-10 16:29:18 [2314509] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314509] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314509] [INFO] Finished server process [2314509]
+2024-10-10 16:29:18 [2314469] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314469] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314469] [INFO] Finished server process [2314469]
+2024-10-10 16:29:18 [2314673] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314468] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314673] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314673] [INFO] Finished server process [2314673]
+2024-10-10 16:29:18 [2314468] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314468] [INFO] Finished server process [2314468]
+2024-10-10 16:29:18 [2314501] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314501] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314501] [INFO] Finished server process [2314501]
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314632) was sent SIGINT!
+2024-10-10 16:29:18 [2314512] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314543] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314543] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314512] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314512] [INFO] Finished server process [2314512]
+2024-10-10 16:29:18 [2314543] [INFO] Finished server process [2314543]
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314627) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314469) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314506) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314502) was sent SIGINT!
+2024-10-10 16:29:18 [2314596] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314596] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314596] [INFO] Finished server process [2314596]
+2024-10-10 16:29:18 [2314475] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314475] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314475] [INFO] Finished server process [2314475]
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314509) was sent SIGINT!
+2024-10-10 16:29:18 [2314550] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314550] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314550] [INFO] Finished server process [2314550]
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314501) was sent SIGINT!
+2024-10-10 16:29:18 [2314511] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314511] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314511] [INFO] Finished server process [2314511]
+2024-10-10 16:29:18 [2314503] [INFO] Waiting for application shutdown.
+2024-10-10 16:29:18 [2314503] [INFO] Application shutdown complete.
+2024-10-10 16:29:18 [2314503] [INFO] Finished server process [2314503]
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314468) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314673) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314512) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314543) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314475) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314596) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314511) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314550) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [ERROR] Worker (pid:2314503) was sent SIGINT!
+2024-10-10 16:29:18 [2314439] [INFO] Shutting down: Master

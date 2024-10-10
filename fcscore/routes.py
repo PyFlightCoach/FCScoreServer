@@ -8,11 +8,10 @@ import geometry as g
 import numpy as np
 import pandas as pd
 from fastapi import APIRouter, Body, HTTPException
-from fastapi.responses import FileResponse
 from flightanalysis import ManDetails, ManDef, ScheduleInfo, ma, schedule_library
 from flightanalysis.definition.maninfo import Heading
-from flightdata import BinData, Flight, State
-
+from flightdata import BinData, Flight, State, FCJOrigin
+from flightdata.schemas import fcj
 import fcscore.schemas as s
 
 logger = logging.getLogger(__name__)
@@ -27,7 +26,7 @@ router = APIRouter()
 async def calculate_direction(
     heading: Annotated[float, Body(description="Pilot heading to locate the box")],
     data: Annotated[
-        s.State, Body(description="the first point of the first manoeuvre")
+        dict, Body(description="the first point of the first manoeuvre")
     ],
 ) -> Heading:
     rotation = g.Euler(np.pi, 0, np.radians(heading) + np.pi / 2)
@@ -46,30 +45,21 @@ def rate_check(st: State):
         return f"FCScore expects a logging rate of {25}Hz, but the data provided is at {int(log_rate)}Hz"
 
 
-def create_state_from_states(sts: list[s.State]) -> State:
-    return State(
-        pd.DataFrame([fl.__dict__ for fl in sts])
-        .set_index("t", drop=False)
-        .infer_objects(copy=False)  # .fillna(value=np.nan)
-        .dropna(axis=1)
-    )
-
-
 @router.post("/analyse_manoeuvre")
 async def analyse_manoeuvre(
     name: Annotated[str, Body()],
     category: Annotated[str, Body()],
     schedule: Annotated[str, Body()],
     optimise_alignment: Annotated[bool, Body()],
-    flown: Annotated[list[s.State] | dict, Body()],
-    origin: s.FCJOrigin,
+    flown: Annotated[list[dict] | dict, Body()],
+    origin: FCJOrigin,
     schedule_direction: Annotated[
         str | None,
         Body(
             description="The direction the schedule is flown in (LefttoRight or RighttoLeft), None for inferred"
         ),
     ],
-) -> s.LongOutout:
+) -> s.AnalysisOutput:
     try:
         sinfo = ScheduleInfo(category, schedule)
         mdef = ManDef.load(sinfo, name)
@@ -81,7 +71,7 @@ async def analyse_manoeuvre(
         man = ma.Basic(
             id,
             mdef,
-            create_state_from_states(flown)
+            s.create_state(flown)
             if isinstance(flown, list)
             else State.from_flight(
                 Flight.from_log(BinData.parse_json(flown)).remove_time_flutter(),
@@ -101,7 +91,7 @@ async def analyse_manoeuvre(
             f"Analysis {str(sinfo)} {man.mdef.info.short_name} {origin.lat} {origin.lng} {man.scores.score() if isinstance(man, ma.Scored) else 'FAILED'}"
         )
 
-        return s.LongOutout.build(man, "all", "both", rate_check(man.flown))
+        return s.AnalysisOutput.build(man, "all", "both", rate_check(man.flown))
     except Exception as ex:
         logger.error(traceback.format_exc())
         raise HTTPException(status_code=500, detail=str(ex))
@@ -148,7 +138,7 @@ async def read_telemetry():
 
 
 @router.post("/create_state")
-def create_state(data: dict, site: s.FCJOrigin) -> list[dict]:
+def create_state(data: dict, site: FCJOrigin) -> list[dict]:
     fl = Flight.from_log(BinData.parse_json(data))
 
     return State.from_flight(fl, site.origin()).to_dict()
@@ -158,7 +148,7 @@ def create_state(data: dict, site: s.FCJOrigin) -> list[dict]:
     "/create_state_fcj",
     description="Convert a list of FCJData to a list of State",
 )
-async def create_state_fcj(data: list[s.FCJData], site: s.FCJOrigin) -> list[dict]:
+async def create_state_fcj(data: list[fcj.Data], site: FCJOrigin) -> list[dict]:
     return State.from_flight(
         Flight.parse_fcj_data(
             pd.DataFrame([d.__dict__ for d in data]), site.origin(), site.shift()
